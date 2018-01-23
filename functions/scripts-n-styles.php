@@ -4,7 +4,7 @@
  *
  * @author		Beit Hatfutsot
  * @package		bh/functions
- * @version		2.6.0
+ * @version		2.7.1
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -65,12 +65,9 @@ function BH_wp_scripts_n_styles() {
 	wp_register_style( 'blog',						CSS_DIR . '/blog.css',											array( 'bootstrap' ),		VERSION );
 	wp_register_style( 'donate',				    CSS_DIR . '/donate.css',										array( 'bootstrap' ),		VERSION );
 	wp_register_style( 'rtl',						CSS_DIR . '/rtl.css',											array( 'bootstrap-rtl' ),	VERSION );
-	
-	if ( file_exists( THEME_ROOT . '/css/sites.css') )
-		wp_enqueue_style ( 'sites',					CSS_DIR . '/sites.css',											array( 'bootstrap' ),		VERSION );
 
-	if ( file_exists( THEME_ROOT . '/css/sites-rtl.css') )
-		wp_register_style ( 'sites-rtl',			CSS_DIR . '/sites-rtl.css',										array( 'bootstrap' ),		VERSION );
+	// Enqueue sites style
+	BH_enqueue_sites_styles();
 
 	if ( is_page() ) {
 
@@ -162,6 +159,27 @@ function BH_wp_scripts_n_styles() {
 	wp_enqueue_script( 'bh-analytics' );
 	// facebook pixel script
 	wp_enqueue_script( 'bh-fb-pixel' );
+
+}
+
+/**
+ * BH_enqueue_sites_styles
+ *
+ * This function enqueues sites styles
+ *
+ * @param	N/A
+ * @return	N/A
+ */
+function BH_enqueue_sites_styles() {
+
+	if ( ! function_exists( 'icl_object_id' ) )
+		return;
+
+	$file = 'sites-' . ICL_LANGUAGE_CODE . '.css';
+
+	if ( file_exists( THEME_ROOT . '/css/' . $file ) ) {
+		wp_enqueue_style ( 'sites', CSS_DIR . '/' . $file, array( 'bootstrap' ), VERSION );
+	}
 
 }
 
