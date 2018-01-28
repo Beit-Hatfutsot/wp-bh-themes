@@ -4,7 +4,7 @@
  *
  * @author		Beit Hatfutsot
  * @package		bh/functions/acf
- * @version		2.6.0
+ * @version		2.7.1
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -45,7 +45,7 @@ function BH_acf_save_options_headerfooter() {
 
 	$screen = get_current_screen();
 
-	if ( strpos( $screen->id, 'acf-options-headerfooter' ) == true ) {
+	if ( strpos( $screen->id, 'acf-options-header-footer' ) == true ) {
 
 		$bh_sites	= get_field( 'acf-options_sites', 'option' );
 		$wpml_lang	= function_exists( 'icl_object_id' ) ? ICL_LANGUAGE_CODE : '';
@@ -54,7 +54,7 @@ function BH_acf_save_options_headerfooter() {
 			return;
 
 		// Open file for writing
-		$file = fopen( THEME_ROOT . '/css/sites' . ( $wpml_lang == 'he' ? '-rtl' : '' ) . '.css', 'w' );
+		$file = fopen( THEME_ROOT . '/css/sites-' . $wpml_lang . '.css', 'w' );
 
 		if ( ! $file )
 			return;
