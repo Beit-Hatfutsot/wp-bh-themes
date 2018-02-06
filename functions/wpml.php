@@ -41,13 +41,19 @@ function BH_footer_menu_languages_list() {
 	if ( ! function_exists( 'icl_get_languages' ) )
 		return;
 
-	$languages	= icl_get_languages( 'skip_missing=0&orderby=code' );
+	$languages	= icl_get_languages( 'skip_missing=0&orderby=custom' );
 	$output		= '';
 	
 	if ( ! empty( $languages ) ) {
 
-		foreach ( $languages as $l )
+		foreach ( $languages as $l ) {
+
+			if ( ( is_woocommerce() || $globals[ 'shop_page' ] ) && $l[ 'language_code' ] == 'ru' )
+				continue;
+
 			$output .= '<li><a ' . ( ! $l[ 'active' ] ? 'href="' . $l[ 'url' ] . '"' : 'style="cursor: default;"' ) . '><span>' . $l[ 'native_name' ] . '</span></a></li>';
+
+		}
 
 	}
 
