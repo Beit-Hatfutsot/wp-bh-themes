@@ -4,7 +4,7 @@
  *
  * @author		Beit Hatfutsot
  * @package		bh/views/components
- * @version		2.7.0
+ * @version		2.7.1
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -22,16 +22,12 @@ $events_page_id			= $events_page ? $events_page->ID : '';
 $object_id				= get_queried_object_id();
 
 /**
- * Check if is Event page template, event category or a single event
+ * Check if is Event page template, event category, a single event or another default object
  * If it is, do the following steps:
  * 1. Get category type should be displayed ( exhibition / event )
  * 2. Set $object_id accordingly
  */
 if ( 'event.php' == basename( get_page_template() ) ) {
-
-	// Event page template
-	$exhibitions_page	= get_field( 'acf-options_exhibitions_page', 'option' );
-	$events_page		= get_field( 'acf-options_events_page', 'option' );
 
 	if ( $exhibitions_page && $events_page ) {
 		switch ( $post->ID ) :
@@ -64,6 +60,31 @@ elseif ( is_singular( 'event' ) ) {
 	// Single event
 	$event_categories = wp_get_post_terms( $object_id, 'event_category' );
 	$category_type = get_field( 'acf-event_category_type', $event_categories[0] );
+
+}
+else {
+
+	// Another object
+	$parent = BH_get_top_menu_item( $object_id, 'main-menu' );		// Top menu parent
+	if ( $parent && get_page_template_slug( $parent[ 'object_id' ] ) == 'page-templates/event.php' ) {
+
+		switch ( $parent[ 'object_id' ] ) :
+			case $exhibitions_page->ID :
+				// Exhibitions
+				$category_type = 'exhibition';
+				break;
+
+			case $events_page->ID :
+				// Events
+				$category_type = 'event';
+				break;
+
+			default :
+				$category_type = 'exhibition';
+
+		endswitch;
+
+	}
 
 }
 
