@@ -4,7 +4,7 @@
  *
  * @author		Beit Hatfutsot
  * @package		bh/functions
- * @version		2.7.0
+ * @version		2.7.5
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -479,7 +479,7 @@ function BH_add_event_categories_submenu_items( &$items, $parent_item_key, $cate
  * @param	$args (array) Object containing wp_nav_menu() arguments
  * @return	(array) Extended $items with additional items list containing blog categories
  */
-function BH_add_blog_categories_submenu($items, $args) {
+function BH_add_blog_categories_submenu( $items, $args ) {
 
 	if ( empty( $args->add_blog_list_under ) )
 		// return
@@ -583,3 +583,47 @@ function BH_add_blog_categories_submenu($items, $args) {
 
 }
 add_filter( 'wp_nav_menu_objects', 'BH_add_blog_categories_submenu', 10, 2 );
+
+/**
+ * BH_getarchives_where
+ *
+ * This function filters the SQL WHERE clause for retrieving archives
+ *
+ * @param	$where (string) Portion of SQL query containing the WHERE clause
+ * @return	(string)
+ */
+function BH_getarchives_where( $where ) {
+
+	/**
+	 * Variables
+	 */
+	global $globals, $wpdb;
+
+	if ( ! $globals[ 'current_cat' ] )
+		// return
+		return $where;
+
+	// return
+	return $where . " AND $wpdb->term_taxonomy.taxonomy = 'category' AND $wpdb->term_taxonomy.term_id IN (" . $globals[ 'current_cat' ]->term_id . ")";
+
+}
+
+/**
+ * BH_getarchives_join
+ *
+ * This function filters the SQL JOIN clause for retrieving archives
+ *
+ * @param	$join (string) Portion of SQL query containing JOIN clause
+ * @return	(string)
+ */
+function BH_getarchives_join( $join ) {
+
+	/**
+	 * Variables
+	 */
+	global $globals, $wpdb;
+
+	// return
+	return $join . " INNER JOIN $wpdb->term_relationships ON ($wpdb->posts.ID = $wpdb->term_relationships.object_id) INNER JOIN $wpdb->term_taxonomy ON ($wpdb->term_relationships.term_taxonomy_id = $wpdb->term_taxonomy.term_taxonomy_id)";
+
+}

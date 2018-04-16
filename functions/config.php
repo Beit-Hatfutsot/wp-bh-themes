@@ -4,7 +4,7 @@
  *
  * @author		Beit Hatfutsot
  * @package		bh/functions
- * @version		2.7.0
+ * @version		2.7.5
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -69,6 +69,9 @@ $globals = array(
 
 	// Shop
 	'shop_page'			=> '',			// True / False	- Is shop page (set in woocommerce-functions.php)
+
+	// Blog
+	'current_cat'		=> '',			// Current category
 
 	// Galleries
 	'_galleries'		=> array()		// Array of arrays of galleries images

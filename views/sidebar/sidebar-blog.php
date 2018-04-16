@@ -4,10 +4,15 @@
  *
  * @author 		Beit Hatfutsot
  * @package 	bh/views/sidebar
- * @version     2.5.0
+ * @version     2.7.5
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+
+/**
+ * Variables
+ */
+global $globals;
 
 // Get blog page id
 if ( function_exists( 'get_field' ) ) {
@@ -23,13 +28,14 @@ $object_id = get_queried_object_id();
 // Get current post categories or the current category
 if ( is_singular( 'post' ) ) {
 
-	$post_categories	= wp_get_post_terms( $object_id, 'category' );
-	$current_cat		= $post_categories[0];
+	$post_categories			= wp_get_post_terms( $object_id, 'category' );
+	$current_cat				= $post_categories[0];
 
 }
 elseif ( is_category() ) {
-	$current_cat = get_category( get_query_var( 'cat' ) );
+	$current_cat				= get_category( get_query_var( 'cat' ) );
 }
+$globals[ 'current_cat' ] = $current_cat ? $current_cat : '';
 
 // Get recent posts
 $args = array(
@@ -39,9 +45,22 @@ $args = array(
 	'suppress_filters'	=> 0
 
 );
+
+if ( $globals[ 'current_cat' ] ) {
+	$args[ 'category' ] = $globals[ 'current_cat' ]->term_id;
+}
 $recent_posts = wp_get_recent_posts( $args );
 
 // Get archives
+// Although there is no 'category' argument for wp_get_archives,
+// we declare it here for further use within getarchives_where filter hook
+if ( $globals[ 'current_cat' ] ) {
+
+	add_filter( 'getarchives_where', 'BH_getarchives_where' );
+	add_filter( 'getarchives_join', 'BH_getarchives_join' );
+
+}
+
 $args = array(
 
 	'format'	=> 'custom',
@@ -50,6 +69,13 @@ $args = array(
 
 );
 $archives = wp_get_archives( $args );
+
+if ( $globals[ 'current_cat' ] ) {
+
+	remove_filter( 'getarchives_where', 'BH_getarchives_where' );
+	remove_filter( 'getarchives_join', 'BH_getarchives_join' );
+
+}
 
 // Build archive list
 if ( $archives ) {
@@ -76,6 +102,7 @@ if ( $archives ) {
 		foreach ( $archives as $link ) {
 
 			if ( preg_match( $pattern, $link, $matches ) ) {
+
 				$year	= $matches[1];
 				$month	= $matches[2];
 
@@ -84,8 +111,11 @@ if ( $archives ) {
 					$current_archive = $link;
 				}
 
-				$archives_output .= '<li' . ( ( $current_year == $year && $current_month == $month ) ? ' class="current-menu-item"' : '' ) . '>' . $link . '</li>';
+				if ( $globals[ 'current_cat' ] ) {
+					$link = preg_replace( "/href='(.*?)'/", "href='$1?cat=" . $globals[ 'current_cat' ]->term_id . "'", $link );
+				}
 
+				$archives_output .= '<li' . ( ( $current_year == $year && $current_month == $month ) ? ' class="current-menu-item"' : '' ) . '>' . $link . '</li>';
 
 			}
 
@@ -94,8 +124,15 @@ if ( $archives ) {
 	}
 	else {
 
-		foreach ( $archives as $link )
+		foreach ( $archives as $link ) {
+
+			if ( $globals[ 'current_cat' ] ) {
+				$link = preg_replace( "/href='(.*?)'/", "href='$1?cat=" . $globals[ 'current_cat' ]->term_id . "'", $link );
+			}
+
 			$archives_output .= '<li>' . $link . '</li>';
+
+		}
 
 	}
 
@@ -113,13 +150,13 @@ if ( $archives ) {
 			/**
 			 * Current category
 			 */
-			if ( $current_cat || $current_archive || $blog_page_id  ) {
+			if ( $globals[ 'current_cat' ] || $current_archive || $blog_page_id  ) {
 
 				echo '<ul>';
 					echo '<li class="parent">';
 
-						if ( $current_cat )
-							echo '<a href="' . get_term_link( $current_cat ) . '">' . $current_cat->name . '</a>';
+						if ( $globals[ 'current_cat' ] )
+							echo '<a href="' . get_term_link( $globals[ 'current_cat' ] ) . '">' . $globals[ 'current_cat' ]->name . '</a>';
 						elseif ( $current_archive )
 							echo $current_archive;
 						elseif ( $blog_page_id )
