@@ -4,7 +4,7 @@
  *
  * @author		Beit Hatfutsot
  * @package		bh/functions
- * @version		2.7.1
+ * @version		2.7.6
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -98,7 +98,7 @@ function BH_wp_scripts_n_styles() {
 
 	}
 
-	if ( is_category() || is_date() || is_singular( 'post' ) ) {
+	if ( is_category() || is_date() || is_singular( 'post' ) || is_author() ) {
 		wp_enqueue_style( 'blog' );
 	}
 

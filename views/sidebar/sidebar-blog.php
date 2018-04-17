@@ -4,7 +4,7 @@
  *
  * @author 		Beit Hatfutsot
  * @package 	bh/views/sidebar
- * @version     2.7.5
+ * @version     2.7.6
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -25,17 +25,24 @@ if ( function_exists( 'get_field' ) ) {
 // Get current object id
 $object_id = get_queried_object_id();
 
-// Get current post categories or the current category
+// Get current post categories (or the current category) or current author
 if ( is_singular( 'post' ) ) {
 
-	$post_categories			= wp_get_post_terms( $object_id, 'category' );
-	$current_cat				= $post_categories[0];
+	$post_categories	= wp_get_post_terms( $object_id, 'category' );
+	$current_cat		= $post_categories[0];
 
 }
 elseif ( is_category() ) {
-	$current_cat				= get_category( get_query_var( 'cat' ) );
+	$current_cat		= get_category( get_query_var( 'cat' ) );
 }
-$globals[ 'current_cat' ] = $current_cat ? $current_cat : '';
+elseif ( is_author() ) {
+	$current_author		= ( get_query_var( 'author_name' ) ) ? get_user_by( 'slug', get_query_var( 'author_name' ) ) : get_userdata( get_query_var( 'author' ) );
+}
+elseif ( is_month() ) {
+	$current_author		= ( isset( $_GET[ 'auth' ] ) && $_GET[ 'auth' ] ) ? get_user_by( 'id', $_GET[ 'auth' ] ) : '';
+}
+$globals[ 'current_cat' ]		= $current_cat ? $current_cat : '';
+$globals[ 'current_author' ]	= $current_author ? $current_author : '';
 
 // Get recent posts
 $args = array(
@@ -49,12 +56,13 @@ $args = array(
 if ( $globals[ 'current_cat' ] ) {
 	$args[ 'category' ] = $globals[ 'current_cat' ]->term_id;
 }
+elseif ( $globals[ 'current_author' ] ) {
+	$args[ 'author' ] = $globals[ 'current_author' ]->ID;
+}
 $recent_posts = wp_get_recent_posts( $args );
 
 // Get archives
-// Although there is no 'category' argument for wp_get_archives,
-// we declare it here for further use within getarchives_where filter hook
-if ( $globals[ 'current_cat' ] ) {
+if ( $globals[ 'current_cat' ] || $globals[ 'current_author' ] ) {
 
 	add_filter( 'getarchives_where', 'BH_getarchives_where' );
 	add_filter( 'getarchives_join', 'BH_getarchives_join' );
@@ -70,7 +78,7 @@ $args = array(
 );
 $archives = wp_get_archives( $args );
 
-if ( $globals[ 'current_cat' ] ) {
+if ( $globals[ 'current_cat' ] || $globals[ 'current_author' ] ) {
 
 	remove_filter( 'getarchives_where', 'BH_getarchives_where' );
 	remove_filter( 'getarchives_join', 'BH_getarchives_join' );
@@ -114,6 +122,9 @@ if ( $archives ) {
 				if ( $globals[ 'current_cat' ] ) {
 					$link = preg_replace( "/href='(.*?)'/", "href='$1?cat=" . $globals[ 'current_cat' ]->term_id . "'", $link );
 				}
+				elseif ( $globals[ 'current_author' ] ) {
+					$link = preg_replace( "/href='(.*?)'/", "href='$1?auth=" . $globals[ 'current_author' ]->ID . "'", $link );
+				}
 
 				$archives_output .= '<li' . ( ( $current_year == $year && $current_month == $month ) ? ' class="current-menu-item"' : '' ) . '>' . $link . '</li>';
 
@@ -128,6 +139,9 @@ if ( $archives ) {
 
 			if ( $globals[ 'current_cat' ] ) {
 				$link = preg_replace( "/href='(.*?)'/", "href='$1?cat=" . $globals[ 'current_cat' ]->term_id . "'", $link );
+			}
+			elseif ( $globals[ 'current_author' ] ) {
+				$link = preg_replace( "/href='(.*?)'/", "href='$1?auth=" . $globals[ 'current_author' ]->ID . "'", $link );
 			}
 
 			$archives_output .= '<li>' . $link . '</li>';

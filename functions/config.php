@@ -4,7 +4,7 @@
  *
  * @author		Beit Hatfutsot
  * @package		bh/functions
- * @version		2.7.5
+ * @version		2.7.6
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -72,6 +72,7 @@ $globals = array(
 
 	// Blog
 	'current_cat'		=> '',			// Current category
+	'current_author'	=> '',			// Current author
 
 	// Galleries
 	'_galleries'		=> array()		// Array of arrays of galleries images

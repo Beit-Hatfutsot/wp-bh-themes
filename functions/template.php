@@ -4,7 +4,7 @@
  *
  * @author		Beit Hatfutsot
  * @package		bh/functions
- * @version		2.7.0
+ * @version		2.7.6
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -606,3 +606,80 @@ function BH_get_gallery_html( $id, $title ) {
 	return $output;
 
 }
+
+/**
+ * BH_getarchives_where
+ *
+ * This function filters the SQL WHERE clause for retrieving archives
+ *
+ * @param	$where (string) Portion of SQL query containing the WHERE clause
+ * @return	(string)
+ */
+function BH_getarchives_where( $where ) {
+
+	/**
+	 * Variables
+	 */
+	global $globals, $wpdb;
+
+	if ( $globals[ 'current_cat' ] ) {
+		$where .= " AND $wpdb->term_taxonomy.taxonomy = 'category' AND $wpdb->term_taxonomy.term_id IN (" . $globals[ 'current_cat' ]->term_id . ")";
+	}
+	elseif ( $globals[ 'current_author' ] ) {
+		$where .= " AND $wpdb->posts.post_author = " . $globals[ 'current_author' ]->ID;
+	}
+
+	// return
+	return $where;
+
+}
+
+/**
+ * BH_getarchives_join
+ *
+ * This function filters the SQL JOIN clause for retrieving archives
+ *
+ * @param	$join (string) Portion of SQL query containing JOIN clause
+ * @return	(string)
+ */
+function BH_getarchives_join( $join ) {
+
+	/**
+	 * Variables
+	 */
+	global $globals, $wpdb;
+
+	if ( $globals[ 'current_cat' ] ) {
+		$join .= " INNER JOIN $wpdb->term_relationships ON ($wpdb->posts.ID = $wpdb->term_relationships.object_id) INNER JOIN $wpdb->term_taxonomy ON ($wpdb->term_relationships.term_taxonomy_id = $wpdb->term_taxonomy.term_taxonomy_id)";
+	}
+
+	// return
+	return $join;
+
+}
+
+/**
+ * BH_author_archive
+ *
+ * This function hooks the query variable object before the actual query is run
+ *
+ * @param	$query (object)
+ * @return	N/A
+ */
+function BH_author_archive( $query ) {
+
+	if ( is_admin() || ! $query->is_main_query() )
+		// return
+		return;
+
+	if ( is_month() && isset( $_GET[ 'auth' ] ) && $_GET[ 'auth' ] ) {
+
+		$query->set( 'author', $_GET[ 'auth' ] );
+
+	}
+
+	// return
+	return;
+
+}
+add_action( 'pre_get_posts', 'BH_author_archive', 1 );
