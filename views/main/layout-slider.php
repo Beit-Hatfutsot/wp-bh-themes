@@ -4,7 +4,7 @@
  *
  * @author 		Beit Hatfutsot
  * @package 	bh/views/main
- * @version     2.7.0
+ * @version     2.7.7
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -55,6 +55,8 @@ foreach ( $slider as $s ) {
 			// Get custom slide parameters
 			$image		= $s[ 'custom_image' ];
 			$title		= $s[ 'custom_title' ];
+			$sub_title	= $s[ 'custom_sub_title' ];
+			$date		= $s[ 'custom_date' ];
 			$link		= $s[ 'custom_link' ];
 			$target		= $s[ 'custom_link_target' ];
 
@@ -62,6 +64,8 @@ foreach ( $slider as $s ) {
 			$item[ 'event' ]	= array(
 				'image' 	=> $image		? $image		: '',
 				'title' 	=> $title		? $title		: '',
+				'sub_title'	=> $sub_title	? $sub_title	: '',
+				'date'	 	=> $date		? $date			: '',
 				'link'		=> $link		? $link			: '',
 				'target'	=> $target		? $target		: ''
 			);

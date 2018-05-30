@@ -4,7 +4,7 @@
  *
  * @author 		Beit Hatfutsot
  * @package 	bh/views/main/slider
- * @version     2.7.0
+ * @version     2.7.7
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -113,6 +113,12 @@ foreach ( $globals[ 'events' ] as $e ) {
 				"<a href='" . $e[ 'event' ][ 'link' ] . "' " . ( $e[ 'event' ][ 'target' ] == 'blank' ? "target='_blank'" : "" ) . ">" .
 					"<img src='" . $e[ 'event' ][ 'image' ][ 'sizes' ][ 'thumbnail' ] . "' alt='" . ( ( $e[ 'event' ][ 'image' ][ 'alt' ] ) ? $e[ 'event' ][ 'image' ][ 'alt' ] : '' ) . "' />" .
 					"<div class='event-meta'>" .
+
+						// Event sub title
+						"<div class='event-type'>" . $e[ 'event' ][ 'sub_title' ] . "</div>" .
+
+						// Event date
+						"<div class='event-date'>" . $e[ 'event' ][ 'date' ] . "</div>" .
 
 						// Event title
 						"<h3>" . $e[ 'event' ][ 'title' ] . "</h3>" .
