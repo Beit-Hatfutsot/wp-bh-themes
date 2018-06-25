@@ -66,13 +66,4 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 		get_template_part( 'views/header/scripts/facebook-remarketing' );
 	?>
 
-	<?php
-		/**
-		 * Facebook conversion
-		 */
-		if ( is_wc_endpoint_url( 'order-received' ) ) {
-			get_template_part( 'views/header/scripts/facebook-conversion' );
-		}
-	?>
-
 </head>

@@ -115,12 +115,6 @@ if ( $order ) : ?>
 				</script>
 				<!-- End Facebook Pixel Code - Purchase event -->
 
-				<!-- Facebook Conversion Code -->
-				<script>
-					window._fbq.push(['track', '6025740659065', {'value':'<?php echo $transaction[0]['total']; ?>','currency':'<?php echo get_woocommerce_currency(); ?>'}]);
-				</script>
-				<!-- End Facebook Conversion Code -->
-
 			<?php }
 		?>
 

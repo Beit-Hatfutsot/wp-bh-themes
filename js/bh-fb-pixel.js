@@ -16,7 +16,7 @@ function BH_FB_onAddToCart(sku, name, category, value, currency) {
 	fbq('track', 'AddToCart', {
 		content_name: name, 
 		content_category: category,
-		content_ids: ['' + sku + ''],
+		content_ids: sku,
 		content_type: 'product',
 		value: value,
 		currency: currency
