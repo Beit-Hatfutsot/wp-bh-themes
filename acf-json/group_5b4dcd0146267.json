@@ -1,0 +1,43 @@
+{
+    "key": "group_5b4dcd0146267",
+    "title": "Landing Page Attributes",
+    "fields": [
+        {
+            "key": "field_5b4dcd42fc983",
+            "label": "Order Tickets Link",
+            "name": "acf-landing_order_tickets_link",
+            "type": "url",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "https:\/\/"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-templates\/landing.php"
+            }
+        ]
+    ],
+    "menu_order": 8,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content",
+        "excerpt"
+    ],
+    "active": 1,
+    "description": "",
+    "modified": 1531830897
+}

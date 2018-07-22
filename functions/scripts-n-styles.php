@@ -4,7 +4,7 @@
  *
  * @author		Beit Hatfutsot
  * @package		bh/functions
- * @version		2.7.6
+ * @version		2.8.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -134,6 +134,7 @@ function BH_wp_scripts_n_styles() {
 	wp_register_script( 'photoswipe-ui-default',	JS_DIR . '/libs/PhotoSwipe/photoswipe-ui-default.min.js',			array( 'jquery', 'photoswipe' ),								VERSION,	true );
 
 	wp_register_script( 'general',					JS_DIR . '/min/general.min.js',										array( 'jquery', 'bootstrap' ),									VERSION,	true );
+	wp_register_script( 'tickets',					JS_DIR . '/min/tickets.min.js',										array( 'jquery' ),									VERSION,	true );
 	wp_register_script( 'main',						JS_DIR . '/min/main.min.js',										array( 'cycle2-carousel', 'cycle2-swipe', 'cycle2-ios6fix' ),	VERSION,	true );
 	wp_register_script( 'bh-analytics',				JS_DIR . '/bh-analytics.js',										array( 'jquery' ),												VERSION,	true );
 	wp_register_script( 'bh-fb-pixel',				JS_DIR . '/bh-fb-pixel.js',											array(),														VERSION,	true );
@@ -155,6 +156,8 @@ function BH_wp_scripts_n_styles() {
 	wp_register_script( 'item-handler',				JS_DIR . '/forms/item-handler.js',									array( 'jquery' ),							                    VERSION,	true );        
 	wp_register_script( 'state-handler',			JS_DIR . '/forms/state-handler.js',									array( 'jquery' ),							                    VERSION,	true );
 
+	// Tickets script
+	wp_enqueue_script( 'tickets' );
 	// google analytics script
 	wp_enqueue_script( 'bh-analytics' );
 	// facebook pixel script

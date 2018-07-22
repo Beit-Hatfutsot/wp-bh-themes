@@ -3,8 +3,6 @@
     "title": "Event Attributes",
     "fields": [
         {
-            "placement": "top",
-            "endpoint": 0,
             "key": "field_533b07ca1cdbd",
             "label": "General",
             "name": "",
@@ -16,12 +14,11 @@
                 "width": "",
                 "class": "",
                 "id": ""
-            }
+            },
+            "placement": "top",
+            "endpoint": 0
         },
         {
-            "display_format": "d\/m\/Y",
-            "return_format": "Ymd",
-            "first_day": 0,
             "key": "field_53380bf11cedd",
             "label": "Start Date",
             "name": "acf-event_start_date",
@@ -33,12 +30,12 @@
                 "width": "",
                 "class": "",
                 "id": ""
-            }
+            },
+            "first_day": 0,
+            "return_format": "Ymd",
+            "display_format": "d\/m\/Y"
         },
         {
-            "display_format": "d\/m\/Y",
-            "return_format": "Ymd",
-            "first_day": 0,
             "key": "field_53380c601cede",
             "label": "End Date",
             "name": "acf-event_end_date",
@@ -50,14 +47,12 @@
                 "width": "",
                 "class": "",
                 "id": ""
-            }
+            },
+            "first_day": 0,
+            "return_format": "Ymd",
+            "display_format": "d\/m\/Y"
         },
         {
-            "default_value": "",
-            "new_lines": "br",
-            "maxlength": 140,
-            "placeholder": "",
-            "rows": 2,
             "key": "field_53380c8e1cedf",
             "label": "Description",
             "name": "acf-event_description",
@@ -70,15 +65,15 @@
                 "class": "",
                 "id": ""
             },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": 140,
+            "rows": 2,
+            "new_lines": "br",
             "readonly": 0,
             "disabled": 0
         },
         {
-            "default_value": 0,
-            "message": "",
-            "ui": 0,
-            "ui_on_text": "",
-            "ui_off_text": "",
             "key": "field_5404097f180a2",
             "label": "Landing Mode",
             "name": "acf-event_landing_mode",
@@ -90,14 +85,14 @@
                 "width": "",
                 "class": "",
                 "id": ""
-            }
-        },
-        {
-            "default_value": 0,
+            },
             "message": "",
+            "default_value": 0,
             "ui": 0,
             "ui_on_text": "",
-            "ui_off_text": "",
+            "ui_off_text": ""
+        },
+        {
             "key": "field_53b55de7c5420",
             "label": "Payed Event",
             "name": "acf-event_payed_event",
@@ -117,11 +112,14 @@
                 "width": "",
                 "class": "",
                 "id": ""
-            }
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
         },
         {
-            "placement": "top",
-            "endpoint": 0,
             "key": "field_533b087a1cdc0",
             "label": "Images",
             "name": "",
@@ -133,19 +131,11 @@
                 "width": "",
                 "class": "",
                 "id": ""
-            }
+            },
+            "placement": "top",
+            "endpoint": 0
         },
         {
-            "return_format": "array",
-            "preview_size": "thumbnail",
-            "library": "all",
-            "min_width": 0,
-            "min_height": 0,
-            "min_size": 0,
-            "max_width": 0,
-            "max_height": 0,
-            "max_size": 0,
-            "mime_types": "",
             "key": "field_533b083f1cdbf",
             "label": "Main Image",
             "name": "acf-event_main_image",
@@ -157,19 +147,19 @@
                 "width": "",
                 "class": "",
                 "id": ""
-            }
-        },
-        {
-            "return_format": "array",
+            },
             "preview_size": "thumbnail",
             "library": "all",
+            "return_format": "array",
             "min_width": 0,
             "min_height": 0,
             "min_size": 0,
             "max_width": 0,
             "max_height": 0,
             "max_size": 0,
-            "mime_types": "",
+            "mime_types": ""
+        },
+        {
             "key": "field_533b08891cdc1",
             "label": "Slider Image",
             "name": "acf-event_slider_image",
@@ -181,11 +171,19 @@
                 "width": "",
                 "class": "",
                 "id": ""
-            }
+            },
+            "preview_size": "thumbnail",
+            "library": "all",
+            "return_format": "array",
+            "min_width": 0,
+            "min_height": 0,
+            "min_size": 0,
+            "max_width": 0,
+            "max_height": 0,
+            "max_size": 0,
+            "mime_types": ""
         },
         {
-            "placement": "top",
-            "endpoint": 0,
             "key": "field_533b09b41cdc2",
             "label": "Series of Events",
             "name": "",
@@ -205,16 +203,11 @@
                 "width": "",
                 "class": "",
                 "id": ""
-            }
+            },
+            "placement": "top",
+            "endpoint": 0
         },
         {
-            "default_value": "",
-            "min": 0,
-            "max": "",
-            "step": 1,
-            "placeholder": "",
-            "prepend": "",
-            "append": "\u20aa",
             "key": "field_53af3c943fc6b",
             "label": "Series Price",
             "name": "acf-event_series_price",
@@ -235,17 +228,37 @@
                 "class": "",
                 "id": ""
             },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "₪",
+            "min": 0,
+            "max": "",
+            "step": 1,
             "readonly": 0,
             "disabled": 0
         },
         {
+            "key": "field_53380d601cee2",
+            "label": "Series of Events",
+            "name": "acf-event_series_of_events",
+            "type": "repeater",
+            "instructions": "Events have to be sorted from earlier to last event",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "row_min": "",
+            "row_limit": "",
+            "layout": "table",
+            "button_label": "Add Event in Series",
+            "min": 0,
+            "max": 0,
             "sub_fields": [
                 {
-                    "default_value": "",
-                    "maxlength": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
                     "key": "field_53380e971cee3",
                     "label": "Title",
                     "name": "title",
@@ -258,16 +271,16 @@
                         "class": "",
                         "id": ""
                     },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
                     "formatting": "none",
+                    "maxlength": "",
                     "readonly": 0,
                     "disabled": 0
                 },
                 {
-                    "default_value": "",
-                    "new_lines": "br",
-                    "maxlength": "",
-                    "placeholder": "",
-                    "rows": "",
                     "key": "field_53380eec1cee5",
                     "label": "Content",
                     "name": "content",
@@ -280,13 +293,15 @@
                         "class": "",
                         "id": ""
                     },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": "",
+                    "new_lines": "br",
                     "readonly": 0,
                     "disabled": 0
                 },
                 {
-                    "display_format": "d\/m\/Y",
-                    "return_format": "Ymd",
-                    "first_day": 0,
                     "key": "field_53380ed11cee4",
                     "label": "Date",
                     "name": "date",
@@ -298,16 +313,12 @@
                         "width": 20,
                         "class": "",
                         "id": ""
-                    }
+                    },
+                    "first_day": 0,
+                    "return_format": "Ymd",
+                    "display_format": "d\/m\/Y"
                 },
                 {
-                    "default_value": "",
-                    "min": 0,
-                    "max": "",
-                    "step": 1,
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "\u20aa",
                     "key": "field_53aadc67b6f9e",
                     "label": "Price",
                     "name": "price",
@@ -328,15 +339,17 @@
                         "class": "",
                         "id": ""
                     },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "₪",
+                    "min": 0,
+                    "max": "",
+                    "step": 1,
                     "readonly": 0,
                     "disabled": 0
                 },
                 {
-                    "default_value": "",
-                    "maxlength": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
                     "key": "field_53940bd94dca5",
                     "label": "Ticket Net Link",
                     "name": "ticket_net_link",
@@ -357,34 +370,19 @@
                         "class": "",
                         "id": ""
                     },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
                     "formatting": "html",
+                    "maxlength": "",
                     "readonly": 0,
                     "disabled": 0
                 }
             ],
-            "min": 0,
-            "max": 0,
-            "layout": "table",
-            "button_label": "Add Event in Series",
-            "collapsed": "",
-            "key": "field_53380d601cee2",
-            "label": "Series of Events",
-            "name": "acf-event_series_of_events",
-            "type": "repeater",
-            "instructions": "Events have to be sorted from earlier to last event",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "row_min": "",
-            "row_limit": ""
+            "collapsed": ""
         },
         {
-            "placement": "top",
-            "endpoint": 0,
             "key": "field_533b07e11cdbe",
             "label": "External References",
             "name": "",
@@ -396,14 +394,11 @@
                 "width": "",
                 "class": "",
                 "id": ""
-            }
+            },
+            "placement": "top",
+            "endpoint": 0
         },
         {
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
             "key": "field_53380d371cee1",
             "label": "Ticket Net Link",
             "name": "acf-event_ticket_net_link",
@@ -424,16 +419,16 @@
                 "class": "",
                 "id": ""
             },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
             "formatting": "html",
+            "maxlength": "",
             "readonly": 0,
             "disabled": 0
         },
         {
-            "default_value": 0,
-            "message": "Include in Registration Form?",
-            "ui": 0,
-            "ui_on_text": "",
-            "ui_off_text": "",
             "key": "field_533b09ef1cdc3",
             "label": "Registration Form",
             "name": "acf-event_registration_form",
@@ -458,11 +453,14 @@
                 "width": "",
                 "class": "",
                 "id": ""
-            }
+            },
+            "message": "Include in Registration Form?",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
         },
         {
-            "placement": "top",
-            "endpoint": 0,
             "key": "field_540409c2180a3",
             "label": "Landing Mode",
             "name": "",
@@ -482,19 +480,11 @@
                 "width": "",
                 "class": "",
                 "id": ""
-            }
+            },
+            "placement": "top",
+            "endpoint": 0
         },
         {
-            "return_format": "array",
-            "preview_size": "thumbnail",
-            "library": "all",
-            "min_width": 0,
-            "min_height": 0,
-            "min_size": 0,
-            "max_width": 0,
-            "max_height": 0,
-            "max_size": 0,
-            "mime_types": "",
             "key": "field_540409e8180a4",
             "label": "Background Image",
             "name": "acf-event_background_image",
@@ -506,7 +496,17 @@
                 "width": "",
                 "class": "",
                 "id": ""
-            }
+            },
+            "preview_size": "thumbnail",
+            "library": "all",
+            "return_format": "array",
+            "min_width": 0,
+            "min_height": 0,
+            "min_size": 0,
+            "max_width": 0,
+            "max_height": 0,
+            "max_size": 0,
+            "mime_types": ""
         }
     ],
     "location": [
@@ -526,5 +526,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1483967796
+    "modified": 1531830891
 }
