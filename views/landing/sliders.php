@@ -15,22 +15,28 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
  */
 $slider_count = 1;
 
-foreach ( $sliders as $slider ) {
+?>
 
-	// Get slider content
-	$images		= $slider[ 'images' ];
-	$title		= $slider[ 'title' ];
-	$excerpt	= $slider[ 'excerpt' ];
-	$more_info	= $slider[ 'more_info' ];
+<div class="sliders"> 
 
-	if ( ! $images || ! $title || ! $excerpt )
-		return;
+	<?php foreach ( $sliders as $slider ) {
 
-	/**
-	 * Display the slider
-	 */
-	include( locate_template( 'views/landing/slider.php' ) );
+		// Get slider content
+		$images		= $slider[ 'images' ];
+		$title		= $slider[ 'title' ];
+		$excerpt	= $slider[ 'excerpt' ];
+		$more_info	= $slider[ 'more_info' ];
 
-	$slider_count++;
+		if ( ! $images || ! $title || ! $excerpt )
+			return;
 
-}
+		/**
+		 * Display the slider
+		 */
+		include( locate_template( 'views/landing/slider.php' ) );
+
+		$slider_count++;
+
+	} ?>
+
+</div>

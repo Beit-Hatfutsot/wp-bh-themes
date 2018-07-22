@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 // Globals
 global $globals;
 
-wp_enqueue_script( 'bootstrap' );
+wp_enqueue_script( 'landing' );
 wp_enqueue_script( 'ticketnet' );
 wp_enqueue_script( 'cycle2' );
 wp_enqueue_script( 'cycle2-carousel' );

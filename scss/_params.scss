@@ -18,6 +18,9 @@ $admin-ui:		"../../images/ui/";
 /* colors */
 /**********/
 
+$white:				#FFF;
+$black:				#000;
+
 $gray-color1:		#333;
 $gray-color2:		#444;
 $gray-color3:		#666;
@@ -50,14 +53,21 @@ $blue-color5:		#a7e2ea;
 $blue-color6:		#daf3f6;
 $blue-color7:		#f0feff;
 
+/******************/
+/* landing colors */
+/******************/
+
+$landing-white:		$white;
+$landing-black:		$black;
+$landing-red:		#cc5947;
+$landing-blue:		#203b71;
+$landing-yellow:	#ffea00;
+
 /*********************/
 /* old design colors */
 /*********************/
 
-$white:				#FFF;
 $white-opac:		rgba($white, 0.9);
-
-$black:				#000;
 
 $black-color1:		#333;
 $black-color2:		#666;

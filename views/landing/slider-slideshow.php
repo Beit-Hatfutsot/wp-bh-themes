@@ -14,11 +14,12 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 <div class="slideshow-placeholder <?php echo $slider_count == 1 ? 'hidden-xs' : ''; ?>">
 	<div class="slideshow">
-		<div class="slides"
+		<div class="cycle-slideshow"
 			data-cycle-slides=".slide"
 			data-cycle-fx=carousel
-			data-cycle-timeout=5000
+			data-cycle-timeout=0
 			data-cycle-carousel-visible=1
+			data-cycle-auto-height=container
 			data-cycle-manual-trump=false
 			data-cycle-swipe=true
 			data-cycle-log=false
@@ -50,11 +51,12 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 		<div class="slideshow-placeholder visible-xs">
 			<div class="slideshow">
-				<div class="slides"
+				<div class="cycle-slideshow"
 					data-cycle-slides=".slide"
 					data-cycle-fx=carousel
-					data-cycle-timeout=5000
+					data-cycle-timeout=0
 					data-cycle-carousel-visible=1
+					data-cycle-auto-height=container
 					data-cycle-manual-trump=false
 					data-cycle-swipe=true
 					data-cycle-log=false

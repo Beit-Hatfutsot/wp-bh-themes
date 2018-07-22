@@ -14,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 <footer>
 
-	<div class="footer-wrapper" <?php echo $footer_bg ? 'style="background: url(\'' . $footer_bg[ 'url' ] . '\');"' : ''; ?>>
+	<div class="footer-wrapper" <?php echo $footer_bg ? 'style="background-image: url(\'' . $footer_bg[ 'url' ] . '\');"' : ''; ?>>
 
 		<?php
 			/**
