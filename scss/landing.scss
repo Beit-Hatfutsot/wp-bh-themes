@@ -14,14 +14,16 @@
 body {
 	@include font;
 	margin: 0 auto;
-	line-height: 40px;
-	font-size: 30px;
 	color: $landing-black;
 	background-color: $content-bg;
 
 	&:before {
-		content: "768";
 		display: none;
+	}
+
+	.landing-wrapper {
+		padding-left: 15px;
+		padding-right: 15px;
 	}
 }
 
@@ -66,8 +68,6 @@ header {
 
 	.logo {
 		margin: 30px auto 25px;
-		width: 278px;
-		height: 108px;
 	}
 
 	/**************/
@@ -75,33 +75,19 @@ header {
 	/**************/
 
 	.page-title {
-		position: relative;
 		margin-bottom: 35px;
 
 		h1 {
+			margin: 0 auto;
 			padding-bottom: 10px;
+			font-weight: $font-normal;
 			text-align: center;
-			border-bottom: 15px solid $landing-red;
-			@include center-align;
-		}
+			border-bottom-style: solid;
+			border-bottom-color: $landing-red;
 
-		.hidden-title {
-			&:after {
-				content: attr(data-title);
-				padding-bottom: 10px;
-				line-height: 68px;
-				font-size: 43px;
-				font-weight: $font-normal;
-				text-align: center;
-				border-bottom: 15px solid $landing-red;
-				display: inline-block;
-				visibility: hidden;
-
-				& b,
-				& strong {
-					font-size: 53px;
-					font-weight: $font-semi-bold;
-				}
+			& b,
+			& strong {
+				font-weight: $font-semi-bold;
 			}
 		}
 	}
@@ -112,12 +98,13 @@ header {
 /***********/
 
 .sliders {
+	margin-left: -15px;
+	margin-right: -15px;
 	overflow: hidden;
 
 	.slider {
 		.slideshow-placeholder {
 			position: relative;
-			margin-bottom: 20px;
 
 			.slideshow {
 				.cycle-carousel-wrap {
@@ -126,69 +113,36 @@ header {
 
 				.slide {
 					display: none;
-				}
 
-				.slide:first-child,
-				.slide.cycle-slide {
-					display: block;
+					&:first-child,
+					&.cycle-slide {
+						display: block;
+					}
 				}
-			}
-
-			.btn {
-				padding: 25px;
-				bottom: 40px;
-				font-size: 44px;
-				font-weight: $font-bold;
-				color: $landing-black;
-				background-color: $landing-white;
-				border: 9px solid $landing-red;
-				@include border-radius(53px);
-				@include center-align;
-				cursor: pointer;
 			}
 		}
 
 		.content {
 			margin: 0 auto 35px;
+			padding-left: 15px;
+			padding-right: 15px;
 			text-align: center;
 
 			.title {
-				position: relative;
-				margin-bottom: 30px;
-
 				h2 {
+					margin: 0 auto;
 					padding-bottom: 10px;
-					border-bottom: 15px solid;
-					@include center-align;
-				}
-
-				.hidden-title {
-					&:after {
-						content: attr(data-title);
-						padding-bottom: 10px;
-						line-height: 60px;
-						font-size: 41px;
-						font-weight: $font-bold;
-						border-bottom: 15px solid;
-						display: inline-block;
-						visibility: hidden;
-					}
+					font-weight: $font-bold;
+					border-bottom-style: solid;
 				}
 			}
 
 			.excerpt,
 			.more-info {
 				position: relative;
-				margin-bottom: 75px;
-
-				&.active {
-					margin-bottom: 40px;
-				}
 
 				.more,
 				.less {
-					line-height: 60px;
-					font-size: 40px;
 					@include center-align;
 					cursor: pointer;
 
@@ -216,36 +170,33 @@ header {
 /**********/
 
 footer {
+	margin-left: -15px;
+	margin-right: -15px;
+
 	.footer-wrapper {
 		position: relative;
-		height: 297px;
-		background-position: 50% 0;
+		background-position: 51% 0;
 		background-repeat: no-repeat;
-
-		.btn {
-			padding: 25px;
-			bottom: 40px;
-			font-size: 44px;
-			font-weight: $font-bold;
-			color: $landing-black;
-			background-color: $landing-white;
-			border: 9px solid $landing-red;
-			@include border-radius(53px);
-			@include center-align;
-			cursor: pointer;
-		}
 	}
+}
+
+/************************/
+/* order tickets button */
+/************************/
+
+.btn {
+	font-weight: $font-bold;
+	color: $landing-black !important;
+	background-color: $landing-white;
+	border-style: solid;
+	border-color: $landing-red;
+	@include center-align;
+	cursor: pointer;
 }
 
 /**************/
 /* responsive */
 /**************/
-
-@media (max-width: 767px) {
-	body:before {
-		content: "767";
-	}
-}
 
 @media (min-width: 768px) {
 	.visible-xs {
@@ -256,6 +207,49 @@ footer {
 		display: block;
 	}
 
+	body {
+		line-height: 40px;
+		font-size: 30px;
+
+		&:before {
+			content: "768";
+		}
+	}
+
+	/**********/
+	/* header */
+	/**********/
+
+	header {
+
+		/********/
+		/* logo */
+		/********/
+
+		.logo {
+			width: 278px;
+			height: 108px;
+		}
+
+		/**************/
+		/* page title */
+		/**************/
+
+		.page-title {
+			h1 {
+				width: 63%;
+				line-height: 68px;
+				font-size: 43px;
+				border-bottom-width: 15px;
+
+				& b,
+				& strong {
+					font-size: 53px;
+				}
+			}
+		}
+	}
+
 	/***********/
 	/* sliders */
 	/***********/
@@ -263,7 +257,38 @@ footer {
 	.sliders {
 		.slider {
 			.content {
-				width: 75%;
+				margin-top: 40px;
+
+				.title {
+					margin-bottom: 20px;
+
+					h2 {
+						line-height: 60px;
+						font-size: 41px;
+						border-bottom-width: 15px;
+					}
+				}
+
+				.excerpt,
+				.more-info {
+					margin-bottom: 75px;
+
+					&.active {
+						margin-bottom: 40px;
+					}
+
+					.more,
+					.less {
+						line-height: 60px;
+						font-size: 40px;
+					}
+				}
+			}
+
+			&:nth-child(1) {
+				.content {
+					width: 63%;
+				}
 			}
 
 			&:nth-child(2),
@@ -276,8 +301,34 @@ footer {
 						display: none;
 					}
 				}
+
+				.content {
+					width: 90%;
+				}
 			}
 		}
+	}
+
+	/**********/
+	/* footer */
+	/**********/
+
+	footer {
+		.footer-wrapper {
+			height: 297px;
+		}
+	}
+
+	/************************/
+	/* order tickets button */
+	/************************/
+
+	.btn {
+		padding: 25px 40px;
+		bottom: 40px;
+		font-size: 44px;
+		border-width: 9px;
+		@include border-radius(53px);
 	}
 }
 
@@ -288,5 +339,106 @@ footer {
 
 	.hidden-xs {
 		display: none;
+	}
+
+	body {
+		line-height: 20px;
+		font-size: 14px;
+
+		&:before {
+			content: "767";
+		}
+	}
+
+	/**********/
+	/* header */
+	/**********/
+
+	header {
+
+		/********/
+		/* logo */
+		/********/
+
+		.logo {
+			width: 132px;
+			height: 51px;
+		}
+
+		/**************/
+		/* page title */
+		/**************/
+
+		.page-title {
+			h1 {
+				line-height: 24px;
+				font-size: 14px;
+				border-bottom-width: 7.5px;
+
+				& b,
+				& strong {
+					font-size: 18px;
+				}
+			}
+		}
+	}
+
+	/***********/
+	/* sliders */
+	/***********/
+
+	.sliders {
+		.slider {
+			.content {
+				margin-top: 15px;
+
+				.title {
+					margin-bottom: 10px;
+
+					h2 {
+						line-height: 26px;
+						font-size: 17px;
+						border-bottom-width: 7.5px;
+					}
+				}
+
+				.excerpt,
+				.more-info {
+					margin-bottom: 40px;
+
+					&.active {
+						margin-bottom: 18px;
+					}
+
+					.more,
+					.less {
+						line-height: 26px;
+						font-size: 18px;
+					}
+				}
+			}
+		}
+	}
+
+	/**********/
+	/* footer */
+	/**********/
+
+	footer {
+		.footer-wrapper {
+			height: 160px;
+		}
+	}
+
+	/************************/
+	/* order tickets button */
+	/************************/
+
+	.btn {
+		padding: 10px 25px;
+		bottom: 20px;
+		font-size: 20px;
+		border-width: 4px;
+		@include border-radius(25px);
 	}
 }

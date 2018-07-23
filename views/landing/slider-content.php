@@ -22,7 +22,6 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 	<div class="title">
 
 		<h2><?php echo $title; ?></h2>
-		<div class="hidden-title" data-title="<?php echo esc_html( $title ); ?>"></div>
 
 	</div><!-- .page-title -->
 
