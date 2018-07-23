@@ -30,6 +30,9 @@ var $ = jQuery,
 			// Toggles slider more info content
 			BH_landing.moreInfo();
 
+			// Push dataLayer events
+			BH_landing.pushDataLayer();
+
 		},
 
 		/**
@@ -71,7 +74,57 @@ var $ = jQuery,
 					excerpt.toggleClass('active');
 					excerpt.find('.more').toggle();
 				}, BH_landing.params.timeout);
+			});
 
+		},
+
+		/**
+		 * pushDataLayer
+		 *
+		 * This function pushes dataLayer events on buttons click
+		 * Called from init
+		 *
+		 * @param	N/A
+		 * @return	N/A
+		 */
+		pushDataLayer : function () {
+
+			// Variables
+			var more = $('.slider .content .more'),
+				order = $('.btn');
+
+			event = '';
+			exhibitionName = '';
+
+			more.click(function() {
+				// Variables
+				event = 'touristReadMore';
+				exhibitionName = $(this).closest('.content').find('.title h2').text();
+
+				// Push dataLayer
+				dataLayer.push({
+					'exhibitionName': exhibitionName,
+					'event': event
+				});
+			});
+
+			order.click(function() {
+				// Variables
+				event = 'touristOrderTickets';
+				type = $(this).parent();
+
+				if (type.hasClass('slideshow-placeholder')) {
+					exhibitionName = type.parent().find('.content .title h2').text();
+				}
+				else if (type.hasClass('footer-wrapper')) {
+					exhibitionName = 'footer';
+				}
+
+				// Push dataLayer
+				dataLayer.push({
+					'exhibitionName': exhibitionName,
+					'event': event
+				});
 			});
 
 		},
