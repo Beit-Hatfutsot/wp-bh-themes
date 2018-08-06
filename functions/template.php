@@ -619,11 +619,33 @@ function BH_get_friendsjoin_html() {
 	/**
 	 * variables
 	 */
-	$output	= '';
+	$form_target = BH_get_donation_page_url('options');
+	$strings = array(
+		'annual_donation' => esc_html__('I would like this to be a regular annual donation', 'BH'),
+		'gold' => esc_html__('Gold Membership - 700 NIS, per year, per family', 'BH'),
+		'premium' => esc_html__('Premium Membership - 1800 NIS, per year, per family', 'BH'),
+		'button' => esc_html__('Join the Friends of Beit Hatfutsot', 'BH'),
+	);
 
 	$output .= '<!-- Join BH Friends --><div class="friendsjoin">';
-	$output .= '<h2 class="title">' . 'FOO!' . '</h2>';
+	$output .= '<form id="friendsjoin-form" class="friendsjoin-form" method="get" action="' . $form_target . '">';
+	$output .= '<fieldset class="friendsjoin-plan">';
 
+	$output .= '<div class="radio">
+		<input type="radio" name="fplan" id="gold" value="gold" title="' . $strings['gold'] . '" class="fixed-amount" required><label for="gold">' . $strings['gold'] . '</label>
+	</div>
+	<div class="radio">
+		<input type="radio" name="fplan" id="premium" value="premium" title="' .  $strings['premium'] . '" class="fixed-amount"><label for="premium">' . $strings['premium'] . '</label>
+	</div>';
+	
+	$output .= '<div class="checkbox">
+		<input type="checkbox" id="annual-donation" name="annual-donation" value="annual"><label for="annual-donation" class="annual-donation"><em class="accent">'. $strings['annual_donation'] .'</em>
+		</label>
+	</div>';
+
+	$output .= '</fieldset>';
+	$output .= '<button type="submit" id="cont-to-details" class="btn orange-btn">' . $strings['button'] . '</button>';
+	$output .= '</form>';
 	$output .= '</div><!-- End of Join BH Friends -->';
 
 	// return
