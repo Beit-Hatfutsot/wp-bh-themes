@@ -608,6 +608,30 @@ function BH_get_gallery_html( $id, $title ) {
 }
 
 /**
+ * BH_get_friendsjoin_html
+ *
+ * This function returns HTML markup for the "Join the friends of BH" initial form.
+ *
+ * @return	(string)
+ */
+function BH_get_friendsjoin_html() {
+
+	/**
+	 * variables
+	 */
+	$output	= '';
+
+	$output .= '<!-- Join BH Friends --><div class="friendsjoin">';
+	$output .= '<h2 class="title">' . 'FOO!' . '</h2>';
+
+	$output .= '</div><!-- End of Join BH Friends -->';
+
+	// return
+	return $output;
+
+}
+
+/**
  * BH_getarchives_where
  *
  * This function filters the SQL WHERE clause for retrieving archives

@@ -121,3 +121,18 @@ function BH_gallery( $atts ) {
 
 }
 add_shortcode( 'BH-gallery', 'BH_gallery' );
+
+/**
+ * BH_friendsjoin
+ *
+ * This function adds the "BH-friendsjoin" Shortcode
+ *
+ * @param	$atts (array) // This shortcode has no attributes
+ * @return	(string)
+ */
+function BH_friendsjoin( $atts ) {
+
+	return BH_get_friendsjoin_html();
+
+}
+add_shortcode( 'BH-friendsjoin', 'BH_friendsjoin' );
