@@ -2242,38 +2242,44 @@ body > header {
 /* shop - homepage banners */
 /***************************/
 
-.shop-banners {
-	position: relative;
-	height: 633px;
-	overflow: hidden;
-	
-	.shop-banner {
-		position: absolute;
-		top: 0;
+.shop-banners-wrapper {
+	&.page-banners {
+		margin-bottom: 40px;
+	}
+
+	.shop-banners {
+		position: relative;
 		height: 633px;
-		@include transform( skew(-28deg) );
-		@include opacity(1);
-		@include transition(opacity);
-		-webkit-backface-visibility: hidden;
 		overflow: hidden;
-
-		&.shop-banner-1 { left: -168px; width: 493px; }
-		&.shop-banner-2 { left: 338px;  width: 290px; }
-		&.shop-banner-3 { left: 641px;  width: 290px; }
-		&.shop-banner-4 { left: 944px;  width: 399px; }
 		
-		&:hover {
-			@include opacity(0.7);
-		}
-
-		img {
+		.shop-banner {
 			position: absolute;
-			left: -168px;
-			max-width: none;
-			@include transform( skew(28deg) );
-		}
+			top: 0;
+			height: 633px;
+			@include transform( skew(-28deg) );
+			@include opacity(1);
+			@include transition(opacity);
+			-webkit-backface-visibility: hidden;
+			overflow: hidden;
 
-		&.shop-banner-1 img { left: 168px; }
+			&.shop-banner-1 { left: -168px; width: 493px; }
+			&.shop-banner-2 { left: 338px;  width: 290px; }
+			&.shop-banner-3 { left: 641px;  width: 290px; }
+			&.shop-banner-4 { left: 944px;  width: 399px; }
+			
+			&:hover {
+				@include opacity(0.7);
+			}
+
+			img {
+				position: absolute;
+				left: -168px;
+				max-width: none;
+				@include transform( skew(28deg) );
+			}
+
+			&.shop-banner-1 img { left: 168px; }
+		}
 	}
 }
 

@@ -31,8 +31,9 @@
                 "class": "",
                 "id": ""
             },
+            "collapsed": "",
             "min": 0,
-            "max": 0,
+            "max": 4,
             "layout": "row",
             "button_label": "Add Banner",
             "sub_fields": [
@@ -243,8 +244,7 @@
                     "readonly": 0,
                     "disabled": 0
                 }
-            ],
-            "collapsed": ""
+            ]
         },
         {
             "key": "field_56447e801dda7",
@@ -900,5 +900,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1531831005
+    "modified": 1533471170
 }

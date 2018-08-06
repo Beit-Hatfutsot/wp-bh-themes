@@ -4,12 +4,15 @@
  *
  * @author		Beit Hatfutsot
  * @package		bh/views/page/content
- * @version		2.1
+ * @version		2.9.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
-while ( has_sub_field('acf-content_page_template_layouts') ) :
+if ( ! function_exists( 'get_field' ) )
+	return;
+
+while ( has_sub_field( 'acf-content_page_template_layouts' ) ) :
 
 	$layout = get_row_layout();
 	

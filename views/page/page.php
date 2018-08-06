@@ -3,8 +3,8 @@
  * The Template for displaying the default page template
  *
  * @author		Beit Hatfutsot
- * @package		bh/views/footer
- * @version		2.6.0
+ * @package		bh/views/page
+ * @version		2.9.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -18,11 +18,19 @@ if ( ! function_exists( 'get_field' ) )
 global $globals;
 
 $shop_page		= $globals[ 'shop_page' ];
-$widgets_area	= get_field( 'acf-content_page_template_widgets_area' );	// get page widgets area
+$banners		= get_field( 'acf-content_page_banners' );
+$widgets_area	= get_field( 'acf-content_page_template_widgets_area' );
 
 ?>
 
 <section class="page-content">
+
+	<?php
+		/**
+		 * Display page banners
+		 */
+		include( locate_template( 'views/page/content/banners.php' ) );
+	?>
 
 	<?php
 		if ( $shop_page ) {
