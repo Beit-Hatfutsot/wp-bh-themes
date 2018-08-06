@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: BH Website 1.0\n"
-"POT-Creation-Date: 2018-01-21 22:44+0200\n"
-"PO-Revision-Date: 2018-01-21 22:47+0200\n"
+"POT-Creation-Date: 2018-08-06 16:02+0300\n"
+"PO-Revision-Date: 2018-08-06 16:04+0300\n"
 "Last-Translator: Itay Banner <itay@ibanner.co.il>\n"
 "Language-Team: BH online <nirg@bh.org.il>\n"
 "Language: he_IL\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.0.6\n"
+"X-Generator: Poedit 2.1.1\n"
 "X-Poedit-Basepath: ..\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;esc_html__;esc_html_e;"
@@ -58,47 +58,47 @@ msgstr ""
 msgid "Shop Menu"
 msgstr ""
 
-#: functions/pelecard/payment-result.php:152
+#: functions/pelecard/payment-result.php:162
 msgid "Thank you for your request!"
 msgstr "תודה רבה על פנייתכם!"
 
-#: functions/pelecard/payment-result.php:153
+#: functions/pelecard/payment-result.php:163
 msgid "An invoice for your payment will be sent to your email address shortly."
 msgstr "חשבונית תישלח בהקדם לכתובת המייל שציינתם."
 
-#: functions/pelecard/payment-result.php:158
+#: functions/pelecard/payment-result.php:168
 msgid "Payment failed"
 msgstr "התשלום נכשל"
 
-#: functions/pelecard/payment-result.php:164
-#: functions/pelecard/payment-result.php:172
-#: functions/pelecard/payment-result.php:179
-#: functions/pelecard/payment-result.php:186
+#: functions/pelecard/payment-result.php:174
+#: functions/pelecard/payment-result.php:182
+#: functions/pelecard/payment-result.php:189
+#: functions/pelecard/payment-result.php:196
 msgid "Error #"
 msgstr "שגיאה מספר "
 
-#: functions/pelecard/payment-result.php:164
+#: functions/pelecard/payment-result.php:174
 msgid "Wrong ID or CVV."
 msgstr "מספר ת.ז. או CVV שגוי."
 
-#: functions/pelecard/payment-result.php:165
-#: functions/pelecard/payment-result.php:173
+#: functions/pelecard/payment-result.php:175
+#: functions/pelecard/payment-result.php:183
 msgid "Please correct the errors and submit the request again."
 msgstr "אנא תקנו את השגיאות ושלחו שוב את הבקשה."
 
-#: functions/pelecard/payment-result.php:172
+#: functions/pelecard/payment-result.php:182
 msgid "Wrong credit card number."
 msgstr "מספר כרטיס אשראי שגוי."
 
-#: functions/pelecard/payment-result.php:179
+#: functions/pelecard/payment-result.php:189
 msgid "Unsupported credit card."
 msgstr "כרטיס אשראי לא נתמך."
 
-#: functions/pelecard/payment-result.php:180
+#: functions/pelecard/payment-result.php:190
 msgid "Please submit the request again using a different credit card."
 msgstr "אנא שלחו את הבקשה באמצעות כרטיס אשראי אחר."
 
-#: functions/pelecard/payment-result.php:186
+#: functions/pelecard/payment-result.php:196
 msgid "General Error."
 msgstr "שגיאה כללית."
 
@@ -106,15 +106,15 @@ msgstr "שגיאה כללית."
 msgid "Transaction ID"
 msgstr "מזהה עסקה"
 
-#: functions/scripts-n-styles.php:150 views/donate/form-amount.php:78
+#: functions/scripts-n-styles.php:161 views/donate/form-amount.php:78
 msgid "Bar Mitzvah boy Mordechai ben Ester"
 msgstr "חתן בר המצווה מרדכי בן אסתר"
 
-#: functions/scripts-n-styles.php:151
+#: functions/scripts-n-styles.php:162
 msgid "Our beloved grandmother Bracha Cohen"
 msgstr "סבתנו היקרה ברכה כהן ז\"ל"
 
-#: functions/scripts-n-styles.php:152
+#: functions/scripts-n-styles.php:163
 msgid "To Barak Aharoni with appreciation of your good work"
 msgstr "לברק אהרוני על פועלו"
 
@@ -125,6 +125,22 @@ msgstr "ניוזלטר"
 #: functions/template.php:598
 msgid "Load more"
 msgstr "תמונות נוספות"
+
+#: functions/template.php:624 views/donate/form-amount.php:36
+msgid "I would like this to be a regular annual donation"
+msgstr "אני רוצה שתרומתי תהיה שנתית"
+
+#: functions/template.php:625
+msgid "Gold Membership - 700 NIS, per year, per family"
+msgstr "חברות מנוי זהב - 700 ש\"ח לשנה, למשפחה"
+
+#: functions/template.php:626
+msgid "Premium Membership - 1800 NIS, per year, per family"
+msgstr "חברות מנוי פרימיום - 1,800 ש\"ח לשנה, למשפחה"
+
+#: functions/template.php:627
+msgid "Join the Friends of Beit Hatfutsot"
+msgstr "הצטרפו לאגודת הידידים של בית התפוצות"
 
 #: functions/widgets/active-trail-newsletter/active-trail-newsletter.php:189
 msgid "Your Email:"
@@ -343,10 +359,6 @@ msgstr "לתרום 1000 ש\"ח"
 #: views/donate/form-amount.php:31
 msgid "will help bring a group of visitors with special needs to Beit Hatfusot"
 msgstr "יעזרו בהבאת קבוצה של מבקרים בעלי צרכים מיוחדים"
-
-#: views/donate/form-amount.php:36
-msgid "I would like this to be a regular annual donation"
-msgstr "אני רוצה שתרומתי תהיה שנתית"
 
 #: views/donate/form-amount.php:40
 msgid "A gift of over 100,000 NIS will be recognized on"
@@ -620,6 +632,16 @@ msgstr "קראו עוד"
 msgid "Language/שפה"
 msgstr ""
 
+#: views/landing/slider-content.php:36
+#, fuzzy
+#| msgid "Load more"
+msgid "more"
+msgstr "תמונות נוספות"
+
+#: views/landing/slider-content.php:49
+msgid "less"
+msgstr ""
+
 #: views/main/slider/display-events-slider.php:38
 msgid "All events"
 msgstr "כל האירועים"
@@ -776,11 +798,11 @@ msgid ""
 "below:"
 msgstr ""
 
-#: views/sidebar/sidebar-blog.php:140
+#: views/sidebar/sidebar-blog.php:191
 msgid "Recent Posts"
 msgstr "פוסטים אחרונים"
 
-#: views/sidebar/sidebar-blog.php:157
+#: views/sidebar/sidebar-blog.php:208
 msgid "Archives"
 msgstr "ארכיון"
 
@@ -945,7 +967,7 @@ msgstr ""
 msgid "My Account"
 msgstr ""
 
-#: woocommerce/checkout/thankyou.php:36 woocommerce/checkout/thankyou.php:134
+#: woocommerce/checkout/thankyou.php:36 woocommerce/checkout/thankyou.php:128
 msgid "Thank you. Your order has been received."
 msgstr ""
 
