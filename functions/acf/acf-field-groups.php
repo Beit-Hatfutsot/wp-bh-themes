@@ -364,7 +364,7 @@ acf_add_local_field_group(array(
 				'id' => '',
 			),
 			'collapsed' => '',
-			'min' => 4,
+			'min' => 0,
 			'max' => 4,
 			'layout' => 'table',
 			'button_label' => 'Add Banner',

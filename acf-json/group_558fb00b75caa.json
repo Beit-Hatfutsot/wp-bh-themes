@@ -16,7 +16,7 @@
                 "id": ""
             },
             "collapsed": "",
-            "min": 4,
+            "min": 0,
             "max": 4,
             "layout": "table",
             "button_label": "Add Banner",
@@ -841,5 +841,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1533557348
+    "modified": 1533632403
 }
