@@ -3,10 +3,19 @@
 
     var $flowStrip = $('#donate-process-flow'),
         $csRadio = $('#custom-amount-radio'),
+        $annualCheckBox = $('#annual-donation'),
         $csHotspot = $('.cs-hotspot'),
         $fixedAmountRadio = $('.fixed-amount'),
         $csField = $('#custom-amount-field'),
-        $donationAmount = 0;
+        $donationAmount = 0,
+        $urlParams = new URLSearchParams(window.location.search),
+        $fplan = $urlParams.get('fplan');
+    
+        if ( $fplan == 'gold' ) {
+            $donationAmount = 700;
+        } else if ( $fplan == 'premium' ) {
+            $donationAmount = 1800;
+        }
 
     function updateExampleImage() {
         $('#certificate-example').attr({
@@ -15,8 +24,21 @@
         });
     }
 
-    function updateDonationAmount(newAmount) {
-        $donationAmount = newAmount;
+    function displayDetailsState() {
+        var $tabContentArea = $('#donate-process-options').find('.tab-content');
+
+        $flowStrip.show();
+        $('#donate-option-tabs').hide();
+        $('.flow-amount').hide().prop('required',false);
+        $tabContentArea.css('margin-top', '0');
+        $('.tax-deduct').hide();
+        $('.flow-details').show();
+        $('#amount-fig').text($donationAmount);
+    }
+
+    function displayAmountState() {
+        $('.flow-details').hide();
+        $('#donate-layout-options').find($flowStrip).hide();
     }
 
     function validateDonationAmount() {
@@ -34,9 +56,21 @@
     }
 
     $(document).ready(function () {
-        $('.flow-details').hide();
-        $('#donate-layout-options').find($flowStrip).hide();
+
         $('#error-msg--amount').hide();
+
+        if ( $urlParams.has('fplan') ) {
+            displayDetailsState();
+            $csRadio.val($donationAmount).prop('checked', true);
+
+            if ( $urlParams.has('annual-donation') ) {
+                $annualCheckBox.prop('checked', true);
+            }
+
+        } else {
+            displayAmountState();
+        }
+
     });
 
     $('#show-tribute').click(function(){
@@ -64,16 +98,9 @@
 
     $('#cont-to-details').click(function (event) {
 
-        var $tabContentArea = $('#donate-process-options').find('.tab-content'),
-            $scrollTarget = $('#process-title').position();
-
-        $flowStrip.show();
-        $('#donate-option-tabs').hide();
-        $('.flow-amount').hide().prop('required',false);
-        $tabContentArea.css('margin-top', '0');
-        $('.tax-deduct').hide();
-        $('.flow-details').show();
-        $('#amount-fig').text($donationAmount);
+        var $scrollTarget = $('#process-title').position();
+        
+        displayDetailsState();
 
         $('html, body').animate({
             scrollTop: $scrollTarget.top - 120}, 800);
