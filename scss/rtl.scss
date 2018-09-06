@@ -78,18 +78,35 @@ body > header {
 			/**********************/
 
 			&.languages-switcher {
-				.languages-switcher-content {
-					.wpml-languages-switcher,
-					.wpml-untranslated-languages-switcher {
-						li {
-							a {
-								text-align: right;
+				&.languages-switcher-menu {
+					.languages-switcher-content {
+						.wpml-languages-switcher,
+						.wpml-untranslated-languages-switcher {
+							li {
+								a {
+									text-align: right;
 
-								.flag {
-									float: right;
-									margin-left: 10px;
-									margin-right: 0;
+									.flag {
+										float: right;
+										margin-left: 10px;
+										margin-right: 0;
+									}
 								}
+							}
+						}
+					}
+				}
+
+				&.languages-switcher-list {
+					.languages-switcher-content {
+						.wpml-languages-switcher {
+							li {
+								float: right;
+								margin: 0 0 0 5px;
+								padding-left: 5px;
+								padding-right: 0;
+								border-left: 1px solid $font-color;
+								border-right: 0;
 							}
 						}
 					}

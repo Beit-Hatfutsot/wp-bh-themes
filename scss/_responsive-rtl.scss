@@ -52,9 +52,11 @@
 				/**********************/
 
 				&.languages-switcher {
-					.languages-switcher-content {
-						left: 0;
-						right: auto;
+					&.languages-switcher-menu {
+						.languages-switcher-content {
+							left: 0;
+							right: auto;
+						}
 					}
 				}
 			}
@@ -602,9 +604,11 @@
 				/**********************/
 
 				&.languages-switcher {
-					.languages-switcher-content {
-						left: auto;
-						right: -11px;
+					&.languages-switcher-menu {
+						.languages-switcher-content {
+							left: auto;
+							right: -11px;
+						}
 					}
 				}
 

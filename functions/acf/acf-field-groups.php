@@ -4,7 +4,7 @@
  *
  * @author 		Beit Hatfutsot
  * @package 	bh/functions/acf
- * @version     2.9.0
+ * @version     2.10.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -3095,19 +3095,54 @@ acf_add_local_field_group(array(
 			'endpoint' => 0,
 		),
 		array(
-			'key' => 'field_5a119805d1b09',
-			'label' => 'Untranslated Languages',
-			'name' => 'acf-options_untranslated_languages',
-			'type' => 'repeater',
+			'key' => 'field_5b855ab856275',
+			'label' => 'Switcher Type',
+			'name' => 'acf-options_switcher_type',
+			'type' => 'select',
 			'instructions' => '',
-			'required' => 0,
+			'required' => 1,
 			'conditional_logic' => 0,
 			'wrapper' => array(
 				'width' => '',
 				'class' => '',
 				'id' => '',
 			),
-			'collapsed' => 'field_5a1198a5d1b0b',
+			'choices' => array(
+				'menu' => 'Drop Down Menu',
+				'list' => 'List Menu',
+			),
+			'default_value' => array(
+				0 => 'menu',
+			),
+			'allow_null' => 0,
+			'multiple' => 0,
+			'ui' => 0,
+			'ajax' => 0,
+			'return_format' => 'value',
+			'placeholder' => '',
+		),
+		array(
+			'key' => 'field_5a119805d1b09',
+			'label' => 'Untranslated Languages',
+			'name' => 'acf-options_untranslated_languages',
+			'type' => 'repeater',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => array(
+				array(
+					array(
+						'field' => 'field_5b855ab856275',
+						'operator' => '==',
+						'value' => 'menu',
+					),
+				),
+			),
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'collapsed' => '',
 			'min' => 0,
 			'max' => 0,
 			'layout' => 'table',

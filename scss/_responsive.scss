@@ -293,9 +293,15 @@
 				/**********************/
 
 				&.languages-switcher {
-					.languages-switcher-content {
-						left: auto;
-						right: 0;
+					&.languages-switcher-menu {
+						.languages-switcher-content {
+							left: auto;
+							right: 0;
+						}
+					}
+
+					&.languages-switcher-list {
+						display: none;
 					}
 				}
 
@@ -1394,13 +1400,15 @@
 				/**********************/
 
 				&.languages-switcher {
-					.languages-switcher-btn {
-						margin-top: 10px;
-						padding-bottom: 10px;
-					}
+					&.languages-switcher-menu {
+						.languages-switcher-btn {
+							margin-top: 10px;
+							padding-bottom: 10px;
+						}
 
-					.languages-switcher-content {
-						top: 50px;
+						.languages-switcher-content {
+							top: 50px;
+						}
 					}
 				}
 
@@ -2307,19 +2315,21 @@
 				/**********************/
 
 				&.languages-switcher {
-					.languages-switcher-btn {
-						margin-top: 20px;
-						padding-bottom: 20px;
-					}
+					&.languages-switcher-menu {
+						.languages-switcher-btn {
+							margin-top: 20px;
+							padding-bottom: 20px;
+						}
 
-					.languages-switcher-content {
-						top: 70px;
-						left: -11px;
-					}
-
-					&:hover {
 						.languages-switcher-content {
-							display: block;
+							top: 70px;
+							left: -11px;
+						}
+
+						&:hover {
+							.languages-switcher-content {
+								display: block;
+							}
 						}
 					}
 				}
@@ -3515,13 +3525,15 @@
 				/**********************/
 
 				&.languages-switcher {
-					.languages-switcher-btn {
-						margin-top: 5px;
-						padding-bottom: 5px;
-					}
+					&.languages-switcher-menu {
+						.languages-switcher-btn {
+							margin-top: 5px;
+							padding-bottom: 5px;
+						}
 
-					.languages-switcher-content {
-						top: 40px;
+						.languages-switcher-content {
+							top: 40px;
+						}
 					}
 				}
 

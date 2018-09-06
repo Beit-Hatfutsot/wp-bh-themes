@@ -7,7 +7,7 @@
  * @author		Beit Hatfutsot
  * @package		bh/views/wpml
  * @since		2.6.0
- * @version		2.6.0
+ * @version		2.10.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -48,7 +48,13 @@ if ( empty( $languages ) )
 					
 				</div>
 
-				<div class="language-name"><?php echo $l[ 'native_name' ]; ?></div>
+				<?php
+					if ( $switcher_type == 'menu' ) { ?>
+						<div class="language-name"><?php echo $l[ 'native_name' ]; ?></div>
+					<?php } else { ?>
+						<div class="language-name" data-title="<?php echo mb_substr( $l[ 'native_name' ], 0, 2 ); ?>"><?php echo mb_substr( $l[ 'native_name' ], 0, 2 ); ?></div>
+					<?php }
+				?>
 			</a>
 		</li>
 
