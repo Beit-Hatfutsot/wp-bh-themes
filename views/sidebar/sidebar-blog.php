@@ -4,7 +4,7 @@
  *
  * @author 		Beit Hatfutsot
  * @package 	bh/views/sidebar
- * @version     2.7.6
+ * @version     2.11.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -180,6 +180,20 @@ if ( $archives ) {
 				echo '</ul>';
 
 			}
+		?>
+
+		<?php
+			/**
+			 * Display the Subscribe2 subscription form
+			 */
+			get_template_part( 'views/sidebar/sidebar', 'subscribe2' );
+		?>
+
+		<?php
+			/**
+			 * Display the rss link
+			 */
+			get_template_part( 'views/sidebar/sidebar', 'rss' );
 		?>
 
 		<?php

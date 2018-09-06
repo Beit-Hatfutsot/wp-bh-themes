@@ -992,7 +992,17 @@ body > header {
 				}
 			}
 		}
-		
+
+		/************/
+		/* rss link */
+		/************/
+
+		.sidebar-rss {
+			margin: 5px 0;
+			width: 30px;
+			height: 30px;
+		}
+
 		/*********************/
 		/* newsletter widget */
 		/*********************/
@@ -1382,7 +1392,60 @@ body > header {
 		.email:before { @include email; }
 		.address:before { @include address; }
 	}
-	
+
+	/*********************************/
+	/* Subscriber2 subscription form */
+	/*********************************/
+
+	.subscribe2-form {
+		padding: 5px;
+		border: 1px solid #b5b5b5;
+
+		form {
+			p {
+				&:last-child {
+					margin: 0;
+				}
+			}
+
+			label {
+				font-size: 14px;
+			}
+
+			input {
+				&[type="text"] {
+					padding: 3px;
+					width: 100%;
+					font-size: 14px;
+					border: 1px solid #b5b5b5;
+				}
+
+				&[type="submit"] {
+					padding: 2px 5px;
+					font-size: 14px;
+					color: $white;
+					background-color: $cyan-color1;
+				}
+			}
+		}
+
+		p.s2_message {
+			margin: 0;
+			font-size: 14px;
+		}
+
+		p.s2_error {
+			margin: 5px 0 0;
+			font-size: 14px;
+		}
+	}
+
+	.side-menu-wrapper {
+		.subscribe2-form {
+			margin-top: 15px;
+		}
+	}
+
 	/*************/
 	/* not found */
 	/*************/
