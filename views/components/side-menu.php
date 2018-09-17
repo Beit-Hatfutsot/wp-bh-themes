@@ -4,7 +4,7 @@
  *
  * @author		Beit Hatfutsot
  * @package		bh/views/components
- * @version		2.7.1
+ * @version		2.12.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -15,6 +15,8 @@ if ( ! function_exists( 'get_field' ) )
 /**
  * Variables
  */
+global $globals;
+
 $exhibitions_page		= get_field( 'acf-options_exhibitions_page', 'option' );
 $exhibitions_page_id	= $exhibitions_page ? $exhibitions_page->ID : '';
 $events_page			= get_field( 'acf-options_events_page', 'option' );
@@ -106,7 +108,11 @@ switch ( $category_type ) :
 endswitch;
 
 // Get top menu parent
-$parent = BH_get_top_menu_item( $object_id, 'main-menu' );
+if ( $globals[ 'bh_sites' ][ $globals[ 'current_site' ] ][ 'menu_theme_location' ] ) {
+
+	$parent = BH_get_top_menu_item( $object_id, $globals[ 'bh_sites' ][ $globals[ 'current_site' ] ][ 'menu_theme_location' ] );
+
+}
 
 ?>
 
@@ -131,13 +137,17 @@ $parent = BH_get_top_menu_item( $object_id, 'main-menu' );
 				}
 
 				// Display children pages
-				$args = array(
-					'theme_location'	=> 'main-menu',
-					'container'			=> false,
-					'items_wrap'		=> '%3$s',
-					'children_of'		=> $parent['ID']
-				);
-				wp_nav_menu( $args );
+				if ( $globals[ 'bh_sites' ][ $globals[ 'current_site' ] ][ 'menu_theme_location' ] ) {
+
+					$args = array(
+						'theme_location'	=> $globals[ 'bh_sites' ][ $globals[ 'current_site' ] ][ 'menu_theme_location' ],
+						'container'			=> false,
+						'items_wrap'		=> '%3$s',
+						'children_of'		=> $parent['ID']
+					);
+					wp_nav_menu( $args );
+
+				}
 
 			}
 			else {
