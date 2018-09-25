@@ -4,7 +4,7 @@
  *
  * @author		Beit Hatfutsot
  * @package		bh/functions
- * @version		2.7.6
+ * @version		2.12.1
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -14,11 +14,17 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
  */
 global $globals;
 
+// Menu theme locations
+
+$wpml_menu_theme_locations = BH_wpml_menu_theme_locations();
+
 $globals[ 'menus' ] = array(
 	'main-menu'			=> __( 'Main Menu' ),
 	'education-menu'	=> __( 'Education Menu' ),
 	'shop-menu'			=> __( 'Shop Menu' )
 );
+
+$globals[ 'menus' ] = array_merge( $globals[ 'menus' ], $wpml_menu_theme_locations );
 
 /**
  * BH_register_menus

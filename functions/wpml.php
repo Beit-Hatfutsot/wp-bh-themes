@@ -4,7 +4,7 @@
  *
  * @author		Beit Hatfutsot
  * @package		bh/functions
- * @version		2.6.0
+ * @version		2.12.1
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -29,6 +29,45 @@ define( 'ICL_DONT_LOAD_LANGUAGE_SELECTOR_CSS',	true );
 define( 'ICL_DONT_LOAD_LANGUAGES_JS',			true );
 
 /**
+ * BH_wpml_menu_theme_locations
+ *
+ * This function generates menu theme locations per each predefined WPML language
+ *
+ * @param	N/A
+ * @return	(array)
+ */
+function BH_wpml_menu_theme_locations() {
+
+	if ( ! function_exists( 'icl_get_languages' ) )
+		return;
+
+	global $sitepress;
+
+	$languages		= icl_get_languages( 'skip_missing=0&orderby=custom' );
+	$default_lang	= $sitepress->get_default_language();
+	$locations		= array();
+
+	if ( ! empty( $languages ) ) {
+
+		foreach ( $languages as $l ) {
+
+			if ( $l[ 'language_code' ] == $default_lang )
+				continue;
+
+			$locations[ 'main-menu-' . $l[ 'language_code' ] ]		= __( 'Main Menu - ' . $l[ 'native_name' ] );
+			$locations[ 'education-menu-' . $l[ 'language_code' ] ]	= __( 'Education Menu - ' . $l[ 'native_name' ] );
+			$locations[ 'shop-menu-' . $l[ 'language_code' ] ]		= __( 'Shop Menu - ' . $l[ 'native_name' ] );
+
+		}
+
+	}
+
+	// return
+	return $locations;
+
+}
+
+/**
  * BH_footer_menu_languages_list
  *
  * This function generates the languages list items for the footer menu
@@ -41,9 +80,11 @@ function BH_footer_menu_languages_list() {
 	if ( ! function_exists( 'icl_get_languages' ) )
 		return;
 
+	global $globals;
+
 	$languages	= icl_get_languages( 'skip_missing=0&orderby=custom' );
 	$output		= '';
-	
+
 	if ( ! empty( $languages ) ) {
 
 		foreach ( $languages as $l ) {
