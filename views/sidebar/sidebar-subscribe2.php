@@ -16,6 +16,6 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 <div class="subscribe2-form">
 
-	<?php echo do_shortcode( '[subscribe2]' ); ?>
+	<?php echo do_shortcode( '[subscribe2 id=self]' ); ?>
 
 </div><!-- .subscribe2-form -->
