@@ -229,12 +229,13 @@ function BH_custom_payment_form_tag_handler( $tag ) {
 	);
 
 	$pelecard_iframe = BH_pelecard_iframe( $lang );
+	$output = '';
 
 	if ( $pelecard_iframe ) {
 
 		// Display Pelecard iframe
-		?>
-		<script>
+		$output = 
+		"<script>
 			jQuery(function($) {
 				var payment_form =
 					'<script>' +
@@ -242,27 +243,30 @@ function BH_custom_payment_form_tag_handler( $tag ) {
 							// parse xhr responseText
 							'var response = JSON.parse(xhr.responseText);' +
 
-							'if (typeof response.paymentStep == "undefined" || response.paymentStep != "processing")' +
+							'if (typeof response.paymentStep == \"undefined\" || response.paymentStep != \"processing\")' +
 								'return;' +
 
 							// hide contact form 7 form
-							'$(".bh-form").fadeOut();' +
+							'$(\".bh-form\").fadeOut();' +
 
 							// expose payment form
-							'$("#payment-form").fadeIn();' +
+							'$(\"#payment-form\").fadeIn();' +
 						'});' +
 					'</scr'+'ipt>' +
 
-					'<div id="payment-form" style="display: none;">' +
-						'<iframe id="frame" name="pelecard_frame" frameborder="0" scrolling="no" src="' + '<?php echo $pelecard_iframe; ?>' + '" style="width:100%; height:694px;"></iframe>' +
+					'<div id=\"payment-form\" style=\"display: none;\">' +
+						'<iframe id=\"frame\" name=\"pelecard_frame\" frameborder=\"0\" scrolling=\"no\" src=\"" . $pelecard_iframe . "\" style=\"width:100%; height:694px;\"></iframe>' +
 					'</div>';
 
 				// move payment form after contact form 7 form
 				$('.bh-form').after(payment_form);
 			});
-		</script>
+		</script>";
 
-	<?php }
+	}
+
+	// return
+	return $output;
 
 }
 
