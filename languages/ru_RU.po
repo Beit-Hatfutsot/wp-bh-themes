@@ -1,23 +1,24 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: BH Website 1.0\n"
-"POT-Creation-Date: 2019-02-07 14:08+0200\n"
-"PO-Revision-Date: 2019-02-07 14:14+0200\n"
+"POT-Creation-Date: 2017-12-19 18:07+0200\n"
+"PO-Revision-Date: 2019-02-07 14:20+0200\n"
 "Last-Translator: Nir Goldberg <nir@htmline.com>\n"
 "Language-Team: BH online <nirg@bh.org.il>\n"
-"Language: he_IL\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.5.4\n"
 "X-Poedit-Basepath: ..\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;esc_html__;esc_html_e;"
+"esc_html_x:1,2c\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPathExcluded-0: .git\n"
 "X-Poedit-SearchPathExcluded-1: css\n"
 "X-Poedit-SearchPathExcluded-2: js\n"
 "X-Poedit-SearchPathExcluded-3: scss\n"
+"Language: ru_RU\n"
 "X-Poedit-SearchPath-0: .\n"
 
 #: searchform.php:24
@@ -28,19 +29,19 @@ msgstr ""
 msgid "Search in site..."
 msgstr ""
 
-#: views/event/events-filters.php:86
+#: views/event/events-filters.php:83
 msgid "All Exhibitions"
 msgstr ""
 
-#: views/event/events-filters.php:91
+#: views/event/events-filters.php:88
 msgid "All Events"
 msgstr ""
 
-#: views/event/events-filters.php:96
+#: views/event/events-filters.php:93
 msgid "All Categories"
 msgstr ""
 
-#: views/event/events-filters.php:123
+#: views/event/events-filters.php:125
 msgid "Start from"
 msgstr ""
 
@@ -48,15 +49,11 @@ msgstr ""
 msgid "Purchase"
 msgstr ""
 
-#: views/sidebar/sidebar-subscribe2.php:15
-msgid "Subscribe to Blog notifications"
-msgstr ""
-
-#: views/sidebar/sidebar-blog.php:205
+#: views/sidebar/sidebar-blog.php:140
 msgid "Recent Posts"
 msgstr ""
 
-#: views/sidebar/sidebar-blog.php:222
+#: views/sidebar/sidebar-blog.php:157
 msgid "Archives"
 msgstr ""
 
@@ -87,19 +84,11 @@ msgstr ""
 msgid "Complete"
 msgstr ""
 
-#: views/landing/slider-content.php:36
-msgid "more"
-msgstr ""
-
-#: views/landing/slider-content.php:49
-msgid "less"
-msgstr ""
-
-#: views/page/page.php:59
+#: views/page/page.php:51
 msgid "Password:"
 msgstr ""
 
-#: views/page/page.php:66
+#: views/page/page.php:58
 msgid ""
 "This content is password protected. To view it please enter your password "
 "below:"
@@ -473,7 +462,7 @@ msgstr ""
 msgid "My Account"
 msgstr ""
 
-#: woocommerce/checkout/thankyou.php:36 woocommerce/checkout/thankyou.php:128
+#: woocommerce/checkout/thankyou.php:36 woocommerce/checkout/thankyou.php:134
 msgid "Thank you. Your order has been received."
 msgstr ""
 
@@ -493,45 +482,33 @@ msgstr ""
 msgid "Payment Method:"
 msgstr ""
 
-#: functions/wpml.php:57
-msgid "Main Menu - "
-msgstr ""
-
-#: functions/wpml.php:58
-msgid "Education Menu - "
-msgstr ""
-
-#: functions/wpml.php:59
-msgid "Shop Menu - "
-msgstr ""
-
-#: functions/template.php:337
+#: functions/template.php:318
 msgid "Newsletter"
-msgstr ""
+msgstr "газета"
 
-#: functions/template.php:598
+#: functions/template.php:579
 msgid "Load more"
 msgstr ""
 
-#: functions/menus.php:22
+#: functions/menus.php:18
 msgid "Main Menu"
 msgstr ""
 
-#: functions/menus.php:23
+#: functions/menus.php:19
 msgid "Education Menu"
 msgstr ""
 
-#: functions/menus.php:24
+#: functions/menus.php:20
 msgid "Shop Menu"
 msgstr ""
 
 #: functions/widgets/active-trail-newsletter/active-trail-newsletter.php:189
 msgid "Your Email:"
-msgstr ""
+msgstr "электронный адресс:"
 
 #: functions/widgets/active-trail-newsletter/active-trail-newsletter.php:190
 msgid "Email Address"
-msgstr ""
+msgstr "электронный адресс"
 
 #: functions/widgets/active-trail-newsletter/active-trail-newsletter.php:191
 msgid "Email address is missing or incorrect"
@@ -539,7 +516,7 @@ msgstr ""
 
 #: functions/widgets/active-trail-newsletter/active-trail-newsletter.php:195
 msgid "Choose Language:"
-msgstr ""
+msgstr "выбрать язык:"
 
 #: functions/widgets/active-trail-newsletter/active-trail-newsletter.php:204
 msgid "Please check at least one newsletter name"
@@ -547,11 +524,11 @@ msgstr ""
 
 #: functions/widgets/active-trail-newsletter/active-trail-newsletter.php:206
 msgid "Register"
-msgstr ""
+msgstr "запись"
 
 #: functions/widgets/active-trail-newsletter/active-trail-newsletter.php:207
 msgid "No thanks"
-msgstr ""
+msgstr "нет, спасибо"
 
 #: functions/widgets/active-trail-newsletter/active-trail-newsletter.php:215
 msgid "General error, please try again later"
@@ -667,46 +644,46 @@ msgstr ""
 msgid "Transaction ID"
 msgstr ""
 
-#: functions/pelecard/payment-result.php:162
+#: functions/pelecard/payment-result.php:152
 msgid "Thank you for your request!"
 msgstr ""
 
-#: functions/pelecard/payment-result.php:163
+#: functions/pelecard/payment-result.php:153
 msgid "An invoice for your payment will be sent to your email address shortly."
 msgstr ""
 
-#: functions/pelecard/payment-result.php:168
+#: functions/pelecard/payment-result.php:158
 msgid "Payment failed"
 msgstr ""
 
-#: functions/pelecard/payment-result.php:174
-#: functions/pelecard/payment-result.php:182
-#: functions/pelecard/payment-result.php:189
-#: functions/pelecard/payment-result.php:196
+#: functions/pelecard/payment-result.php:164
+#: functions/pelecard/payment-result.php:172
+#: functions/pelecard/payment-result.php:179
+#: functions/pelecard/payment-result.php:186
 msgid "Error #"
 msgstr ""
 
-#: functions/pelecard/payment-result.php:174
+#: functions/pelecard/payment-result.php:164
 msgid "Wrong ID or CVV."
 msgstr ""
 
-#: functions/pelecard/payment-result.php:175
-#: functions/pelecard/payment-result.php:183
+#: functions/pelecard/payment-result.php:165
+#: functions/pelecard/payment-result.php:173
 msgid "Please correct the errors and submit the request again."
 msgstr ""
 
-#: functions/pelecard/payment-result.php:182
+#: functions/pelecard/payment-result.php:172
 msgid "Wrong credit card number."
 msgstr ""
 
-#: functions/pelecard/payment-result.php:189
+#: functions/pelecard/payment-result.php:179
 msgid "Unsupported credit card."
 msgstr ""
 
-#: functions/pelecard/payment-result.php:190
+#: functions/pelecard/payment-result.php:180
 msgid "Please submit the request again using a different credit card."
 msgstr ""
 
-#: functions/pelecard/payment-result.php:196
+#: functions/pelecard/payment-result.php:186
 msgid "General Error."
 msgstr ""

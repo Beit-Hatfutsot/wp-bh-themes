@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: BH Website 1.0\n"
-"POT-Creation-Date: 2018-09-06 12:17+0200\n"
-"PO-Revision-Date: 2018-09-06 12:18+0200\n"
+"POT-Creation-Date: 2019-02-07 14:08+0200\n"
+"PO-Revision-Date: 2019-02-07 14:20+0200\n"
 "Last-Translator: Nir Goldberg <nir@htmline.com>\n"
 "Language-Team: BH online <nirg@bh.org.il>\n"
 "Language: he_IL\n"
@@ -54,11 +54,11 @@ msgstr "לרכישה"
 msgid "Subscribe to Blog notifications"
 msgstr "רישום לעדכונים שוטפים מהבלוג"
 
-#: views/sidebar/sidebar-blog.php:198
+#: views/sidebar/sidebar-blog.php:205
 msgid "Recent Posts"
 msgstr "פוסטים אחרונים"
 
-#: views/sidebar/sidebar-blog.php:215
+#: views/sidebar/sidebar-blog.php:222
 msgid "Archives"
 msgstr "ארכיון"
 
@@ -793,6 +793,18 @@ msgstr "תרומה לזכר אדם"
 msgid "Thank You"
 msgstr "תודתנו"
 
+#: functions/wpml.php:57
+msgid "Main Menu - "
+msgstr ""
+
+#: functions/wpml.php:58
+msgid "Education Menu - "
+msgstr ""
+
+#: functions/wpml.php:59
+msgid "Shop Menu - "
+msgstr ""
+
 #: functions/scripts-n-styles.php:162
 msgid "Our beloved grandmother Bracha Cohen"
 msgstr "סבתנו היקרה ברכה כהן ז\"ל"
@@ -809,15 +821,15 @@ msgstr "ניוזלטר"
 msgid "Load more"
 msgstr "תמונות נוספות"
 
-#: functions/menus.php:18
+#: functions/menus.php:22
 msgid "Main Menu"
 msgstr ""
 
-#: functions/menus.php:19
+#: functions/menus.php:23
 msgid "Education Menu"
 msgstr ""
 
-#: functions/menus.php:20
+#: functions/menus.php:24
 msgid "Shop Menu"
 msgstr ""
 
