@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: BH Website 1.0\n"
 "POT-Creation-Date: 2017-12-19 18:07+0200\n"
-"PO-Revision-Date: 2019-02-07 14:20+0200\n"
+"PO-Revision-Date: 2019-02-11 15:57+0200\n"
 "Last-Translator: Nir Goldberg <nir@htmline.com>\n"
 "Language-Team: BH online <nirg@bh.org.il>\n"
 "MIME-Version: 1.0\n"
@@ -512,7 +512,7 @@ msgstr "электронный адресс"
 
 #: functions/widgets/active-trail-newsletter/active-trail-newsletter.php:191
 msgid "Email address is missing or incorrect"
-msgstr ""
+msgstr "Имэйл адрес отсутствует или неверен"
 
 #: functions/widgets/active-trail-newsletter/active-trail-newsletter.php:195
 msgid "Choose Language:"
@@ -520,7 +520,7 @@ msgstr "выбрать язык:"
 
 #: functions/widgets/active-trail-newsletter/active-trail-newsletter.php:204
 msgid "Please check at least one newsletter name"
-msgstr ""
+msgstr "Пожалуйста выберите хотя бы одно заглавие информационного листка"
 
 #: functions/widgets/active-trail-newsletter/active-trail-newsletter.php:206
 msgid "Register"
