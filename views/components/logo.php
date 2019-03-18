@@ -24,7 +24,7 @@ if ( ! $wpml_lang )
 $wpml_lang = $wpml_lang == 'ru' ? 'en' : $wpml_lang;
 
 // Check if landing page
-$landing = is_page_template( 'page-templates/landing.php' ) ? '-orig' : '';
+$landing = is_page_template( 'page-templates/landing.php' );
 
 ?>
 
@@ -32,7 +32,7 @@ $landing = is_page_template( 'page-templates/landing.php' ) ? '-orig' : '';
 
 	<?php if ( ! $landing ) { ?><a href="<?php echo HOME; ?>" title="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>"><?php } ?>
 
-		<?php get_template_part( 'views/svgs/shape', 'logo-' . $wpml_lang . $landing ); ?>
+		<?php get_template_part( 'views/svgs/shape', 'logo-' . $wpml_lang ); ?>
 
 	<?php if ( ! $landing ) { ?></a><?php } ?>
 
