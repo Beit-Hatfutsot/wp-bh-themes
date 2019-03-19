@@ -66,4 +66,16 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 		get_template_part( 'views/header/scripts/facebook-remarketing' );
 	?>
 
+	<?php
+		/**
+		 * Landing page template scripts
+		 */
+		if ( is_page_template( 'page-templates/landing.php' ) ) {
+
+			get_template_part( 'views/header/scripts/landing-facebook-pixel' );
+			get_template_part( 'views/header/scripts/landing-google-tag-manager' );
+
+		}
+	?>
+
 </head>

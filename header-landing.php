@@ -45,6 +45,13 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 	<?php
 		/**
+		 * Landing DFP Audience Pixel
+		 */
+		get_template_part( 'views/header/scripts/landing-dfp-audience-pixel' );
+	?>
+
+	<?php
+		/**
 		 * Display SVG sprite
 		 */
 		get_template_part( 'views/header/header', 'svg' );
