@@ -4,7 +4,7 @@
  *
  * @author 		Beit Hatfutsot
  * @package 	bh/views/footer
- * @version     2.0
+ * @version     2.12.3
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly ?>
@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly ?>
 <footer>
 
 	<?php // Footer links
-		get_template_part('views/footer/footer-links');
+		get_template_part( 'views/footer/footer-links' );
 	?>
 
 	<div class="container">
@@ -26,18 +26,20 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly ?>
 	</div>
 
 	<?php // Social links
-		get_template_part('views/footer/social-links');
+		get_template_part( 'views/footer/social-links' );
 	?>
 
 	<?php // Menu
-		get_template_part('views/footer/footer-menu');
+		get_template_part( 'views/footer/footer-menu' );
 	?>
 
 	<?php // sites
-		get_template_part('views/footer/sites-links');
+		get_template_part( 'views/footer/sites-links' );
 	?>
 
-	<div class="copyrights">&copy; 1996 <?php bloginfo('name'); ?></div>
+	<?php // Terms of Use
+		get_template_part( 'views/footer/footer', 'terms-of-use');
+	?>
 
 	<?php /*
 	<div class="monitoring">

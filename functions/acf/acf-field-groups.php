@@ -4,7 +4,7 @@
  *
  * @author 		Beit Hatfutsot
  * @package 	bh/functions/acf
- * @version     2.10.0
+ * @version     2.12.3
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -3193,6 +3193,56 @@ acf_add_local_field_group(array(
 					'ui' => 1,
 				),
 			),
+		),
+		array(
+			'key' => 'field_5c973cfd2ee10',
+			'label' => 'Footer',
+			'name' => '',
+			'type' => 'tab',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'placement' => 'left',
+			'endpoint' => 0,
+		),
+		array(
+			'key' => 'field_5c973d912ee12',
+			'label' => 'Terms of Use Label',
+			'name' => 'acf-options_terms_of_use_label',
+			'type' => 'text',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+			'prepend' => '',
+			'append' => '',
+			'maxlength' => '',
+		),
+		array(
+			'key' => 'field_5c973d242ee11',
+			'label' => 'Terms of Use Link',
+			'name' => 'acf-options_terms_of_use_link',
+			'type' => 'link',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'return_format' => 'url',
 		),
 	),
 	'location' => array(

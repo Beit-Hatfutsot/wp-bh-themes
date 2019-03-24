@@ -580,6 +580,56 @@
                     "ui": 1
                 }
             ]
+        },
+        {
+            "key": "field_5c973cfd2ee10",
+            "label": "Footer",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5c973d912ee12",
+            "label": "Terms of Use Label",
+            "name": "acf-options_terms_of_use_label",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5c973d242ee11",
+            "label": "Terms of Use Link",
+            "name": "acf-options_terms_of_use_link",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url"
         }
     ],
     "location": [
@@ -599,5 +649,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1535466384
+    "modified": 1553415610
 }

@@ -4551,6 +4551,12 @@ footer {
 		line-height: 39px;
 		font-size: 12px;
 		text-align: center;
+
+		a,
+		a:hover,
+		a:active {
+			color: $font-color;
+		}
 	}
 
 	.monitoring {
