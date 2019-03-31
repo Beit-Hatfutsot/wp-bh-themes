@@ -202,40 +202,44 @@ footer {
 #contentForm {
 	padding: 125px 100px;
 
-	.labelWrapper,
-	.labelSubmit {
-		float: left;
-		padding: 0 1%;
-		width: 18%;
+	#at-signup-table {
+		width: 100%;
 
-		.at-signup-label {
-			line-height: 20px;
-			font-size: 20px;
-			color: $white;
-		}
+		.labelWrapper,
+		.labelSubmit {
+			float: left;
+			padding: 0 1%;
+			width: 18%;
 
-		input {
-			padding: 0 2%;
-			width: 96%;
-			height: 35px;
-			line-height: 35px;
-			font-size: 16px;
-			color: $landing-black;
-
-			&.at-signup-submit {
-				width: 100%;
-				font-weight: $font-bold;
-				white-space: normal;
-				background-color: $landing-yellow;
-				cursor: pointer;
+			.at-signup-label {
+				line-height: 20px;
+				font-size: 20px;
+				color: $white;
 			}
-		}
 
-		.errph {
-			position: absolute;
-			font-size: 12px;
-			color: $white;
-			line-height: normal;
+			input {
+				padding: 0 2%;
+				width: 96%;
+				height: 35px;
+				line-height: 35px;
+				font-size: 16px;
+				color: $landing-black;
+
+				&.at-signup-submit {
+					width: 100%;
+					font-weight: $font-bold;
+					white-space: normal;
+					background-color: $landing-yellow;
+					cursor: pointer;
+				}
+			}
+
+			.errph {
+				position: absolute;
+				font-size: 12px;
+				color: $white;
+				line-height: normal;
+			}
 		}
 	}
 }
@@ -493,14 +497,16 @@ footer {
 	/**************/
 
 	#contentForm {
-		.labelWrapper,
-		.labelSubmit {
-			margin-bottom: 15px;
-			width: 98%;
-			display: block;
+		#at-signup-table {
+			.labelWrapper,
+			.labelSubmit {
+				margin-bottom: 15px;
+				width: 98%;
+				display: block;
 
-			.errph {
-				position: static;
+				.errph {
+					position: static;
+				}
 			}
 		}
 	}
