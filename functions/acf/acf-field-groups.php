@@ -1991,13 +1991,48 @@ acf_add_local_field_group(array(
 	'title' => 'Landing Page Attributes',
 	'fields' => array(
 		array(
+			'key' => 'field_5ca0d46d4b33f',
+			'label' => 'Order Tickets Target',
+			'name' => 'acf-landing_order_tickets_target',
+			'type' => 'select',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'choices' => array(
+				'link' => 'Link',
+				'form' => 'Form',
+			),
+			'default_value' => array(
+				0 => 'link',
+			),
+			'allow_null' => 0,
+			'multiple' => 0,
+			'ui' => 0,
+			'ajax' => 0,
+			'return_format' => 'value',
+			'placeholder' => '',
+		),
+		array(
 			'key' => 'field_5b4dcd42fc983',
 			'label' => 'Order Tickets Link',
 			'name' => 'acf-landing_order_tickets_link',
 			'type' => 'url',
 			'instructions' => '',
 			'required' => 1,
-			'conditional_logic' => 0,
+			'conditional_logic' => array(
+				array(
+					array(
+						'field' => 'field_5ca0d46d4b33f',
+						'operator' => '==',
+						'value' => 'link',
+					),
+				),
+			),
 			'wrapper' => array(
 				'width' => '',
 				'class' => '',
@@ -2005,6 +2040,33 @@ acf_add_local_field_group(array(
 			),
 			'default_value' => '',
 			'placeholder' => 'https://',
+		),
+		array(
+			'key' => 'field_5ca0d4cb4b340',
+			'label' => 'Order Tickets Form',
+			'name' => 'acf-landing_order_tickets_form',
+			'type' => 'textarea',
+			'instructions' => 'Place here registration form code',
+			'required' => 1,
+			'conditional_logic' => array(
+				array(
+					array(
+						'field' => 'field_5ca0d46d4b33f',
+						'operator' => '==',
+						'value' => 'form',
+					),
+				),
+			),
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+			'maxlength' => '',
+			'rows' => '',
+			'new_lines' => '',
 		),
 	),
 	'location' => array(

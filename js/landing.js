@@ -30,6 +30,9 @@ var $ = jQuery,
 			// Toggles slider more info content
 			BH_landing.moreInfo();
 
+			// Scroll browser to form on order button click event
+			BH_landing.scrollToForm();
+
 			// Push dataLayer events
 			BH_landing.pushDataLayer();
 
@@ -74,6 +77,31 @@ var $ = jQuery,
 					excerpt.toggleClass('active');
 					excerpt.find('.more').toggle();
 				}, BH_landing.params.timeout);
+			});
+
+		},
+
+		/**
+		 * scrollToForm
+		 *
+		 * This function scrolls browser to form on order button click event
+		 * Called from init
+		 *
+		 * @param	N/A
+		 * @return	N/A
+		 */
+		scrollToForm : function () {
+
+			// Variables
+			var btn = $('.slider .event-form');
+
+			btn.click(function() {
+				// Variables
+				var form = $('.footer-wrapper');
+
+				$('html, body').animate({
+					scrollTop: (form.offset().top)
+				}, 1000);
 			});
 
 		},
