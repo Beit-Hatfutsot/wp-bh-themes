@@ -5,7 +5,7 @@
  * @author		Beit Hatfutsot
  * @package		bh/views/landing
  * @since		2.8.0
- * @version		2.8.0
+ * @version		2.13.1
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -25,7 +25,9 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 		/**
 		 * Display the title
 		 */
-		include( locate_template( 'views/landing/header-title.php' ) );
+		if ( 'landing.php' == basename( get_page_template() ) ) {
+			include( locate_template( 'views/landing/header-title.php' ) );
+		}
 	?>
 
 </header>

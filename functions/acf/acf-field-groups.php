@@ -4,7 +4,7 @@
  *
  * @author 		Beit Hatfutsot
  * @package 	bh/functions/acf
- * @version     2.12.3
+ * @version     2.13.1
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -20,6 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
  * @fieldgroup	Event Category Attributes
  * @fieldgroup	Gallery Attributes
  * @fieldgroup	Landing Page Attributes
+ * @fieldgroup	Landing Thank You Page Attributes
  * @fieldgroup	Product Category Attributes
  * @fieldgroup	Product Badge Attributes
  * @fieldgroup	Shop - About
@@ -2075,6 +2076,52 @@ acf_add_local_field_group(array(
 				'param' => 'page_template',
 				'operator' => '==',
 				'value' => 'page-templates/landing.php',
+			),
+		),
+	),
+	'menu_order' => 8,
+	'position' => 'normal',
+	'style' => 'default',
+	'label_placement' => 'top',
+	'instruction_placement' => 'label',
+	'hide_on_screen' => array(
+		0 => 'the_content',
+		1 => 'excerpt',
+	),
+	'active' => 1,
+	'description' => '',
+));
+
+acf_add_local_field_group(array(
+	'key' => 'group_5cb2dc37df5a7',
+	'title' => 'Landing Thank You Page Attributes',
+	'fields' => array(
+		array(
+			'key' => 'field_5cb2dc38002f1',
+			'label' => 'Footer Scripts',
+			'name' => 'acf-landing_footer_scripts',
+			'type' => 'textarea',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+			'maxlength' => '',
+			'rows' => '',
+			'new_lines' => '',
+		),
+	),
+	'location' => array(
+		array(
+			array(
+				'param' => 'page_template',
+				'operator' => '==',
+				'value' => 'page-templates/landing-thank-you.php',
 			),
 		),
 	),
@@ -6153,6 +6200,41 @@ acf_add_local_field_group(array(
 					'new_lines' => 'br',
 				),
 			),
+		),
+		array(
+			'key' => 'field_5cb2db96b5ae8',
+			'label' => 'Thank You Page',
+			'name' => '',
+			'type' => 'tab',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'placement' => 'left',
+			'endpoint' => 0,
+		),
+		array(
+			'key' => 'field_5cb2dbc2b5ae9',
+			'label' => 'Thank You Text',
+			'name' => 'acf-options_landing_thank_you_text',
+			'type' => 'wysiwyg',
+			'instructions' => '',
+			'required' => 1,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'tabs' => 'all',
+			'toolbar' => 'basic',
+			'media_upload' => 0,
+			'delay' => 0,
 		),
 		array(
 			'key' => 'field_5b4db908981c4',

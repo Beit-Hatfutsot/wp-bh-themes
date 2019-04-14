@@ -380,6 +380,14 @@ footer {
 		border-width: 9px;
 		@include border-radius(53px);
 	}
+
+	/******************/
+	/* thank you text */
+	/******************/
+
+	.thank-you-text {
+		margin: 100px 0;
+	}
 }
 
 @media (max-width: 767px) {
@@ -509,6 +517,14 @@ footer {
 				}
 			}
 		}
+	}
+
+	/******************/
+	/* thank you text */
+	/******************/
+
+	.thank-you-text {
+		margin: 50px 0;
 	}
 }
 

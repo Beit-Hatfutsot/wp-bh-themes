@@ -4,7 +4,7 @@
  *
  * @author		Beit Hatfutsot
  * @package		bh/functions
- * @version		2.8.0
+ * @version		2.13.1
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -71,7 +71,7 @@ function BH_wp_scripts_n_styles() {
 		$page_template = basename( get_page_template() );
 	}
 
-	if ( $page_template == 'landing.php' ) {
+	if ( 'landing.php' == $page_template || 'landing-thank-you.php' == $page_template ) {
 		wp_enqueue_style( 'landing' );
 	}
 	else {
