@@ -4,7 +4,7 @@
  *
  * @author		Beit Hatfutsot
  * @package		bh/functions
- * @version		2.7.6
+ * @version		2.14.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -93,6 +93,14 @@ function BH_set_header_globals() {
 
 	}
 	$globals[ 'menu' ] = wp_nav_menu( $args );
+
+	/**
+	 * Set featured notification
+	 */
+	$globals[ 'featured_notification' ] = array(
+		'text'	=> get_field( 'acf-options_featured_notification_text', 'option' ),
+		'link'	=> get_field( 'acf-options_featured_notification_link', 'option' )
+	);
 
 }
 
@@ -222,15 +230,17 @@ function BH_set_header_elements() {
 		'shop_cart_header_mid_popup'	=> '',
 		'newsletter_header_top_popup'	=> '',
 		'newsletter_header_mid_popup'	=> '',
+		'featured_notification'			=> '',
 		'featured_page'					=> ''
 	);
 
 	/**
 	 * Get header global variables
 	 */
-	$bh_sites		= $globals[ 'bh_sites' ];
-	$current_site	= $globals[ 'current_site' ];
-	$site_type		= '';
+	$bh_sites				= $globals[ 'bh_sites' ];
+	$current_site			= $globals[ 'current_site' ];
+	$featured_notification	= $globals[ 'featured_notification' ];
+	$site_type				= '';
 
 	if ( $bh_sites && $current_site !== false )
 		$site_type	= $bh_sites[ $current_site ][ 'type' ];
@@ -261,6 +271,11 @@ function BH_set_header_elements() {
 		$elements[ 'newsletter_header_top_popup' ]	= BH_newsletter_popup( 'top', $newsletter_sidebar );
 		$elements[ 'newsletter_header_mid_popup' ]	= BH_newsletter_popup( 'mid', $newsletter_sidebar );
 
+	}
+
+	// Featured notification
+	if ( $bh_sites && $current_site !== false && $bh_sites[ $current_site ][ 'menu_theme_location' ] == 'main-menu' ) {
+		$elements[ 'featured_notification' ] = $featured_notification;
 	}
 
 	// Featured page

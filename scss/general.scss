@@ -186,6 +186,8 @@ body > header {
 		/********/
 
 		nav.menu {
+			float: left;
+
 			ul.nav {
 				& > li {
 					float: left;
@@ -836,6 +838,37 @@ body > header {
 		}
 	}
 
+	/*************************/
+	/* featured notification */
+	/*************************/
+
+	.featured-notification {
+		a {
+			padding: 0 12px;
+			color: $white;
+			background-color: $red-color8;
+			text-decoration: none;
+			display: block;
+		}
+	}
+
+	.header-bottom {
+		.featured-notification {
+			float: left;
+			padding: 7px 12px;
+
+			a {
+				line-height: 26px;
+			}
+		}
+	}
+
+	.header-mobile-notification {
+		.featured-notification {
+			text-align: center;
+		}
+	}
+
 	/*****************/
 	/* featured page */
 	/*****************/
@@ -879,7 +912,6 @@ body > header {
 	.header-bottom {
 		.featured-page {
 			float: right;
-			margin-top: -40px;
 
 			a {
 				padding: 0 12px;

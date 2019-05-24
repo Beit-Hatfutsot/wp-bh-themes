@@ -749,6 +749,7 @@ var $ = jQuery,
 		 * @return	N/A
 		 */
 		footer_sub_menu_toggle : function(event) {
+
 			var current = event.currentTarget,
 				li = $(current).parent(),
 				mobile = $('.footer-menu').hasClass('mobile') ? true : false,
@@ -765,6 +766,7 @@ var $ = jQuery,
 			else {
 				li.addClass('collapsed');
 			}
+
 		},
 
 		/**
@@ -784,6 +786,23 @@ var $ = jQuery,
 
 			BH_general.params.prev_breakpoint = BH_general.params.breakpoint;
 			BH_general.params.breakpoint = new_breakpoint;
+
+		},
+
+		/**
+		 * set_content_top
+		 *
+		 * Adjust page content margin-top according to header height
+		 * Called from loaded/alignments
+		 *
+		 * @param	N/A
+		 * @return	N/A
+		 */
+		set_content_top : function() {
+
+			var header_height = $('header').height();
+
+			$('.main-wrapper, .page-content').css('margin-top', header_height + 'px');
 
 		},
 
@@ -1004,6 +1023,9 @@ var $ = jQuery,
 			
 			// set window breakpoint values
 			BH_general.breakpoint_refreshValue();
+
+			// set content top
+			BH_general.set_content_top();
 
 			// footer links
 			BH_general.footer_links();

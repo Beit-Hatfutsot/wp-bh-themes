@@ -41,6 +41,8 @@ body > header {
 		/********/
 
 		nav.menu {
+			float: right;
+
 			ul.nav {
 				& > li {
 					float: right;
@@ -216,6 +218,16 @@ body > header {
 					}
 				}
 			}
+		}
+	}
+
+	/*************************/
+	/* featured notification */
+	/*************************/
+
+	.header-bottom {
+		.featured-notification {
+			float: right;
 		}
 	}
 

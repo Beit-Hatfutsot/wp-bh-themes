@@ -582,6 +582,57 @@
             ]
         },
         {
+            "key": "field_5ce788713fca4",
+            "label": "Featured Notification",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5ce78adf3fca5",
+            "label": "Notification Text",
+            "name": "acf-options_featured_notification_text",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5ce78b223fca6",
+            "label": "Notification Link",
+            "name": "acf-options_featured_notification_link",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
             "key": "field_5c973cfd2ee10",
             "label": "Footer",
             "name": "",
@@ -649,5 +700,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1553415610
+    "modified": 1558679528
 }

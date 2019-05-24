@@ -830,7 +830,6 @@
 	/****************/
 
 	.page-content {
-		margin-top: 100px;
 
 		/***********/
 		/* content */
@@ -886,14 +885,6 @@
 				}
 			}
 		}
-	}
-
-	/***********************/
-	/* main general layout */
-	/***********************/
-
-	.main-wrapper {
-		margin-top: 100px;
 	}
 
 	/**********/
@@ -1466,6 +1457,21 @@
 			}
 		}
 
+		/*************************/
+		/* featured notification */
+		/*************************/
+
+		.header-mobile-notification {
+			height: 30px;
+
+			.featured-notification {
+				a {
+					line-height: 25px;
+					font-size: 11px;
+				}
+			}
+		}
+
 		/*****************/
 		/* featured page */
 		/*****************/
@@ -1482,6 +1488,22 @@
 				}
 			}
 		}
+	}
+
+	/****************/
+	/* page content */
+	/****************/
+
+	.page-content {
+		margin-top: 130px;
+	}
+
+	/***********************/
+	/* main general layout */
+	/***********************/
+
+	.main-wrapper {
+		margin-top: 130px;
 	}
 
 	/****************/
@@ -2125,7 +2147,26 @@
 	body {
 		width: 1170px;
 	}
-	
+
+	/**********/
+	/* header */
+	/**********/
+
+	body > header {
+
+		/*************************/
+		/* featured notification */
+		/*************************/
+
+		.header-bottom {
+			.featured-notification {
+				a {
+					font-size: 18px;
+				}
+			}
+		}
+	}
+
 	/****************/
 	/* page content */
 	/****************/
@@ -2368,6 +2409,22 @@
 		}
 	}
 
+	/****************/
+	/* page content */
+	/****************/
+
+	.page-content {
+		margin-top: 120px;
+	}
+
+	/***********************/
+	/* main general layout */
+	/***********************/
+
+	.main-wrapper {
+		margin-top: 120px;
+	}
+
 	/*******************/
 	/* contact details */
 	/*******************/
@@ -2425,6 +2482,18 @@
 							}
 						}
 					}
+				}
+			}
+		}
+
+		/*************************/
+		/* featured notification */
+		/*************************/
+
+		.header-bottom {
+			.featured-notification {
+				a {
+					font-size: 16px;
 				}
 			}
 		}
@@ -2828,22 +2897,6 @@
 		}
 	}
 
-	/****************/
-	/* page content */
-	/****************/
-
-	.page-content {
-		margin-top: 120px;
-	}
-
-	/***********************/
-	/* main general layout */
-	/***********************/
-
-	.main-wrapper {
-		margin-top: 120px;
-	}
-
 	/**********/
 	/* footer */
 	/**********/
@@ -3027,6 +3080,22 @@
 				}
 			}
 		}
+	}
+
+	/****************/
+	/* page content */
+	/****************/
+
+	.page-content {
+		margin-top: 160px;
+	}
+
+	/***********************/
+	/* main general layout */
+	/***********************/
+
+	.main-wrapper {
+		margin-top: 160px;
 	}
 
 	/*******************/
@@ -3567,6 +3636,23 @@
 				}
 			}
 		}
+
+		/*************************/
+		/* featured notification */
+		/*************************/
+
+		.header-mobile-notification {
+			height: 40px;
+
+			.featured-notification {
+				margin-top: 5px;
+
+				a {
+					line-height: 30px;
+					font-size: 15px;
+				}
+			}
+		}
 	}
 
 	/**********/
@@ -3678,6 +3764,22 @@
 				}
 			}
 		}
+	}
+
+	/****************/
+	/* page content */
+	/****************/
+
+	.page-content {
+		margin-top: 140px;
+	}
+
+	/***********************/
+	/* main general layout */
+	/***********************/
+
+	.main-wrapper {
+		margin-top: 140px;
 	}
 
 	/*******/

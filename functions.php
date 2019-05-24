@@ -2,9 +2,9 @@
 /**
  * Functions
  *
- * @author 		Beit Hatfutsot
- * @package 	bh
- * @version     2.12.1
+ * @author		Beit Hatfutsot
+ * @package		bh
+ * @version		2.14.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -17,6 +17,10 @@ require_once( 'functions/config.php' );
 
 // theme support
 require_once( 'functions/theme.php' );
+
+// classes
+// smarticket
+// require_once( 'includes/classes/class-smarticket-core.php' );
 
 // wpml
 require_once( 'functions/wpml.php' );

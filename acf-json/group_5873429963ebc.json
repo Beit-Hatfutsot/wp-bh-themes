@@ -329,6 +329,38 @@
                     "ui": 1
                 }
             ]
+        },
+        {
+            "key": "field_5ce29d07a489e",
+            "label": "SmarTicket",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5ce29d62a489f",
+            "label": "API",
+            "name": "acf-options_smarticket_api",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "https:\/\/"
         }
     ],
     "location": [
@@ -348,5 +380,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1531830947
+    "modified": 1558355362
 }

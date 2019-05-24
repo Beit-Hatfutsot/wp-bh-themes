@@ -4,7 +4,7 @@
  *
  * @author 		Beit Hatfutsot
  * @package 	bh/functions/acf
- * @version     2.13.1
+ * @version     2.14.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -3304,6 +3304,57 @@ acf_add_local_field_group(array(
 			),
 		),
 		array(
+			'key' => 'field_5ce788713fca4',
+			'label' => 'Featured Notification',
+			'name' => '',
+			'type' => 'tab',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'placement' => 'left',
+			'endpoint' => 0,
+		),
+		array(
+			'key' => 'field_5ce78adf3fca5',
+			'label' => 'Notification Text',
+			'name' => 'acf-options_featured_notification_text',
+			'type' => 'text',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+			'prepend' => '',
+			'append' => '',
+			'maxlength' => '',
+		),
+		array(
+			'key' => 'field_5ce78b223fca6',
+			'label' => 'Notification Link',
+			'name' => 'acf-options_featured_notification_link',
+			'type' => 'url',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+		),
+		array(
 			'key' => 'field_5c973cfd2ee10',
 			'label' => 'Footer',
 			'name' => '',
@@ -4901,6 +4952,38 @@ acf_add_local_field_group(array(
 					'ui' => 1,
 				),
 			),
+		),
+		array(
+			'key' => 'field_5ce29d07a489e',
+			'label' => 'SmarTicket',
+			'name' => '',
+			'type' => 'tab',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'placement' => 'left',
+			'endpoint' => 0,
+		),
+		array(
+			'key' => 'field_5ce29d62a489f',
+			'label' => 'API',
+			'name' => 'acf-options_smarticket_api',
+			'type' => 'url',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => 'https://',
 		),
 	),
 	'location' => array(

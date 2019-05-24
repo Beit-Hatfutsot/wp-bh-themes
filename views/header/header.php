@@ -4,7 +4,7 @@
  *
  * @author		Beit Hatfutsot
  * @package		bh/views/header
- * @version		2.6.1
+ * @version		2.14.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -151,6 +151,13 @@ $wpml_lang = $wpml_lang == 'ru' ? 'en' : $wpml_lang;
 
 			<?php
 				/**
+				 * Display the featured notification
+				 */
+				get_template_part( 'views/header/header-featured-notification' );
+			?>
+
+			<?php
+				/**
 				 * Display the featured page
 				 */
 				get_template_part( 'views/header/header-featured-page' );
@@ -158,5 +165,18 @@ $wpml_lang = $wpml_lang == 'ru' ? 'en' : $wpml_lang;
 
 		</div>
 	</div><!-- .header-bottom -->
+
+	<div class="header-mobile-notification hidden-md hidden-lg">
+		<div class="container">
+
+			<?php
+				/**
+				 * Display the featured notification
+				 */
+				get_template_part( 'views/header/header-featured-notification' );
+			?>
+
+		</div>
+	</div><!-- .header-mobile-notification -->
 
 </header>
