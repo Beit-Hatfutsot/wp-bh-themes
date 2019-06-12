@@ -510,6 +510,60 @@
             "placeholder": ""
         },
         {
+            "key": "field_5d010497bf8cb",
+            "label": "Main Title",
+            "name": "acf-options_switcher_main_title",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5b855ab856275",
+                        "operator": "==",
+                        "value": "menu"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5d01050ebf8cc",
+            "label": "Untranslated Languages Title",
+            "name": "acf-options_switcher_untranslated_title",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5b855ab856275",
+                        "operator": "==",
+                        "value": "menu"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_5a119805d1b09",
             "label": "Untranslated Languages",
             "name": "acf-options_untranslated_languages",
@@ -537,11 +591,11 @@
             "button_label": "Add Language",
             "sub_fields": [
                 {
-                    "key": "field_5a11984ad1b0a",
-                    "label": "Language Code",
-                    "name": "language_code",
+                    "key": "field_5cfa30d4d3a1b",
+                    "label": "Title",
+                    "name": "title",
                     "type": "text",
-                    "instructions": "2 letters represent language code, e.g. es, ru, ar, etc.",
+                    "instructions": "",
                     "required": 1,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -553,13 +607,13 @@
                     "placeholder": "",
                     "prepend": "",
                     "append": "",
-                    "maxlength": 2
+                    "maxlength": ""
                 },
                 {
                     "key": "field_5a1198cad1b0c",
                     "label": "Page",
                     "name": "page",
-                    "type": "post_object",
+                    "type": "link",
                     "instructions": "",
                     "required": 1,
                     "conditional_logic": 0,
@@ -568,16 +622,7 @@
                         "class": "",
                         "id": ""
                     },
-                    "post_type": [
-                        "post",
-                        "page",
-                        "event"
-                    ],
-                    "taxonomy": [],
-                    "allow_null": 0,
-                    "multiple": 0,
-                    "return_format": "object",
-                    "ui": 1
+                    "return_format": "array"
                 }
             ]
         },
@@ -700,5 +745,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1558679528
+    "modified": 1560348225
 }

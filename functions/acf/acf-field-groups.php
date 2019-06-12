@@ -4,7 +4,7 @@
  *
  * @author 		Beit Hatfutsot
  * @package 	bh/functions/acf
- * @version     2.14.0
+ * @version     2.14.1
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -3231,6 +3231,60 @@ acf_add_local_field_group(array(
 			'placeholder' => '',
 		),
 		array(
+			'key' => 'field_5d010497bf8cb',
+			'label' => 'Main Title',
+			'name' => 'acf-options_switcher_main_title',
+			'type' => 'text',
+			'instructions' => '',
+			'required' => 1,
+			'conditional_logic' => array(
+				array(
+					array(
+						'field' => 'field_5b855ab856275',
+						'operator' => '==',
+						'value' => 'menu',
+					),
+				),
+			),
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+			'prepend' => '',
+			'append' => '',
+			'maxlength' => '',
+		),
+		array(
+			'key' => 'field_5d01050ebf8cc',
+			'label' => 'Untranslated Languages Title',
+			'name' => 'acf-options_switcher_untranslated_title',
+			'type' => 'text',
+			'instructions' => '',
+			'required' => 1,
+			'conditional_logic' => array(
+				array(
+					array(
+						'field' => 'field_5b855ab856275',
+						'operator' => '==',
+						'value' => 'menu',
+					),
+				),
+			),
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+			'prepend' => '',
+			'append' => '',
+			'maxlength' => '',
+		),
+		array(
 			'key' => 'field_5a119805d1b09',
 			'label' => 'Untranslated Languages',
 			'name' => 'acf-options_untranslated_languages',
@@ -3258,11 +3312,11 @@ acf_add_local_field_group(array(
 			'button_label' => 'Add Language',
 			'sub_fields' => array(
 				array(
-					'key' => 'field_5a11984ad1b0a',
-					'label' => 'Language Code',
-					'name' => 'language_code',
+					'key' => 'field_5cfa30d4d3a1b',
+					'label' => 'Title',
+					'name' => 'title',
 					'type' => 'text',
-					'instructions' => '2 letters represent language code, e.g. es, ru, ar, etc.',
+					'instructions' => '',
 					'required' => 1,
 					'conditional_logic' => 0,
 					'wrapper' => array(
@@ -3274,13 +3328,13 @@ acf_add_local_field_group(array(
 					'placeholder' => '',
 					'prepend' => '',
 					'append' => '',
-					'maxlength' => 2,
+					'maxlength' => '',
 				),
 				array(
 					'key' => 'field_5a1198cad1b0c',
 					'label' => 'Page',
 					'name' => 'page',
-					'type' => 'post_object',
+					'type' => 'link',
 					'instructions' => '',
 					'required' => 1,
 					'conditional_logic' => 0,
@@ -3289,17 +3343,7 @@ acf_add_local_field_group(array(
 						'class' => '',
 						'id' => '',
 					),
-					'post_type' => array(
-						0 => 'post',
-						1 => 'page',
-						2 => 'event',
-					),
-					'taxonomy' => array(
-					),
-					'allow_null' => 0,
-					'multiple' => 0,
-					'return_format' => 'object',
-					'ui' => 1,
+					'return_format' => 'array',
 				),
 			),
 		),

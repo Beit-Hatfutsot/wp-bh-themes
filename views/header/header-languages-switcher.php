@@ -7,7 +7,7 @@
  * @author		Beit Hatfutsot
  * @package		bh/views/header
  * @since		2.6.0
- * @version		2.10.0
+ * @version		2.14.1
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -26,10 +26,10 @@ $switcher_type	= get_field( 'acf-options_switcher_type', 'option' );
 
 	<?php
 		/**
-		 * Display the current langauge flag as the switcher button
+		 * Display the drop down menu switcher button
 		 */
 		if ( $switcher_type == 'menu' ) {
-			get_template_part( 'views/wpml/wpml', 'current-language' );
+			get_template_part( 'views/wpml/wpml', 'languages-switcher-btn' );
 		}
 	?>
 

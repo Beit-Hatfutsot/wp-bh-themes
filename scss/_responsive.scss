@@ -801,6 +801,9 @@
 
 		.header-elements {
 			.header-element {
+				a {
+					font-size: 15px;
+				}
 
 				/*******************/
 				/* shop cart popup */
@@ -3601,7 +3604,7 @@
 						}
 
 						.languages-switcher-content {
-							top: 40px;
+							top: 45px;
 						}
 					}
 				}
@@ -3749,18 +3752,6 @@
 				.mobile-menu-btn {
 					margin-left: 13px;
 					height: 50px;
-				}
-			}
-		}
-
-		/*******************/
-		/* header elements */
-		/*******************/
-
-		.header-elements {
-			.header-element {
-				a {
-					font-size: 15px;
 				}
 			}
 		}

@@ -7,7 +7,7 @@
  * @author		Beit Hatfutsot
  * @package		bh/views/wpml
  * @since		2.6.0
- * @version		2.6.0
+ * @version		2.14.1
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -18,40 +18,36 @@ if ( ! function_exists( 'get_field' ) )
 /**
  * Variables
  */
+$untranslated_title	= get_field( 'acf-options_switcher_untranslated_title', 'option' );
 $languages			= get_field( 'acf-options_untranslated_languages', 'option' );
-$current_object_id	= get_queried_object_id();
+$current_permalink	= get_permalink( get_queried_object() );
 
 if ( ! $languages )
 	return;
 
-?>
+if ( $untranslated_title ) { ?>
+
+	<div class="untranslated-title"><?php echo $untranslated_title; ?></div>
+
+<?php } ?>
 
 <ul class="wpml-untranslated-languages-switcher">
 
 	<?php foreach ( $languages as $l ) {
 
-		$language_code	= $l[ 'language_code' ];
-		$page			= $l[ 'page' ];
+		$title	= $l[ 'title' ];
+		$page	= $l[ 'page' ];
 
-		if ( ! $language_code || ! $page )
+		if ( ! $title || ! $page )
 			continue;
 
 		?>
 
-		<li <?php echo $current_object_id == $page->ID ? 'class="active"' : ''; ?>>
-			<a <?php echo $current_object_id != $page->ID ? 'href="' . get_permalink( $page->ID ) . '"' : ''; ?>>
-				<div class="flag">
+		<li <?php echo $current_permalink == $page[ 'url' ] ? 'class="active"' : ''; ?>>
+			<a <?php echo $current_permalink != $page[ 'url' ] ? 'href="' . $page[ 'url' ] . '" target="' . $page[ 'target' ] . '"' : ''; ?>>
 
-					<?php
-						/**
-						 * Display the language flag
-						 */
-						get_template_part( 'views/svgs/shape', 'flag-' . $language_code );
-					?>
+				<div class="page-title"><?php echo $title; ?></div>
 
-				</div>
-
-				<div class="page-title"><?php echo $page->post_title; ?></div>
 			</a>
 		</li>
 
