@@ -1,4 +1,3 @@
-<!-- Nir G. -->
 <!-- Activity name for this tag: Beit Hatfutzot Remarketing -->
 <!-- Should be in the <body> section of the landing page -->
 

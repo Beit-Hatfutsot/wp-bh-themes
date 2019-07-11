@@ -11,14 +11,10 @@
 // Get page content
 if ( function_exists( 'get_field' ) ) {
 
-	$page_title		= get_field( 'acf-options_landing_title', 'option' );
-	$thank_you_text	= get_field( 'acf-options_landing_thank_you_text', 'option');
+	$thank_you_text	= get_field( 'acf-landing_thank_you_text' );
 	$footer_bg		= get_field( 'acf-options_landing_footer_background', 'option' );
 
 }
-
-if ( ! $page_title )
-	return;
 
 ?>
 

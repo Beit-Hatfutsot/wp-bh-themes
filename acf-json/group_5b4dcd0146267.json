@@ -3,6 +3,44 @@
     "title": "Landing Page Attributes",
     "fields": [
         {
+            "key": "field_5b4db90899afb",
+            "label": "Title",
+            "name": "acf-landing_title",
+            "type": "textarea",
+            "instructions": "Bold part will be wrapped with <code>&lt;b&gt;&lt;\/b&gt;<\/code> tag",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 3,
+            "new_lines": "br"
+        },
+        {
+            "key": "field_5b4dbda852a97",
+            "label": "Order Tickets Text",
+            "name": "acf-landing_order_tickets_text",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Order Tickets",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_5ca0d46d4b33f",
             "label": "Order Tickets Target",
             "name": "acf-landing_order_tickets_target",
@@ -101,5 +139,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1554044168
+    "modified": 1562858962
 }

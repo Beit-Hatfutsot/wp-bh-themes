@@ -11,13 +11,13 @@
 // Get page content
 if ( function_exists( 'get_field' ) ) {
 
-	$sliders		= get_field( 'acf-options_landing_sliders', 'option' );
-	$page_title		= get_field( 'acf-options_landing_title', 'option' );
-	$footer_bg		= get_field( 'acf-options_landing_footer_background', 'option' );
-	$order_text		= get_field( 'acf-options_landing_order_tickets_text', 'option' );
+	$page_title		= get_field( 'acf-landing_title' );
+	$order_text		= get_field( 'acf-landing_order_tickets_text' );
 	$order_target	= get_field( 'acf-landing_order_tickets_target' );
 	$order_link		= get_field( 'acf-landing_order_tickets_link' );
 	$order_form		= get_field( 'acf-landing_order_tickets_form' );
+	$sliders		= get_field( 'acf-options_landing_sliders', 'option' );
+	$footer_bg		= get_field( 'acf-options_landing_footer_background', 'option' );
 
 }
 

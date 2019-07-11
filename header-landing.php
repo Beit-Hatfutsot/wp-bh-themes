@@ -31,6 +31,13 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 	<?php
 		/**
+		 * Landing Facebook track lead
+		 */
+		get_template_part( 'views/header/scripts/landing-facebook-track-lead' );
+	?>
+
+	<?php
+		/**
 		 * Google Tag Manager
 		 */
 		get_template_part( 'views/header/scripts/google-tag-manager' );

@@ -3,6 +3,25 @@
     "title": "Landing Thank You Page Attributes",
     "fields": [
         {
+            "key": "field_5cb2dbc2b5ae9",
+            "label": "Thank You Text",
+            "name": "acf-landing_thank_you_text",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
             "key": "field_5cb2dc38002f1",
             "label": "Footer Scripts",
             "name": "acf-landing_footer_scripts",
@@ -42,5 +61,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1555225788
+    "modified": 1562859359
 }
