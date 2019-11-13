@@ -167,8 +167,8 @@ add_action('BH_after_single_product',				'BH_EC_product_detail', 10);
 /**
  * @see		BH_shipping_options_disclaimer()
  */
-add_action('woocommerce_cart_totals_after_shipping',	'BH_shipping_options_disclaimer');
-add_action('woocommerce_review_order_after_shipping',	'BH_shipping_options_disclaimer');
+//add_action('woocommerce_cart_totals_after_shipping',	'BH_shipping_options_disclaimer');
+//add_action('woocommerce_review_order_after_shipping',	'BH_shipping_options_disclaimer');
 
 /****************************************************************************************************************************************************/
 /* WooCommerce checkout
