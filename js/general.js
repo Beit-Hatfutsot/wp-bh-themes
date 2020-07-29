@@ -366,8 +366,10 @@ var $ = jQuery,
 
 			var slideshow = $('.products-slider-carousel');
 
-			slideshow.cycle();
-			$('.products-slider').fadeIn(BH_general.params.timeout);
+			if (slideshow.length) {
+				slideshow.cycle();
+				$('.products-slider').fadeIn(BH_general.params.timeout);
+			}
 
 		},
 
