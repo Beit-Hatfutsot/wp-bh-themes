@@ -4,7 +4,7 @@
  *
  * @author		Beit Hatfutsot
  * @package		bh/functions
- * @version		2.1
+ * @version		2.14.4
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -121,3 +121,19 @@ function BH_gallery( $atts ) {
 
 }
 add_shortcode( 'BH-gallery', 'BH_gallery' );
+
+/**
+ * BH_newsletter
+ *
+ * This function adds the "BH-newsletter" Shortcode
+ *
+ * @param	$atts (array)
+ * @return	(string)
+ */
+function BH_newsletter( $atts ) {
+
+	// return
+	return '<div class="inner_page_newsltter_widget">' . BH_get_dynamic_sidebar( 'newsletter' ) . '</div>';
+
+}
+add_shortcode( 'BH-newsletter', 'BH_newsletter' );

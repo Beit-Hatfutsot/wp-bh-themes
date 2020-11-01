@@ -4,7 +4,7 @@
  *
  * @author		Beit Hatfutsot
  * @package		bh/functions/acf
- * @version		2.8.0
+ * @version		2.14.4
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -84,7 +84,10 @@ $style .=
 }
 .site-$key header .newsletter-popup .newsletter-popup-content .widgetcontent form .newsletter-groups label:hover,
 .site-$key header .newsletter-popup .newsletter-popup-content .widgetcontent form .newsletter-groups input[type=checkbox]:checked + label,
-.site-$key header .newsletter-popup .newsletter-popup-content .widgetcontent form .newsletter-submit {
+.site-$key header .newsletter-popup .newsletter-popup-content .widgetcontent form .newsletter-submit,
+.site-$key .inner_page_newsltter_widget .widgetcontent form .newsletter-groups label:hover,
+.site-$key .inner_page_newsltter_widget .widgetcontent form .newsletter-groups input[type=checkbox]:checked + label,
+.site-$key .inner_page_newsltter_widget .widgetcontent form .newsletter-submit {
 	background-color: $s[dark_color] !important;
 }
 .site-$key footer .sites-links {

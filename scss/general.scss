@@ -31,7 +31,7 @@ body {
 		content: "1200";
 		display: none;
 	}
-	
+
 	&.collapse-side-out {
 		overflow-y: hidden;
 	}
@@ -72,7 +72,7 @@ body {
 	height: 0;
 	margin-bottom: 16px;
 	overflow: hidden;
-	
+
 	iframe,
 	object,
 	embed {
@@ -176,7 +176,7 @@ body > header {
 	/*****************/
 	/* header bottom */
 	/*****************/
-	
+
 	.header-bottom {
 		height: 40px;
 		background-color: $gray-color6;
@@ -214,7 +214,7 @@ body > header {
 						background-color: $gray-color6;
 						@include box-shadow(0, 6px, rgba(0,0,0,0.2), 6px, 0);
 						display: none;
-						
+
 						& > li {
 							position: relative;
 
@@ -496,11 +496,11 @@ body > header {
 							font-size: 18px;
 							text-align: center;
 						}
-						
+
 						li.product_list_widget_item_wrapper {
 							margin: 0 0 5px;
 							padding: 0;
-							
+
 							.product_list_widget_item {
 								a {
 									font-weight: $font-normal;
@@ -522,7 +522,7 @@ body > header {
 										.col {
 											float: left;
 											text-align: left;
-											
+
 											&.item-image {
 												padding-right: 15px;
 
@@ -541,11 +541,11 @@ body > header {
 													}
 												}
 											}
-											
+
 											&.item-data {
 												width: calc(100% - 75px);
 												font-size: 14px;
-												
+
 												.quantity {
 													margin-top: 3px;
 													padding: 0;
@@ -553,7 +553,7 @@ body > header {
 													font-size: 12px;
 												}
 											}
-											
+
 											&.item-price {
 												float: right;
 												font-size: 15px;
@@ -576,7 +576,7 @@ body > header {
 							}
 						}
 					}
-					
+
 					.total {
 						margin-top: 10px;
 						padding-top: 10px;
@@ -588,11 +588,11 @@ body > header {
 							content: "";
 							display: table;
 						}
-						
+
 						&:after {
 							clear: both;
 						}
-						
+
 						.col {
 							font-size: 13px;
 
@@ -614,10 +614,10 @@ body > header {
 							}
 						}
 					}
-					
+
 					.buttons {
 						margin-top: 15px;
-						
+
 						.view-cart-btn {
 							float: left;
 							margin: 0;
@@ -626,7 +626,7 @@ body > header {
 							font-size: 14px;
 							text-decoration: underline;
 						}
-						
+
 						.checkout-btn {
 							float: right;
 							margin: 0;
@@ -681,7 +681,7 @@ body > header {
 						font-size: 20px;
 						font-weight: $font-normal;
 					}
-					
+
 					.widgetcontent {
 						.pre-text {
 							margin-bottom: 15px;
@@ -699,11 +699,11 @@ body > header {
 								background-color: $white;
 								border: 3px solid $gray-color4;
 							}
-							
+
 							.newsletter-groups {
 								margin-top: 15px;
 								overflow: hidden;
-								
+
 								label {
 									position: relative;
 									margin: 10px 90px 0 2px;
@@ -738,7 +738,7 @@ body > header {
 										@include transform(rotate(-45deg));
 									}
 								}
-								
+
 								input[type=checkbox] {
 									display: none;
 
@@ -758,13 +758,13 @@ body > header {
 									font-size: 11px;
 								}
 							}
-							
+
 							.errph {
 								margin: 5px 0;
 								font-size: 12px;
 								color: $red-msg;
 							}
-							
+
 							.newsletter-submit {
 								float: right;
 								margin-top: 15px;
@@ -791,15 +791,15 @@ body > header {
 								cursor: pointer;
 							}
 						}
-						
+
 						.result-container {
 							position: relative;
-							
+
 							.loader {
 								position: absolute;
 								top: -28px;
 								left: 0;
-								
+
 								&:before {
 									display: none;
 								}
@@ -808,16 +808,16 @@ body > header {
 									width: 20px;
 								}
 							}
-							
+
 							.result {
 								padding-top: 5px;
 								font-size: 12px;
 								text-align: center;
-								
+
 								&.success {
 									color: $green-msg;
 								}
-								
+
 								&.error {
 									color: $red-msg;
 								}
@@ -923,22 +923,22 @@ body > header {
 	/*************/
 	/* side menu */
 	/*************/
-	
+
 	.side-menu-wrapper {
 		width: 245px;
-		
+
 		h3 {
 			margin: 40px 0 10px;
 			font-size: 18px;
 			font-weight: $font-normal;
 		}
-		
+
 		ul {
 			list-style: none;
-			
+
 			li {
 				padding-bottom: 9px;
-				
+
 				a {
 					margin-left: 8px;
 					padding-left: 15px;
@@ -948,14 +948,14 @@ body > header {
 					text-decoration: none;
 					display: block;
 				}
-				
+
 				&.parent {
 					margin: 0 0 14px;
 					padding: 0 0 0 15px;
 					font-size: 24px;
 					color: $cyan-color1;
 					border-left: 4px solid $cyan-color1;
-					
+
 					a,
 					a:hover {
 						margin-left: 0;
@@ -963,27 +963,27 @@ body > header {
 						font-size: 24px;
 						color: $cyan-color1 !important;
 						border-left: 0 !important;
-					}				
+					}
 				}
-				
+
 				.sub-menu {
 					padding-top: 7px;
 					display: none;
-					
+
 					li {
 						padding-bottom: 7px;
-						
+
 						&:last-child {
 							padding-bottom: 0;
 						}
-						
+
 						a {
 							margin-left: 16px;
 							font-size: 14px;
 						}
 					}
 				}
-				
+
 				&:hover > a,
 				& > a:hover,
 				&.current-menu-item > a,
@@ -991,7 +991,7 @@ body > header {
 					color: $black;
 					border-left: 4px solid $cyan-color1;
 				}
-				
+
 				&.current-menu-item,
 				&.current-menu-ancestor {
 					.sub-menu {
@@ -999,15 +999,15 @@ body > header {
 					}
 				}
 			}
-			
+
 			&.blog-menu {
 				li {
 					padding-bottom: 7px;
-					
+
 					&:last-child {
 						padding-bottom: 0;
 					}
-					
+
 					a {
 						margin-left: 0;
 						font-size: 14px;
@@ -1029,24 +1029,24 @@ body > header {
 		/*********************/
 		/* newsletter widget */
 		/*********************/
-		
+
 		.newsletter-widget {
 			margin-top: 30px;
-			
+
 			.Active_Trail_Newsletter {
 				padding: 10px;
 				line-height: normal;
 				background-color: $events-filter-bg;
 				border: 1px solid $border-color1;
 				@include border-radius(6px, false);
-				
+
 				.widgettitle {
 					position: relative;
 					margin: 0 0 10px;
 					padding: 4px 0 4px 40px;
 					min-height: 32px;
 					font-size: 20px;
-					
+
 					&:before {
 						content: "";
 						position: absolute;
@@ -1056,15 +1056,15 @@ body > header {
 						@include newsletter;
 					}
 				}
-				
+
 				.widgetcontent {
 					.pre-text {
 						font-size: 15px;
 					}
-					
+
 					form {
 						margin-top: 15px;
-						
+
 						.mm_newemail {
 							padding: 0 5px;
 							width: 100%;
@@ -1073,17 +1073,17 @@ body > header {
 							background-color: $white;
 							border: 1px solid $border-color1;
 						}
-						
+
 						.newsletter-groups {
 							margin-top: 15px;
-							
+
 							label {
 								padding-left: 15px;
 								text-indent: -20px;
 								font-size: 14px;
 								font-weight: $font-normal;
 								display: block;
-								
+
 								input {
 									position: relative;
 									margin: 0;
@@ -1097,13 +1097,13 @@ body > header {
 								}
 							}
 						}
-						
+
 						.errph {
 							margin: 5px 0;
 							font-size: 12px;
 							color: $red;
 						}
-						
+
 						.newsletter-submit {
 							margin-top: 15px;
 							width: 100%;
@@ -1115,29 +1115,29 @@ body > header {
 							@include border-radius(6px);
 						}
 					}
-					
+
 					.result-container {
 						position: relative;
-						
+
 						.loader {
 							position: absolute;
 							top: -30px;
 							right: 10px;
-							
+
 							img {
 								width: 20px;
 							}
 						}
-						
+
 						.result {
 							padding-top: 5px;
 							font-size: 12px;
 							text-align: center;
-							
+
 							&.success {
 								color: $green-msg;
 							}
-							
+
 							&.error {
 								color: $red;
 							}
@@ -1147,43 +1147,43 @@ body > header {
 			}
 		}
 	}
-	
+
 	/***********/
 	/* content */
 	/***********/
-	
+
 	.content-wrapper,
 	.content-wrapper-wide {
-		
+
 		/***********/
 		/* general */
 		/***********/
-		
+
 		.featured-image {
 			margin-bottom: 30px;
-			
+
 			img {
 				padding: 5px;
 				border: 1px solid $border-color1;
 				@include border-radius(8px);
 			}
 		}
-		
+
 		ul, ol {
 			padding: 0 0 10px 40px;
-			
+
 			li {
 				margin-bottom: 3px;
 			}
 		}
-		
+
 		/***************/
 		/* content row */
 		/***************/
-		
+
 		.content-column {
 			margin-bottom: 30px;
-			
+
 			h2.title {
 				margin: 0;
 				padding-right: 10px;
@@ -1192,7 +1192,7 @@ body > header {
 				background-color: $white;
 				display: inline;
 			}
-			
+
 			hr {
 				margin: -11px 0 20px;
 				padding: 0;
@@ -1200,28 +1200,28 @@ body > header {
 				border: 0;
 				border-top: 1px solid $border-color1;
 				display: block;
-			}	
+			}
 		}
-		
+
 		/********/
 		/* faqs */
 		/********/
-		
+
 		ul.faqs {
 			margin: 0;
 			padding: 0 0 30px;
 			list-style: none;
-			
+
 			li {
 				margin-bottom: 0;
-				
+
 				.question {
 					position: relative;
 					padding-left: 25px;
 					font-size: 18px;
 					font-weight: $font-bold;
 					cursor: pointer;
-					
+
 					&:before {
 						position: absolute;
 						top: 0;
@@ -1231,14 +1231,14 @@ body > header {
 						font-family: FontAwesome;
 						font-size: 17px;
 					}
-					
+
 					&.expanded {
 						&:before {
 							content: "\f146";
 						}
 					}
 				}
-				
+
 				hr {
 					margin: 10px 0;
 					padding: 0;
@@ -1249,22 +1249,22 @@ body > header {
 				}
 			}
 		}
-		
+
 		/************/
 		/* excerpts */
 		/************/
-		
+
 		ul.excerpts {
 			margin: 0;
 			padding: 0;
 			list-style: none;
-			
+
 			li {
 				margin-bottom: 30px;
 				background-color: $events-list-bg;
 				@include border-radius(6px);
 				overflow: hidden;
-				
+
 				.image {
 					margin: 10px;
 					padding: 4px;
@@ -1273,19 +1273,19 @@ body > header {
 					background-color: $white;
 					@include border-radius(6px);
 					@include box-shadow(0, 0, rgba(153,153,153,0.2), 5px, 4px);
-					
+
 					img {
 						@include border-radius(6px);
 					}
 				}
-				
+
 				.content {
 					padding: 10px;
-					
+
 					&.has-image {
 						margin-left: 210px;
 					}
-					
+
 					h3.title {
 						margin: 0 0 10px;
 						font-size: 18px;
@@ -1353,54 +1353,54 @@ body > header {
 			}
 		}
 	}
-	
+
 	/****************/
 	/* widgets area */
 	/****************/
-	
+
 	.widgets-area-wrapper {
 		.widget {
 			margin-bottom: 30px;
 		}
-		
+
 		/*************/
 		/* languages */
 		/*************/
-		
+
 		ul.languages {
 			list-style: none;
 			text-align: center;
-			
+
 			li {
 				margin: 0 5px;
 				display: inline;
 			}
 		}
 	}
-	
+
 	/************/
 	/* contacts */
 	/************/
-	
+
 	.contact {
 		margin-bottom: 30px;
 		padding: 10px;
 		background-color: $events-list-bg;
 		@include border-radius(6px);
-		
+
 		h3 {
 			margin: 0 0 10px;
 			font-size: 16px;
 			font-weight: $font-bold;
 		}
-		
+
 		.phone,
 		.email,
 		.address {
 			position: relative;
 			padding-left: 25px;
 		}
-		
+
 		.phone:before,
 		.email:before,
 		.address:before {
@@ -1410,7 +1410,7 @@ body > header {
 			left: 0;
 			@include image("general/BH-sprites.png");
 		}
-		
+
 		.phone:before { @include phone; }
 		.email:before { @include email; }
 		.address:before { @include address; }
@@ -1472,7 +1472,7 @@ body > header {
 	/*************/
 	/* not found */
 	/*************/
-	
+
 	.not-found {
 		.not-found-title {
 			margin: 20px 0 10px;
@@ -1536,7 +1536,7 @@ body > header {
   	.wpcf7-not-valid-tip,
   	.wpcf7-valid-tip {
       max-width: 200px;
-      
+
       &::before {
         position: absolute;
         width: 20px;
@@ -1551,9 +1551,9 @@ body > header {
 
 	  .wpcf7-not-valid-tip,
   	  .wpcf7-valid-tip {
-  	  	
+
   	  	&::before {
-          left: 55px; 
+          left: 55px;
   	  	}
   	  }
 	}
@@ -1569,7 +1569,7 @@ body > header {
 
   	  	&::before {
   	  	  display: none;
-          left: 440px; 
+          left: 440px;
           top: -5px;
   	  	}
   	  }
@@ -1588,7 +1588,7 @@ body > header {
   	  .wpcf7-valid-tip {
 
   	  	&::before {
-          left: 260px; 
+          left: 260px;
           top: -5px;
   	  	}
   	  }
@@ -1604,11 +1604,11 @@ body > header {
   	  .wpcf7-valid-tip {
 
   	  	&::before {
-          left: 470px; 
+          left: 470px;
   	  	}
   	  }
 	}
-   
+
     .wpcf7-not-valid-tip::before {
       @include image("general/sign-ban.svg", $position: 50% 50%);
     }
@@ -1616,7 +1616,7 @@ body > header {
     .wpcf7-valid-tip::before {
       @include image("general/sign-check.svg", $position: 50% 50%);
     }
-	
+
 
   	.radio {
   		padding: 0;
@@ -1657,7 +1657,7 @@ body > header {
 
     .he-label {
     	float: right;
-    	direction: rtl;  
+    	direction: rtl;
     	text-align: right;
     }
 
@@ -1668,7 +1668,7 @@ body > header {
       padding: 0 5px 30px;
       margin: 0 0 10px;
       vertical-align: top;
-    
+
       [name=cardmonth], [name=cardyear] {
 	    width: 50px;
 	  }
@@ -1768,7 +1768,7 @@ body > header {
   label {
   	display: block;
   }
-  
+
   #description {
     padding-bottom: 22px;
     border-bottom: 1px solid #cccccc;
@@ -1902,7 +1902,7 @@ body > header {
 	  	max-width: 320px;
 	  	padding: 0 50px 30px 0;
 	    vertical-align: top;
-	  	white-space: normal;	
+	  	white-space: normal;
 	}
 
     input.out {
@@ -2000,8 +2000,8 @@ body > header {
     #details {
 
     	.addphone-button {
-    		position: absolute; 
-    		right: 10px; 
+    		position: absolute;
+    		right: 10px;
     		top: 23px;
     	}
     }
@@ -2027,8 +2027,8 @@ body > header {
       font-size: 16px;
     }
 
-    .validation-icon-valid, 
-    .validation-icon-invalid {	
+    .validation-icon-valid,
+    .validation-icon-invalid {
     	position: absolute;
     	top: 20px;
     	left: 205px;
@@ -2055,15 +2055,15 @@ body > header {
 		margin: 0 !important;
 		padding: 0 !important;
 		display: block !important;
-		
+
 		.textfield {
 			font-size: 14px;
 		}
-		
+
 		.wpcf7-form-control-wrap {
 			display: block !important;
 		}
-		
+
 		.textareafield {
 			textarea {
 				padding: 3px !important;
@@ -2075,7 +2075,7 @@ body > header {
 				overflow: hidden !important;
 				resize: none !important;
 			}
-			
+
 			.wpcf7-not-valid-tip {
 				position: absolute;
 				bottom: 10px;
@@ -2084,7 +2084,7 @@ body > header {
 				white-space: nowrap;
 			}
 		}
-		
+
 		.inputfield {
 			input {
 				padding: 0 3px !important;
@@ -2094,7 +2094,7 @@ body > header {
 				font-size: 14px !important;
 				border: 2px solid #936942;
 			}
-			
+
 			.wpcf7-not-valid-tip {
 				position: absolute;
 				bottom: 8px;
@@ -2103,11 +2103,11 @@ body > header {
 				white-space: nowrap;
 			}
 		}
-		
+
 		&.button-wrapper {
 			margin-top: 25px !important;
 			text-align: center;
-			
+
 			input[type="submit"] {
 				width: 183px;
 				height: 60px;
@@ -2116,20 +2116,20 @@ body > header {
 				font-size: 25px;
 				border: 2px solid #673c27;
 			}
-			
+
 			.ajax-loader {
 				margin: 0 4px 0 0;
 			}
 		}
 	}
-	
+
 	.wpcf7-valid-tip,
 	.wpcf7-not-valid-tip {
 		&:before {
 			display: none;
 		}
 	}
-	
+
 	.wpcf7-response-output {
 		margin: 10px 0 0;
 		padding: 0 15px;
@@ -2140,13 +2140,161 @@ body > header {
 	}
 }
 
+/********************/
+/* newsletter popup */
+/********************/
+
+.inner_page_newsltter_widget {
+	.widgettitle {
+		margin: 0 0 10px;
+		font-size: 20px;
+		font-weight: $font-normal;
+	}
+
+	.widgetcontent {
+		.pre-text {
+			margin-bottom: 15px;
+			font-size: 14px;
+		}
+
+		form {
+			overflow: hidden;
+
+			.mm_newemail {
+				padding: 0 5px;
+				width: 100%;
+				height: 36px;
+				font-size: 14px;
+				background-color: $white;
+				border: 3px solid $gray-color4;
+			}
+
+			.newsletter-groups {
+				margin-top: 15px;
+				overflow: hidden;
+
+				label {
+					position: relative;
+					margin: 10px 90px 0 2px;
+					width: 20px;
+					height: 20px;
+					background-color: $gray-color4;
+					border-radius: 50px;
+					cursor: pointer;
+					display: block;
+
+					span {
+						position: relative;
+						padding-left: 5px;
+						top: -2px;
+						left: 20px;
+						font-size: 16px;
+						font-weight: $font-normal;
+					}
+
+					&:after {
+						content: "";
+						position: absolute;
+						top: 6px;
+						left: 4px;
+						width: 12px;
+						height: 6px;
+						border: 3px solid $font-invert-color;
+						border-top: none;
+						border-right: none;
+						background: transparent;
+						opacity: 0;
+						@include transform(rotate(-45deg));
+					}
+				}
+
+				input[type=checkbox] {
+					display: none;
+
+					&:checked + label:after {
+						opacity: 1;
+					}
+				}
+			}
+
+			small {
+				margin-bottom: 5px;
+				font-size: 14px;
+				display: block;
+
+				&.email_comment {
+					margin-bottom: 0;
+					font-size: 11px;
+				}
+			}
+
+			.errph {
+				margin: 5px 0;
+				font-size: 12px;
+				color: $red-msg;
+			}
+
+			.newsletter-submit {
+				float: right;
+				margin-top: 15px;
+				padding: 0 20px;
+				height: 30px;
+				line-height: 30px;
+				font-size: 18px;
+				font-weight: $font-bold;
+				color: $font-invert-color;
+
+				&:hover {
+					background-color: $gray-color3 !important;
+				}
+			}
+
+			.close-btn {
+				display: none;
+			}
+		}
+
+		.result-container {
+			position: relative;
+
+			.loader {
+				position: absolute;
+				top: -28px;
+				left: 0;
+
+				&:before {
+					display: none;
+				}
+
+				img {
+					width: 20px;
+				}
+			}
+
+			.result {
+				padding-top: 5px;
+				font-size: 12px;
+				text-align: center;
+
+				&.success {
+					color: $green-msg;
+				}
+
+				&.error {
+					color: $red-msg;
+				}
+			}
+		}
+	}
+}
+
 /*******/
 /* 404 */
 /*******/
 
 .container-404 {
 	position: relative;
-	
+
 	.bg-wrap {
 		position: absolute;
 		padding-left: 15px;
@@ -2155,58 +2303,58 @@ body > header {
 		left: 0;
 		width: 100%;
 		height: 100%;
-		
+
 		.bg {
 			width: 100%;
 			height: 100%;
 			@include image("general/404.png", $position: 0 100%);
 		}
 	}
-	
+
 	.top-msg {
 		height: 640px;
-		
+
 		.top-msg-title {
 			margin-top: 185px;
 			font-size: 50px;
 			text-align: center;
-			
+
 			.small {
 				font-size: 15px;
 			}
-			
+
 			.big {
 				font-size: 92px;
 				vertical-align: middle;
 			}
-			
+
 			.top {
 				position: relative;
 				top: -35px;
 				font-size: 30px;
 			}
 		}
-		
+
 		.top-msg-content {
 			margin-top: 25px;
 			line-height: normal;
 			font-size: 24px;
 			text-align: center;
-			
+
 			a {
 				color: $font-color;
 			}
 		}
 	}
-	
+
 	.quote {
 		background-color: #E0E0E0;
-		
+
 		.bottom-msg {
 			.bottom-msg-content {
 				padding: 20px 20px 0 0;
 				height: 185px;
-				
+
 				h2 {
 					margin: 0 0 65px;
 					font-size: 28px;
@@ -2229,7 +2377,7 @@ body > header {
 			height: 2.5em !important;
 		}
 	}
-	
+
 	.woocommerce-info {
 		a,
 		a:focus,
@@ -2238,11 +2386,11 @@ body > header {
 			color: #428bca;
 		}
 	}
-	
+
 	a.button {
 		@include shop-button;
 	}
-	
+
 	.return-to-shop a.button {
 		padding: 0;
 	}
@@ -2258,19 +2406,19 @@ body > header {
 	line-height: normal;
 	font-size: 13px !important;
 	border-top: 1px solid $border-color1;
-	border-bottom: 1px solid $border-color1;	
-	
+	border-bottom: 1px solid $border-color1;
+
 	a {
 		font-size: 13px !important;
 		color: $link-color !important;
 		text-decoration: none;
-		
+
 		&:hover {
 			color: link-hover-color;
 			text-decoration: none;
 		}
 	}
-	
+
 	.breadcrumb-delimiter {
 		margin: -1px 15px;
 		@include breadcrumb-delimiter-en;
@@ -2291,17 +2439,17 @@ body > header {
 		text-align: center;
 		border-top: 1px solid $border-color1;
 	}
-	
+
 	.recently-products-slider-wrapper {
 		height: 665px;
-		
+
 		.cycle-carousel-wrap {
 			width: 100%;
-			
+
 			li {
 				height: 95px;
 				text-align: center;
-				
+
 				a {
 					position: relative;
 					padding: 10px 0;
@@ -2309,10 +2457,10 @@ body > header {
 					height: 100%;
 					border: 1px solid $white;
 					display: block;
-					
+
 					&:hover {
 						border: 1px solid $cyan-color2;
-						
+
 						&:before {
 							content: "";
 							position: absolute;
@@ -2327,12 +2475,12 @@ body > header {
 							box-shadow: -7px 7px 7px rgba(0,0,0,0.3);
 							z-index: 100;
 						}
-						
+
 						.glyphicon {
 							display: block;
 						}
 					}
-					
+
 					.glyphicon {
 						position: absolute;
 						top: 0;
@@ -2342,7 +2490,7 @@ body > header {
 						cursor: pointer;
 						display: none;
 					}
-					
+
 					img {
 						width: auto;
 						max-width: 82%;
@@ -2354,13 +2502,13 @@ body > header {
 			}
 		}
 	}
-	
+
 	#recently-products-slider-prev,
 	#recently-products-slider-next {
 		position: relative;
 		height: 20px;
 		visibility: hidden;
-		
+
 		i {
 			position: absolute;
 			left: 30.5px;
@@ -2369,7 +2517,7 @@ body > header {
 			cursor: pointer;
 		}
 	}
-	
+
 	#recently-products-slider-prev i { top: -5px; }
 	#recently-products-slider-next i { bottom: -5px; }
 }
@@ -2387,7 +2535,7 @@ body > header {
 		position: relative;
 		height: 633px;
 		overflow: hidden;
-		
+
 		.shop-banner {
 			position: absolute;
 			top: 0;
@@ -2402,7 +2550,7 @@ body > header {
 			&.shop-banner-2 { left: 338px;  width: 290px; }
 			&.shop-banner-3 { left: 641px;  width: 290px; }
 			&.shop-banner-4 { left: 944px;  width: 399px; }
-			
+
 			&:hover {
 				@include opacity(0.7);
 			}
@@ -2581,7 +2729,7 @@ body > header {
 							bottom: -1px;
 							border-top: 22px solid rgba(153,153,153,0.75);
 						}
-						
+
 						&:after {
 							bottom: 0;
 							border-top: 22px solid #eeeded;
@@ -2736,7 +2884,7 @@ body > header {
 							.badge-name {
 								padding: 0 2.5px 8px;
 								height: 56px;
-								line-height: 14px;							
+								line-height: 14px;
 								font-size: 14px;
 								font-weight: bold;
 								color: white;
@@ -3080,7 +3228,7 @@ body > header {
 				}
 			}
 		}
-			
+
 		/******************/
 		/* product images */
 		/******************/
@@ -3147,7 +3295,7 @@ body > header {
 					border-bottom: 15px solid transparent;
 					cursor: pointer;
 				}
-				
+
 				.product-gallery-slider-prev {
 					left: 15px;
 					border-right: 26px solid $orange-color3;
@@ -3156,7 +3304,7 @@ body > header {
 						border-right-color: $gray-color3;
 					}
 				}
-				
+
 				.product-gallery-slider-next {
 					right: 15px;
 					border-left: 26px solid $orange-color3;
@@ -3536,15 +3684,15 @@ body > header {
 
 table.shop_table {
 	font-size: 15px;
-	
+
 	th {
 		color: $black-color2;
-		
+
 		&.product-thumbnail {
 			width: 160px;
 		}
 	}
-	
+
 	tr.cart_item {
 		td {
 			&.product-remove {
@@ -3552,7 +3700,7 @@ table.shop_table {
 					@include transition(color, .3s);
 				}
 			}
-			
+
 			&.product-thumbnail {
 				img {
 					margin: 0;
@@ -3563,22 +3711,22 @@ table.shop_table {
 					box-shadow:         none;
 				}
 			}
-			
+
 			&.product-quantity {
 				@import "modules/quantity_button";
-				
+
 				.quantity {
 					float: none;
 				}
 			}
 		}
 	}
-	
+
 	td.actions {
 		.input-text {
 			width: 150px !important;
 		}
-		
+
 		input.button[name="apply_coupon"],
 		input.button[name="update_cart"] {
 			@include shop-button;
@@ -3592,12 +3740,12 @@ table.shop_table {
 	border: 1px solid rgba(0,0,0,.1);
 	@include border-radius(5px);
 	border-collapse: separate;
-	
+
 	& > h2 {
 		margin-top: 0;
 		text-align: left;
 	}
-	
+
 	& > table {
 		width: 100%;
 		font-size: 15px;
@@ -3615,7 +3763,7 @@ table.shop_table {
 			th,
 			td {
 				width: 50% !important;
-				
+
 				#shipping_method {
 					label {
 						display: inline;
@@ -3625,15 +3773,15 @@ table.shop_table {
 			}
 		}
 	}
-	
+
 	& > p > small {
 		text-align: left;
 	}
-	
+
 	.wc-proceed-to-checkout {
 		float: right;
 		padding-bottom: 0;
-		
+
 		.checkout-button {
 			margin: 0 !important;
 			height: 30px;
@@ -3650,7 +3798,7 @@ table.shop_table {
 			@include border-radius(3px);
 			border: 0;
 			text-decoration: none !important;
-			
+
 			&:hover {
 				background: $red;
 			}
@@ -3667,46 +3815,46 @@ table.shop_table {
 		.col-1,
 		.col-2 {
 			float: none !important;
-			
+
 			#ship-to-different-address-checkbox {
 				float: left;
 				margin: 4px 10px 0 3px;
 			}
 		}
 	}
-	
+
 	a,
 	a:focus,
 	a:hover {
 		font-size: 14px;
 		color: #428bca;
 	}
-	
+
 	label {
 		margin: 0;
-		padding: 0;				
+		padding: 0;
 		font-size: 15px;
 		font-weight: $font-bold;
 		color: $black-color2;
 		display: inline;
 	}
-	
+
 	h3 {
 		font-size: 20px;
 		font-weight: $font-normal;
-		
+
 		label {
 			font-size: 20px;
 			font-weight: $font-normal;
 			color: $font-color;
 		}
 	}
-	
+
 	.select2-results {
 		margin: 0 4px 4px 0;
 		padding: 0 0 0 4px;
 	}
-	
+
 	.form-row {
 		input.input-text,
 		textarea {
@@ -3719,25 +3867,25 @@ table.shop_table {
 			-webkit-box-shadow:	none;
 			-moz-box-shadow:	none;
 			box-shadow:			none;
-			
+
 			&:focus {
 				background-color: $white;
 				border-color: $border-color2;
 			}
 		}
-		
+
 		&.validate-required.woocommerce-invalid {
 			input.input-text,
 			textarea {
 				border-color: #fb7f88;
 			}
 		}
-		
+
 		&.notes {
 			display: none;
 		}
 	}
-	
+
 	table.shop_table {
 		tr {
 			&.shipping-disclaimer {
@@ -3754,7 +3902,7 @@ table.shop_table {
 			}
 		}
 	}
-	
+
 	#payment {
 		ul.payment_methods {
 			li {
@@ -3763,7 +3911,7 @@ table.shop_table {
 				}
 			}
 		}
-		
+
 		.place-order {
 			#place_order {
 				float: right;
@@ -3865,7 +4013,7 @@ ul.order_details {
 			border-bottom: 20px solid transparent;
 			cursor: pointer;
 		}
-		
+
 		.products-slider-prev {
 			left: 0;
 			border-right: 36px solid $orange-color3;
@@ -3874,7 +4022,7 @@ ul.order_details {
 				border-right-color: $gray-color3;
 			}
 		}
-		
+
 		.products-slider-next {
 			right: 0;
 			border-left: 36px solid $orange-color3;
@@ -3910,7 +4058,7 @@ ul.order_details {
 			}
 		}
 	}
-	
+
 	.product-item-meta {
 		position: relative;
 
@@ -3937,7 +4085,7 @@ ul.order_details {
 					text-decoration: none;
 				}
 			}
-			
+
 			.artist {
 				height: 20px;
 				font-size: 12px;
@@ -4055,7 +4203,7 @@ ul.order_details {
 			}
 		}
 	}
-	
+
 	&:hover {
 		@include box-shadow(0, 0, rgba(153,153,153,0.75), 2px, 1px);
 	}
@@ -4075,7 +4223,7 @@ ul.order_details {
 .shop-about-layout {
 	margin-bottom: 30px;
 	color: $black-color2;
-	
+
 	&.shop-about-layout-content {
 		.content {
 			margin-bottom: 20px;
@@ -4083,23 +4231,23 @@ ul.order_details {
 			font-size: 24px;
 		}
 	}
-	
+
 	&.shop-about-layout-team {
 		.pre-text {
 			margin-bottom: 60px;
 			line-height: 33px;
 			font-size: 24px;
 		}
-		
+
 		.team {
 			.row {
 				position: relative;
 				margin-bottom: 60px;
-				
+
 				&:last-child {
 					margin-bottom: 0;
 				}
-				
+
 				&:before {
 					content: '';
 					position: absolute;
@@ -4109,25 +4257,25 @@ ul.order_details {
 					height: 71px;
 					background: $cyan-color2;
 				}
-				
+
 				.team-member {
 					.team-member-image {
 						text-align: center;
-						
+
 						img {
 							margin: -25.5px 0 30px;
 							max-width: 122px;
 							max-height: 122px;
 						}
 					}
-					
+
 					.team-member-name {
 						margin: 0 0 30px;
 						font-size: 25px;
 						font-weight: $font-normal;
 						text-align: center;
 					}
-					
+
 					.team-member-desc {}
 				}
 			}
@@ -4141,39 +4289,39 @@ ul.order_details {
 
 .shop-wswu-layout {
 	margin-bottom: 30px;
-	
+
 	&.shop-wswu-layout-banners {
 		margin-bottom: 10px;
-		
+
 		.col-shop-wswu {
 			float: left;
 			margin: 0 12px 12px 0;
 			height: 220px;
-			
+
 			&:nth-child(even) {
 				margin: 0 0 12px;
 			}
-			
+
 			&.col-shop-wswu-small {
 				width: 424px;
 			}
-			
+
 			&.col-shop-wswu-big {
 				width: 704px;
 			}
-			
+
 			.image-wrapper {
 				position: relative;
 				background-color: #eee;
 				height: 100%;
 				display: none;
-				
+
 				img {
 					@include opacity(0.04);
 					@include transition(opacity, 2s);
 					max-height: 100%;
 				}
-				
+
 				.image-text {
 					position: absolute;
 					padding: 10px;
@@ -4187,24 +4335,24 @@ ul.order_details {
 					@include transition(opacity, 2s);
 				}
 			}
-			
+
 			&.active {
 				.image-wrapper {
 					img {
 						@include opacity(1);
 					}
-					
+
 					.image-text {
 						@include opacity(0);
 					}
 				}
-				
+
 				&:hover {
 					img {
 						@include opacity(0.04);
 						@include transition(opacity);
 					}
-					
+
 					.image-text {
 						@include opacity(1);
 						@include transition(opacity);
@@ -4213,7 +4361,7 @@ ul.order_details {
 			}
 		}
 	}
-	
+
 	&.shop-wswu-layout-content {
 		.title {
 			margin-bottom: 30px;
@@ -4222,13 +4370,13 @@ ul.order_details {
 			color: $black-color2;
 			text-align: center;
 		}
-		
+
 		.columns {
 			.column-icon {
 				margin: 0 auto 30px;
 				width: 65px;
 				height: 65px;
-				
+
 				img {
 					@include vertical-align;
 				}
@@ -4339,7 +4487,7 @@ footer {
 		form {
 			height: 35px;
 			border: 3px solid $gray-color4;
-			
+
 			.search-field {
 				float: left;
 				padding: 0 3px;
@@ -4347,7 +4495,7 @@ footer {
 				line-height: 29px;
 				@include font;
 			}
-			
+
 			.search-submit-wrapper {
 				float: left;
 				position: relative;
@@ -4357,7 +4505,7 @@ footer {
 				&:hover {
 					background-color: $gray-color3;
 				}
-				
+
 				.magnifying-glass {
 					position: absolute;
 					top: 3px;
@@ -4588,7 +4736,7 @@ footer {
 		text-align: left;
 	}
 }
-	
+
 /*****************/
 /* google search */
 /*****************/
@@ -4603,20 +4751,20 @@ footer {
 	padding-right: 0;
 	width: auto;
 	line-height: normal;
-	
+
 	*,
 	*:before,
 	*:after {
 		-webkit-box-sizing: content-box;
 		   -moz-box-sizing: content-box;
 		        box-sizing: content-box;
-		        
+
 	}
-	
+
 	input {
 		line-height: normal;
 	}
-	
+
 	table {
 		border-collapse: separate;
 	}
