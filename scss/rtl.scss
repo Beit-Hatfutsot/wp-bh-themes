@@ -33,7 +33,7 @@ body > header {
 	/*****************/
 	/* header bottom */
 	/*****************/
-	
+
 	.header-bottom {
 
 		/********/
@@ -50,7 +50,7 @@ body > header {
 					.sub-menu {
 						left: auto;
 						right: 0;
-						
+
 						& > li {
 							& > .sub-menu {
 								left: auto;
@@ -126,12 +126,12 @@ body > header {
 										.col {
 											float: right;
 											text-align: right;
-											
+
 											&.item-image {
 												padding-left: 15px;
 												padding-right: 0;
 											}
-											
+
 											&.item-price {
 												float: left;
 											}
@@ -141,7 +141,7 @@ body > header {
 							}
 						}
 					}
-					
+
 					.total {
 						.col {
 							&.title {
@@ -158,14 +158,14 @@ body > header {
 							}
 						}
 					}
-					
+
 					.buttons {
 						.view-cart-btn {
 							float: right;
 							padding-left: 0;
 							padding-right: 10px;
 						}
-						
+
 						.checkout-btn {
 							float: left;
 						}
@@ -184,7 +184,7 @@ body > header {
 							.newsletter-groups {
 								label {
 									margin: 10px 2px 0 90px;
-									
+
 									span {
 										padding-left: 0;
 										padding-right: 5px;
@@ -202,7 +202,7 @@ body > header {
 								float: left;
 							}
 						}
-						
+
 						.result-container {
 							.loader {
 								left: auto;
@@ -251,7 +251,7 @@ body > header {
 	/*************/
 	/* side menu */
 	/*************/
-	
+
 	.side-menu-wrapper {
 		ul {
 			li {
@@ -263,20 +263,20 @@ body > header {
 					border-left: 0;
 					border-right: 4px solid #b5b5b5;
 				}
-				
+
 				&.parent {
 					padding: 0 15px 0 0;
 					border-left: 0;
 					border-right: 4px solid $cyan-color1;
-					
+
 					a,
 					a:hover {
 						margin-right: 0;
 						padding-right: 0;
 						border-right: 0 !important;
-					}				
+					}
 				}
-				
+
 				.sub-menu {
 					li {
 						a {
@@ -284,7 +284,7 @@ body > header {
 						}
 					}
 				}
-				
+
 				&:hover > a,
 				& > a:hover,
 				&.current-menu-item > a,
@@ -293,7 +293,7 @@ body > header {
 					border-right: 4px solid $cyan-color1;
 				}
 			}
-			
+
 			&.blog-menu {
 				li {
 					a {
@@ -303,23 +303,23 @@ body > header {
 				}
 			}
 		}
-		
+
 		/*********************/
 		/* newsletter widget */
 		/*********************/
-		
+
 		.newsletter-widget {
 			.Active_Trail_Newsletter {
 				.widgettitle {
 					padding: 4px 40px 4px 0;
-					
+
 					&:before {
 						left: auto;
 						right: 0;
 						@include flipH;
 					}
 				}
-				
+
 				.widgetcontent {
 					form {
 						.newsletter-groups {
@@ -329,7 +329,7 @@ body > header {
 							}
 						}
 					}
-					
+
 					.result-container {
 						.loader {
 							left: 10px;
@@ -340,43 +340,43 @@ body > header {
 			}
 		}
 	}
-	
+
 	/***********/
 	/* content */
 	/***********/
-	
+
 	.content-wrapper,
 	.content-wrapper-wide {
-		
+
 		/***********/
 		/* general */
 		/***********/
-		
+
 		ul, ol {
 			padding: 0 40px 10px 0;
 		}
-		
+
 		/***************/
 		/* content row */
 		/***************/
-		
+
 		.content-column {
 			h2.title {
 				padding-left: 10px;
 				padding-right: 0;
 			}
 		}
-		
+
 		/********/
 		/* faqs */
 		/********/
-		
+
 		ul.faqs {
 			li {
 				.question {
 					padding-left: 0;
 					padding-right: 25px;
-					
+
 					&:before {
 						left: auto;
 						right: 0;
@@ -384,17 +384,17 @@ body > header {
 				}
 			}
 		}
-		
+
 		/************/
 		/* excerpts */
 		/************/
-		
+
 		ul.excerpts {
 			li {
 				.image {
 					float: right;
 				}
-				
+
 				.content {
 					&.has-image {
 						margin-left: 0;
@@ -403,11 +403,11 @@ body > header {
 				}
 			}
 		}
-		
+
 		/************/
 		/* contacts */
 		/************/
-		
+
 		.contact {
 			.phone,
 			.email,
@@ -417,7 +417,7 @@ body > header {
 				text-align: right;
 				direction: ltr;
 			}
-			
+
 			.phone:before,
 			.email:before,
 			.address:before {
@@ -427,11 +427,11 @@ body > header {
 			}
 		}
 	}
-	
+
 	/************/
 	/* contacts */
 	/************/
-	
+
 	.contact {
 		.phone,
 		.email {
@@ -440,7 +440,7 @@ body > header {
 			text-align: right;
 			direction: ltr;
 		}
-		
+
 		.phone:before,
 		.email:before {
 			left: auto;
@@ -472,20 +472,20 @@ body > header {
 
 	.wpcf7-not-valid-tip,
   	.wpcf7-valid-tip {
-              
+
       &::before {
         right: 205px;
       }
     }
 
-    .cardmonth, 
+    .cardmonth,
     .cardyear {
 
 	  .wpcf7-not-valid-tip,
   	  .wpcf7-valid-tip {
-  	  	
+
   	  	&::before {
-          right: 55px; 
+          right: 55px;
   	  	}
   	  }
 	}
@@ -494,9 +494,9 @@ body > header {
 
 	  .wpcf7-not-valid-tip,
   	  .wpcf7-valid-tip {
-  	  	
+
   	  	&::before {
-          right: 450px; 
+          right: 450px;
   	  	}
   	  }
 	}
@@ -505,9 +505,9 @@ body > header {
 
 	  .wpcf7-not-valid-tip,
   	  .wpcf7-valid-tip {
-  	  	
+
   	  	&::before {
-          right: 300px; 
+          right: 300px;
   	  	}
   	  }
 	}
@@ -518,7 +518,7 @@ body > header {
   	  .wpcf7-valid-tip {
 
   	  	&::before {
-          right: 470px; 
+          right: 470px;
   	  	}
   	  }
 	}
@@ -561,18 +561,18 @@ body > header {
 		#details {
 
 	    	.addphone-button {
-	    		right: auto; 
-	    		left: 10px; 
+	    		right: auto;
+	    		left: 10px;
 	    	}
 	    }
 
-		.validation-icon-valid, 
-	    .validation-icon-invalid {	
+		.validation-icon-valid,
+	    .validation-icon-invalid {
 	    	right: 205px;
 	    }
 
 	    .carddate-wrapper {
-	    	
+
 	     	.validation-icon-valid,
 	     	.validation-icon-invalid {
 	    		right: 60px !important;
@@ -590,9 +590,9 @@ body > header {
 /**********/
 
 .main-layout-banner {
-	
+
 	.container {
-		
+
 		#slideshow-wrapper {
 
 			#description-wrapper {
@@ -634,21 +634,21 @@ body > header {
 
 .events-slider-placeholder {
 	padding: 0 35px 0 0;
-	
+
 	.events-slider {
 		float: right;
-		
+
 		.event-item {
 			a {
 				.event-meta {
 					text-align: right;
 					direction: rtl;
-					
+
 					.event-type {
 						left: auto;
 						right: 20px;
 					}
-		
+
 					h3,
 					.event-desc {
 						padding-left: 10px;
@@ -658,14 +658,14 @@ body > header {
 			}
 		}
 	}
-	
+
 	#events-slider-next,
 	#events-slider-prev {
 		top: 0;
 		left: auto;
 		right: 0;
 	}
-	
+
 	#events-slider-next {
 		top: 109px;
 	}
@@ -691,19 +691,19 @@ body > header {
 .contact-details {
 	.contact-details-wrapper {
 		padding: 15px 0 15px 28px;
-		
+
 		.contact-details-layout {
 			padding: 0 28px 15px 0;
-			
+
 			/*******/
 			/* map */
 			/*******/
-			
+
 			&.contact-details-layout-map {
 				margin-left: -28px;
 				margin-right: 0;
 			}
-	
+
 			/************/
 			/* text box */
 			/************/
@@ -719,22 +719,22 @@ body > header {
 			/***************/
 			/* single link */
 			/***************/
-			
+
 			&.contact-details-layout-single-link {
 				.icon {
 					float: right;
 				}
-				
+
 				.text {
 					margin-left: 0;
 					margin-right: 60px;
 				}
 			}
-	
+
 			/******************/
 			/* multiple links */
 			/******************/
-			
+
 			&.contact-details-layout-multiple-links {
 				ul {
 					li {
@@ -763,22 +763,22 @@ body > header {
 				margin-left: 4px;
 				margin-right: 0;
 			}
-		
+
 			.event-filter-by-date {
 				float: right;
-				
+
 				&:after {
 					left: 13px;
 					right: auto;
 				}
 			}
-			
+
 			input,
 			select {
 				padding-left: 0;
 				padding-right: 5px;
 			}
-			
+
 			.loader {
 				left: -24px;
 				right: auto;
@@ -832,7 +832,7 @@ body > header {
 			text-align: left;
 		}
 	}
-	
+
 	.panel-body {
 		.row {
 			.event-date {
@@ -840,7 +840,7 @@ body > header {
 					text-align: left;
 				}
 			}
-			
+
 			.event-btn {
 				text-align: left;
 			}
@@ -857,17 +857,17 @@ article.post {
 		.post-meta {
 			padding-left: 0;
 			padding-right: 25px;
-			
+
 			&.post-date {
 				&:before {
 					left: auto;
 					right: 0;
 				}
 			}
-			
+
 			&.post-comments-count {
 				float: right;
-				
+
 				&.active:before {
 					left: auto;
 					right: 0;
@@ -892,6 +892,44 @@ article.post {
 	}
 }
 
+/*********************/
+/* newsletter widget */
+/*********************/
+
+.inner_page_newsltter_widget {
+	.widgetcontent {
+		form {
+			.newsletter-groups {
+				label {
+					margin: 10px 2px 0 90px;
+
+					span {
+						padding-left: 0;
+						padding-right: 5px;
+						left: auto;
+						right: 20px;
+					}
+				}
+			}
+
+			.newsletter-submit {
+				float: left;
+			}
+
+			.close-btn {
+				float: left;
+			}
+		}
+
+		.result-container {
+			.loader {
+				left: auto;
+				right: 0;
+			}
+		}
+	}
+}
+
 /*******/
 /* 404 */
 /*******/
@@ -900,7 +938,7 @@ article.post {
 	.bg-wrap {
 		@include flipH;
 	}
-	
+
 	.quote {
 		.bottom-msg {
 			.bottom-msg-content {
@@ -920,20 +958,20 @@ article.post {
 			float: left;
 		}
 	}
-	
+
 	.col-1 {
 		float: right !important;
 	}
-	
+
 	.col-2 {
 		float: left !important;
 	}
-	
+
 	.form-row {
 		&.form-row-first {
 			float: right;
 		}
-		
+
 		&.form-row-last {
 			float: left;
 		}
@@ -958,7 +996,7 @@ article.post {
 	.widgettitle {
 		font-size: 11px;
 	}
-	
+
 	.recently-products-slider-wrapper {
 		.cycle-carousel-wrap {
 			li {
@@ -974,7 +1012,7 @@ article.post {
 							box-shadow: 7px 7px 7px rgba(0,0,0,0.3);
 						}
 					}
-					
+
 					.glyphicon {
 						left: 0;
 						right: auto;
@@ -1310,29 +1348,29 @@ article.post {
 
 table.shop_table {
 	text-align: right !important;
-	
+
 	tr.cart_item {
 		td {
 			&.product-quantity {
 				@import "modules/quantity_button-rtl";
-				
+
 				.quantity {
 					float: right;
 				}
 			}
 		}
 	}
-	
+
 	td.actions {
 		.coupon {
 			float: right !important;
-			
+
 			.input-text {
 				float: right !important;
 				margin: 0 0 0 4px !important;
 			}
 		}
-		
+
 		input.button[name="update_cart"] {
 			float: left;
 		}
@@ -1341,7 +1379,7 @@ table.shop_table {
 
 .cart_totals {
 	float: right !important;
-	
+
 	& > table {
 		tr {
 			&.shipping-disclaimer {
@@ -1356,7 +1394,7 @@ table.shop_table {
 
 			td {
 				text-align: left;
-				
+
 				#shipping_method {
 					li {
 						padding: .25em 22px .25em 0;
@@ -1365,15 +1403,15 @@ table.shop_table {
 			}
 		}
 	}
-	
+
 	& > h2 {
 		text-align: right;
 	}
-	
+
 	& > p > small {
 		text-align: right;
 	}
-	
+
 	.wc-proceed-to-checkout {
 		float: left;
 	}
@@ -1388,7 +1426,7 @@ table.shop_table {
 	form.checkout_coupon {
 		text-align: right !important;
 	}
-	
+
 	form.checkout {
 		.col-1,
 		.col-2 {
@@ -1398,11 +1436,11 @@ table.shop_table {
 			}
 		}
 	}
-	
+
 	h3#ship-to-different-address {
 		float: none !important;
 	}
-	
+
 	.select2-container {
 		.select2-choice {
 			.select2-arrow {
@@ -1413,7 +1451,7 @@ table.shop_table {
 			}
 		}
 	}
-	
+
 	table.shop_table {
 		tr {
 			&.shipping {
@@ -1425,26 +1463,26 @@ table.shop_table {
 			}
 		}
 	}
-	
+
 	#payment {
 		ul.payment_methods {
 			li {
 				text-align: right !important;
-				
+
 				input.input-radio {
 					margin: 0 0 0 1em;
 				}
-				
+
 				label {
 					img {
 						margin: -2px .5em 0 0;
 					}
-					
+
 					a {
 						float: left !important;
 					}
 				}
-				
+
 				.payment_box {
 					&:after {
 						left: auto;
@@ -1454,15 +1492,15 @@ table.shop_table {
 				}
 			}
 		}
-		
+
 		.place-order {
 			#place_order {
 				float: left;
 			}
-			
+
 			.terms {
 				text-align: left;
-				
+
 				input[type="checkbox"] {
 					margin: -2px 0 0 8px;
 				}
@@ -1556,7 +1594,7 @@ ul.order_details {
 			margin: 0 0 12px 12px;
 		}
 	}
-	
+
 	&.shop-wswu-layout-content {
 		.title {
 			font-size: 38px;
@@ -1655,7 +1693,7 @@ footer {
 			.search-field {
 				float: right;
 			}
-			
+
 			.search-submit-wrapper {
 				float: right;
 			}
