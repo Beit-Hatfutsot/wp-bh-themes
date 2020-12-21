@@ -1,0 +1,270 @@
+@import "functions";
+@import "typography";
+
+@charset "utf-8";
+
+/******************/
+/* general layout */
+/******************/
+
+* {
+	@include reset;
+}
+
+body {
+	@include font;
+	margin: 0 auto;
+	color: $landing-black;
+	background-color: $content-bg;
+
+	&:before {
+		display: none;
+	}
+
+	.landing-wrapper {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+}
+
+::-webkit-scrollbar {
+	display: none;
+}
+
+/**********/
+/* header */
+/**********/
+
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+
+	/********/
+	/* logo */
+	/********/
+
+	.logo {
+		margin: 30px auto 25px;
+	}
+}
+
+/***********/
+/* banner */
+/***********/
+
+.banner {
+	position: relative;
+	margin-left: -15px;
+	margin-right: -15px;
+	overflow: hidden;
+
+	.slideshow-placeholder {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+
+		.slideshow {
+			width: 100%;
+			height: 100%;
+
+			.cycle-slideshow {
+				width: 100% !important;
+				max-width: 100%;
+				height: 100%;
+
+				.cycle-carousel-wrap {
+					width: 100%;
+					height: 100%;
+
+					.slide {
+						width: 100%;
+						height: 100%;
+						display: none;
+
+						&:first-child,
+						&.cycle-slide {
+							display: block;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.content-wrap {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		pointer-events: none;
+
+		.content {
+			.logo {
+				svg {
+					fill: #FFF;
+					-webkit-filter: drop-shadow( 2px 2px 0 #000);
+					filter: drop-shadow( 2px 2px 0 #000);
+				}
+			}
+		}
+	}
+}
+
+/************************/
+/* order tickets button */
+/************************/
+
+.btn {
+	font-weight: $font-bold;
+	color: $landing-black !important;
+	background-color: $landing-white;
+	border-style: solid;
+	border-color: $landing-red;
+	@include center-align;
+	cursor: pointer;
+}
+
+/**************/
+/* responsive */
+/**************/
+
+@media (min-width: 768px) {
+	.visible-xs {
+		display: none;
+	}
+
+	.hidden-xs {
+		display: block;
+	}
+
+	body {
+		&:before {
+			content: "768";
+		}
+	}
+
+	/**********/
+	/* header */
+	/**********/
+
+	header {
+
+		/********/
+		/* logo */
+		/********/
+
+		.logo {
+			width: 278px;
+			height: 108px;
+		}
+	}
+
+	/***********/
+	/* banner */
+	/***********/
+
+	.banner {
+		padding-top: 51.322751323%;
+
+		.slideshow-placeholder {
+			.slideshow {
+				.cycle-slideshow {
+					.cycle-carousel-wrap {
+						.slide {
+							img {
+								width: auto;
+								height: auto;
+								min-width: 100%;
+								min-height: 100%;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	/************************/
+	/* order tickets button */
+	/************************/
+
+	.btn {
+		padding: 25px 40px;
+		bottom: 40px;
+		font-size: 44px;
+		border-width: 9px;
+		@include border-radius(53px);
+	}
+}
+
+@media (max-width: 767px) {
+	.visible-xs {
+		display: block;
+	}
+
+	.hidden-xs {
+		display: none;
+	}
+
+	body {
+		&:before {
+			content: "767";
+		}
+	}
+
+	/**********/
+	/* header */
+	/**********/
+
+	header {
+
+		/********/
+		/* logo */
+		/********/
+
+		.logo {
+			width: 132px;
+			height: 51px;
+		}
+	}
+
+	/***********/
+	/* banner */
+	/***********/
+
+	.banner {
+		padding-top: 567px;
+
+		.slideshow-placeholder {
+			.slideshow {
+				.cycle-slideshow {
+					.cycle-carousel-wrap {
+						.slide {
+							div {
+								width: 100%;
+								height: 100%;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	/************************/
+	/* order tickets button */
+	/************************/
+
+	.btn {
+		padding: 10px 25px;
+		bottom: 20px;
+		font-size: 20px;
+		border-width: 4px;
+		@include border-radius(25px);
+	}
+}

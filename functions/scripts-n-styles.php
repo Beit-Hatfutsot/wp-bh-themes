@@ -4,7 +4,7 @@
  *
  * @author		Beit Hatfutsot
  * @package		bh/functions
- * @version		2.14.2
+ * @version		3.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -17,7 +17,7 @@ add_filter( 'mce_css', 'BH_editor_style' );
 
 /**
  * BH_login_scripts_n_styles
- * 
+ *
  * used before authentication
  *
  * @param	N/A
@@ -52,81 +52,98 @@ function BH_wp_scripts_n_styles() {
 	/**
 	 * Styles
 	 */
-	wp_register_style( 'bootstrap',					CSS_DIR . '/libs/bootstrap.min.css',							array(),					VERSION );
-	wp_register_style( 'bootstrap-rtl',				CSS_DIR . '/libs/bootstrap-rtl.min.css',						array( 'bootstrap' ),		VERSION );
-	wp_register_style( 'jquery-ui',					CSS_DIR . '/libs/jquery-ui.css',								array( 'bootstrap' ),		VERSION );
-	wp_enqueue_style ( 'font-awesome',		 		CSS_DIR . '/libs/font-awesome.min.css',							array(),					VERSION );
-	wp_register_style( 'photoswipe',				CSS_DIR . '/libs/PhotoSwipe/photoswipe.css',					array(),					VERSION );
-	wp_register_style( 'photoswipe-default-skin',	CSS_DIR . '/libs/PhotoSwipe/default-skin/default-skin.css',		array(),					VERSION );
+	wp_register_style( 'bootstrap',					CSS_DIR . '/libs/bootstrap.min.css',							array(),						VERSION );
+	wp_register_style( 'bootstrap-rtl',				CSS_DIR . '/libs/bootstrap-rtl.min.css',						array( 'bootstrap' ),			VERSION );
+	wp_register_style( 'jquery-ui',					CSS_DIR . '/libs/jquery-ui.css',								array( 'bootstrap' ),			VERSION );
+	wp_enqueue_style ( 'font-awesome',		 		CSS_DIR . '/libs/font-awesome.min.css',							array(),						VERSION );
+	wp_register_style( 'photoswipe',				CSS_DIR . '/libs/PhotoSwipe/photoswipe.css',					array(),						VERSION );
+	wp_register_style( 'photoswipe-default-skin',	CSS_DIR . '/libs/PhotoSwipe/default-skin/default-skin.css',		array(),						VERSION );
 
-	wp_register_style( 'general',					CSS_DIR . '/general.css',										array( 'bootstrap' ),		VERSION );
-	wp_register_style( 'main',						CSS_DIR . '/main.css',											array( 'bootstrap' ),		VERSION );
-	wp_register_style( 'event',						CSS_DIR . '/event.css',											array( 'bootstrap' ),		VERSION );
-	wp_register_style( 'blog',						CSS_DIR . '/blog.css',											array( 'bootstrap' ),		VERSION );
-	wp_register_style( 'donate',				    CSS_DIR . '/donate.css',										array( 'bootstrap' ),		VERSION );
-	wp_register_style( 'landing',					CSS_DIR . '/landing.css',										array(),					VERSION );
-	wp_register_style( 'rtl',						CSS_DIR . '/rtl.css',											array( 'bootstrap-rtl' ),	VERSION );
+	wp_register_style( 'general',					CSS_DIR . '/general.css',										array( 'bootstrap' ),			VERSION );
+	wp_register_style( 'main',						CSS_DIR . '/main.css',											array( 'bootstrap' ),			VERSION );
+	wp_register_style( 'event',						CSS_DIR . '/event.css',											array( 'bootstrap' ),			VERSION );
+	wp_register_style( 'blog',						CSS_DIR . '/blog.css',											array( 'bootstrap' ),			VERSION );
+	wp_register_style( 'donate',				    CSS_DIR . '/donate.css',										array( 'bootstrap' ),			VERSION );
+	wp_register_style( 'landing',					CSS_DIR . '/landing.css',										array(),						VERSION );
+	wp_register_style( 'exhibition-landing',		CSS_DIR . '/exhibition-landing.css',							array(),						VERSION );
+	wp_register_style( 'exhibition-landing-rtl',	CSS_DIR . '/exhibition-landing-rtl.css',						array( 'exhibition-landing' ),	VERSION );
+	wp_register_style( 'rtl',						CSS_DIR . '/rtl.css',											array( 'bootstrap-rtl' ),		VERSION );
 
 	if ( is_page() ) {
 		$page_template = basename( get_page_template() );
 	}
 
-	if ( 'landing.php' == $page_template || 'landing-thank-you.php' == $page_template ) {
-		wp_enqueue_style( 'landing' );
-	}
-	else {
+	switch ( $page_template ) :
 
-		wp_enqueue_style( 'general' );
+		case 'landing.php':
+		case 'landing-thank-you.php':
 
-		// Enqueue sites style
-		BH_enqueue_sites_styles();
+			wp_enqueue_style( 'landing' );
+			break;
 
-		if ( is_page() ) {
+		case 'exhibition-landing.php':
 
-			switch ( $page_template ) :
+			wp_enqueue_style( 'exhibition-landing' );
 
-				case 'main.php' :
-					wp_enqueue_style( 'main' );
-					break;
+			if ( is_rtl() ) {
+				wp_enqueue_style( 'exhibition-landing-rtl' );
+			}
 
-				case 'event.php' :
-				case 'past-events.php' :
-					wp_enqueue_style( 'jquery-ui' );
-					wp_enqueue_style( 'event' );
-					break;
+			break;
 
-				case 'blog.php' :
-					wp_enqueue_style( 'blog' );
-					break;
+		default:
 
-				case 'donate-lobby.php' :
-				case 'donate-process.php' :
-					wp_enqueue_style( 'donate' );
-					break;
+			wp_enqueue_style( 'general' );
 
-			endswitch;
+			// Enqueue sites style
+			BH_enqueue_sites_styles();
 
-		}
+			if ( is_page() ) {
 
-		if ( is_category() || is_date() || is_singular( 'post' ) || is_author() ) {
-			wp_enqueue_style( 'blog' );
-		}
+				switch ( $page_template ) :
 
-		if ( is_tax( 'event_category' ) ) {
-			wp_enqueue_style( 'jquery-ui' );
-		}
+					case 'main.php' :
+						wp_enqueue_style( 'main' );
+						break;
 
-		if ( is_tax( 'event_category' ) || is_singular( 'event' ) ) {
-			wp_enqueue_style( 'event' );
-		}
+					case 'event.php' :
+					case 'past-events.php' :
+						wp_enqueue_style( 'jquery-ui' );
+						wp_enqueue_style( 'event' );
+						break;
 
-		if ( is_rtl() ) {
-			wp_enqueue_style( 'bootstrap-rtl' );
-			wp_enqueue_style( 'rtl' );
-			wp_enqueue_style( 'sites-rtl' );
-		}
+					case 'blog.php' :
+						wp_enqueue_style( 'blog' );
+						break;
 
-	}
+					case 'donate-lobby.php' :
+					case 'donate-process.php' :
+						wp_enqueue_style( 'donate' );
+						break;
+
+				endswitch;
+
+			}
+
+			if ( is_category() || is_date() || is_singular( 'post' ) || is_author() ) {
+				wp_enqueue_style( 'blog' );
+			}
+
+			if ( is_tax( 'event_category' ) ) {
+				wp_enqueue_style( 'jquery-ui' );
+			}
+
+			if ( is_tax( 'event_category' ) || is_singular( 'event' ) ) {
+				wp_enqueue_style( 'event' );
+			}
+
+			if ( is_rtl() ) {
+				wp_enqueue_style( 'bootstrap-rtl' );
+				wp_enqueue_style( 'rtl' );
+				wp_enqueue_style( 'sites-rtl' );
+			}
+
+	endswitch;
 
 	/**
 	 * Scripts
@@ -154,6 +171,7 @@ function BH_wp_scripts_n_styles() {
 	wp_register_script( 'blog',						JS_DIR . '/min/blog.min.js',										array( 'jquery', 'bootstrap' ),									VERSION,	true );
 	wp_register_script( 'donate',					JS_DIR . '/min/donate.min.js',										array( 'jquery', 'bootstrap' ),									VERSION,	true );
 	wp_register_script( 'landing',					JS_DIR . '/min/landing.min.js',										array( 'jquery' ),												VERSION,	true );
+	wp_register_script( 'exhibition-landing',		JS_DIR . '/min/exhibition-landing.min.js',							array( 'jquery' ),												VERSION,	true );
 
 	wp_localize_script( 'donate',					'tribute_text_placehoder',
 		array(
@@ -163,9 +181,9 @@ function BH_wp_scripts_n_styles() {
 		)
 	);
 
-	wp_register_script( 'forms',					JS_DIR . '/forms/forms.js',											array( 'jquery' ),							                    VERSION,	true );       
-	wp_register_script( 'microfilm',				JS_DIR . '/forms/microfilm.js',										array( 'jquery' ),							                    VERSION,	true );       
-	wp_register_script( 'item-handler',				JS_DIR . '/forms/item-handler.js',									array( 'jquery' ),							                    VERSION,	true );        
+	wp_register_script( 'forms',					JS_DIR . '/forms/forms.js',											array( 'jquery' ),							                    VERSION,	true );
+	wp_register_script( 'microfilm',				JS_DIR . '/forms/microfilm.js',										array( 'jquery' ),							                    VERSION,	true );
+	wp_register_script( 'item-handler',				JS_DIR . '/forms/item-handler.js',									array( 'jquery' ),							                    VERSION,	true );
 	wp_register_script( 'state-handler',			JS_DIR . '/forms/state-handler.js',									array( 'jquery' ),							                    VERSION,	true );
 
 	// google analytics script

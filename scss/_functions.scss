@@ -117,19 +117,19 @@
 	-webkit-border-radius: $radius;
 	-moz-border-radius:    $radius;
 	border-radius:         $radius;
-	
+
 	@if $background-clip {
-		-webkit-background-clip: padding-box; 
-		-moz-background-clip:    padding; 
+		-webkit-background-clip: padding-box;
+		-moz-background-clip:    padding;
 		background-clip:         padding-box;
-	} 
+	}
 }
 
 @mixin calc($property, $expression) {
-	#{$property}: -moz-calc(#{$expression}); 
-	#{$property}: -o-calc(#{$expression}); 
-	#{$property}: -webkit-calc(#{$expression}); 
-	#{$property}: calc(#{$expression}); 
+	#{$property}: -moz-calc(#{$expression});
+	#{$property}: -o-calc(#{$expression});
+	#{$property}: -webkit-calc(#{$expression});
+	#{$property}: calc(#{$expression});
 }
 
 @mixin center-align {
