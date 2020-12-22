@@ -26,6 +26,17 @@ if ( ! $main_title && ! $sub_title && ! $content )
 
 <section class="introduction">
 
+	<?php if ( $image ) { ?>
 
+		<img src="<?php echo $image[ 'url' ]; ?>" alt="<?php echo $image[ 'alt' ]; ?>" />
 
+	<?php } ?>
+
+	<div class="content-wrap">
+
+		<h2><?php echo $main_title; ?></h2>
+		<div class="sub-title"><?php echo $sub_title; ?></div>
+		<div class="content"><?php echo $content; ?></div>
+
+	</div>
 </section><!-- .introduction -->
