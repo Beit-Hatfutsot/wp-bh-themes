@@ -7,8 +7,14 @@
 /* general layout */
 /******************/
 
+@include load-font("anomalia-light", "anomalia/anomalia-light-aaa", light, normal);
+@include load-font("anomalia-regular", "anomalia/anomalia-regular-aaa", regular, normal);
+@include load-font("ploni-regular", "ploni/ploni-regular-aaa", regular, normal);
+@include load-font("ploni-bold", "ploni/ploni-bold-aaa", bold, normal);
+
 * {
 	@include reset;
+	box-sizing: border-box;
 }
 
 body {
@@ -91,12 +97,33 @@ header {
 						}
 					}
 				}
+
+				.cycle-pager {
+					position: absolute;
+					bottom: 10px;
+					width: 100%;
+					text-align: center;
+					overflow: hidden;
+					z-index: 500;
+
+					span {
+						display: inline-block;
+						background-color: $white;
+						@include border-radius(50%);
+						cursor: pointer;
+
+						&.cycle-pager-active {
+							background-color: $black;
+						}
+					}
+				}
 			}
 		}
 	}
 
 	.content-wrap {
 		position: absolute;
+		padding: 0 15px;
 		top: 0;
 		left: 0;
 		width: 100%;
@@ -104,29 +131,70 @@ header {
 		pointer-events: none;
 
 		.content {
+			text-align: center;
+
 			.logo {
+				position: relative;
+
 				svg {
-					fill: #FFF;
-					-webkit-filter: drop-shadow( 2px 2px 0 #000);
-					filter: drop-shadow( 2px 2px 0 #000);
+					fill: $white;
+					-webkit-filter: drop-shadow(2px 2px 0 $black);
+					filter: drop-shadow(2px 2px 0 $black);
 				}
+
+				&:after {
+					content: "";
+					position: absolute;
+					bottom: 0;
+					left: 0;
+					width: 100%;
+					background-color: $white;
+					@include box-shadow(2px, 2px, $black);
+					@include opacity(.5);
+				}
+			}
+
+			.title {
+				font-family: 'anomalia-regular', sans-serif;
+				color: $white;
+				-webkit-filter: drop-shadow(2px 2px 0 $black);
+				filter: drop-shadow(2px 2px 0 $black);
+			}
+
+			.buttons {
+				pointer-events: initial;
 			}
 		}
 	}
 }
 
-/************************/
-/* order tickets button */
-/************************/
+/***********/
+/* buttons */
+/***********/
 
-.btn {
-	font-weight: $font-bold;
-	color: $landing-black !important;
-	background-color: $landing-white;
-	border-style: solid;
-	border-color: $landing-red;
-	@include center-align;
-	cursor: pointer;
+.anu-btn {
+	font-family: 'anomalia-regular', sans-serif;
+	text-decoration: none;
+
+	&.tickets-btn {
+		color: $white;
+		background-color: $blue;
+
+		&:hover {
+			background-color: $black;
+		}
+	}
+
+	&.museum-btn {
+		color: $blue;
+		border: 2px solid $blue;
+		background-color: #FFFFFFB3;
+
+		&:hover {
+			color: $black;
+			border-color: $black;
+		}
+	}
 }
 
 /**************/
@@ -184,21 +252,60 @@ header {
 							}
 						}
 					}
+
+					.cycle-pager {
+						span {
+							margin: 0 15px;
+							width: 14px;
+							height: 14px;
+						}
+					}
+				}
+			}
+		}
+
+		.content-wrap {
+			.content {
+				.logo {
+					margin: 10.417% auto 1.2%;
+					padding-bottom: 3.646%;
+					width: 45.872%;
+
+					&:after {
+						height: 4.17%;
+					}
+				}
+
+				.title {
+					margin-bottom: 1.2%;
+					font-size: px2vw(110px, 1920px);
+				}
+
+				.buttons {
+					.anu-btn {
+						margin: 0 0.625%;
+						display: inline-block;
+					}
 				}
 			}
 		}
 	}
 
-	/************************/
-	/* order tickets button */
-	/************************/
+	/***********/
+	/* buttons */
+	/***********/
 
-	.btn {
-		padding: 25px 40px;
-		bottom: 40px;
-		font-size: 44px;
-		border-width: 9px;
-		@include border-radius(53px);
+	.anu-btn {
+		font-size: px2vw(28px, 1920px);
+		min-width: 11.111111111%;
+
+		&.tickets-btn {
+			padding: 0.833333333% 5px;
+		}
+
+		&.museum-btn {
+			padding: 0.729166667% 3px;
+		}
 	}
 }
 
@@ -251,20 +358,62 @@ header {
 							}
 						}
 					}
+
+					.cycle-pager {
+						span {
+							margin: 0 5px;
+							width: 6px;
+							height: 6px;
+						}
+					}
+				}
+			}
+		}
+
+		.content-wrap {
+			.content {
+				@include vertical-align;
+
+				.logo {
+					margin: 0 auto 20px;
+					padding-bottom: 30px;
+					width: 85.517241379%;
+
+					&:after {
+						height: 4px;
+					}
+				}
+
+				.title {
+					margin-bottom: 30px;
+					line-height: 40px;
+					font-size: 36px;
+				}
+
+				.buttons {
+					.anu-btn {
+						margin: 0 auto 17px;
+						display: block;
+					}
 				}
 			}
 		}
 	}
 
-	/************************/
-	/* order tickets button */
-	/************************/
+	/***********/
+	/* buttons */
+	/***********/
 
-	.btn {
-		padding: 10px 25px;
-		bottom: 20px;
-		font-size: 20px;
-		border-width: 4px;
-		@include border-radius(25px);
+	.anu-btn {
+		font-size: 14px;
+		width: 148px;
+
+		&.tickets-btn {
+			padding: 6px 5px;
+		}
+
+		&.museum-btn {
+			padding: 4px 3px;
+		}
 	}
 }

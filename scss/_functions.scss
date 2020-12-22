@@ -1,5 +1,9 @@
 @import "params";
 
+@function px2vw($px_size, $viewport) {
+	@return ($px_size*100/$viewport)+vw;
+}
+
 @mixin reset {
 	margin: 0;
 	padding: 0;
@@ -98,15 +102,14 @@
 	}
 }
 
-@mixin load-font($name, $file_name, $weight: normal, $style: normal) {
+@mixin load-font($name, $file_name, $weight: 400, $style: normal) {
 	@if $name != "" and $file_name != "" {
 		@font-face {
 			font-family: $name;
 			src: url( $fonts + $file_name + ".eot" );
 			src: url( $fonts + $file_name + ".eot?#iefix" ) format('embedded-opentype'),
-				 url( $fonts + $file_name + ".woff" ) format('woff'),
-				 url( $fonts + $file_name + ".ttf" ) format('truetype'),
-				 url( $fonts + $file_name + ".svg#" + $name ) format('svg');
+				 url( $fonts + $file_name + ".woff2" ) format('woff2'),
+				 url( $fonts + $file_name + ".woff" ) format('woff');
 			font-weight: $weight;
 			font-style: $style;
 		}

@@ -28,9 +28,25 @@ $title	= get_field( 'acf-exhibition_lp_banner_title' );
 			get_template_part( 'views/components/anu-logo' );
 		?>
 
-		<div class="seperator"></div>
-
 		<div class="title"><?php echo $title; ?></div>
+
+		<div class="buttons">
+
+			<?php
+				/**
+				 * Display the tickets button
+				 */
+				get_template_part( 'views/components/anu-tickets-btn' );
+			?>
+
+			<?php
+				/**
+				 * Display the museum button
+				 */
+				get_template_part( 'views/components/anu-museum-btn' );
+			?>
+
+		</div>
 
 	</div><!-- .content -->
 </div><!-- .content-wrap -->

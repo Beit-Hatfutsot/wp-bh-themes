@@ -11,8 +11,6 @@
 // vars
 if ( function_exists( 'get_field' ) ) {
 
-	$museum_btn		= get_field( 'acf-exhibition_lp_museum_btn' );
-	$tickets_btn	= get_field( 'acf-exhibition_lp_tickets_btn' );
 	$phone			= get_field( 'acf-exhibition_lp_phone' );
 
 }

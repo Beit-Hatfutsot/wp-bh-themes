@@ -33,6 +33,8 @@ if ( ! $slides )
 				data-cycle-auto-height=false
 				data-cycle-manual-trump=false
 				data-cycle-swipe=true
+				data-cycle-pager="#cycle-pager-desktop"
+				data-cycle-pager-template="<span></span>"
 				data-cycle-log=false
 				>
 
@@ -44,7 +46,8 @@ if ( ! $slides )
 
 				} ?>
 
-			</div><!-- .slides -->
+				<div id="cycle-pager-desktop" class="cycle-pager"></div>
+			</div><!-- .cycle-slideshow -->
 		</div><!-- .slideshow -->
 	</div><!-- .slideshow-placeholder -->
 
@@ -58,6 +61,8 @@ if ( ! $slides )
 				data-cycle-auto-height=false
 				data-cycle-manual-trump=false
 				data-cycle-swipe=true
+				data-cycle-pager="#cycle-pager-mobile"
+				data-cycle-pager-template="<span></span>"
 				data-cycle-log=false
 				>
 
@@ -69,7 +74,8 @@ if ( ! $slides )
 
 				} ?>
 
-			</div><!-- .slides -->
+				<div id="cycle-pager-mobile" class="cycle-pager"></div>
+			</div><!-- .cycle-slideshow -->
 		</div><!-- .slideshow -->
 	</div><!-- .slideshow-placeholder -->
 
