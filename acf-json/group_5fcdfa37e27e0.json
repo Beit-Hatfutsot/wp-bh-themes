@@ -335,10 +335,10 @@
                 },
                 {
                     "key": "field_5fcf5ceb00863",
-                    "label": "Video URL",
-                    "name": "video_url",
-                    "type": "url",
-                    "instructions": "",
+                    "label": "Video ID",
+                    "name": "video_id",
+                    "type": "text",
+                    "instructions": "YouTube video ID",
                     "required": 1,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -347,7 +347,10 @@
                         "id": ""
                     },
                     "default_value": "",
-                    "placeholder": ""
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
                 }
             ]
         },
@@ -979,5 +982,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1608593634
+    "modified": 1608727495
 }

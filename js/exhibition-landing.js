@@ -27,6 +27,103 @@ var $ = jQuery,
 				return this.height( Math.max.apply(this, $.map(this, function(e) { return $(e).height() })) );
 			}
 
+			// video
+			BH_landing.video();
+
+		},
+
+		/**
+		 * video
+		 *
+		 * Called from init
+		 *
+		 * @param	N/A
+		 * @return	N/A
+		 */
+		video : function () {
+
+			// responsive video
+			BH_landing.videoResponsive();
+
+			// video click event
+			$('.video-poster').on('click', function() {
+				BH_landing.videoClicked($(this));
+			});
+
+			// more info toggle
+			BH_landing.videoMoreInfo();
+
+		},
+
+		/**
+		 * videoResponsive
+		 *
+		 * Called from video
+		 *
+		 * @param	N/A
+		 * @return	N/A
+		 */
+		videoResponsive : function () {
+
+			$('.landing-wrapper').find('iframe, object, embed').each(function() {
+				if ( $(this).hasClass('no-flex') )
+					return;
+
+				// vars
+				var container = $(this).closest('.video-single'),
+					id = container.data('video');
+
+				$(this).wrap("<div class='flex-video'></div>");
+				$('<button class="video-poster" style="background-image: url(\'https://i.ytimg.com/vi/' + id + '/maxresdefault.jpg\');""></button>').appendTo($(this).parent());
+			});
+
+		},
+
+		/**
+		 * videoClicked
+		 *
+		 * Called from video
+		 *
+		 * @param	el (jQuery)
+		 * @return	N/A
+		 */
+		videoClicked : function (el) {
+
+			// vars
+			var container = el.closest('.video-single'),
+				id = container.data('video'),
+				iframe = container.find('iframe');
+
+			if (container.hasClass('active'))
+				return;
+
+			container.addClass('active');
+
+			// build video src
+			var src = 'https://www.youtube.com/embed/' + id + '/?autoplay=1&showinfo=0&rel=0&modestbranding=1&cc_load_policy=1&origin=' + window.location.origin + '&wmode=transparent';
+
+			iframe.attr('src', src);
+			iframe.attr('wmode', 'Opaque');
+
+		},
+
+		/**
+		 * videoMoreInfo
+		 *
+		 * Called from video
+		 *
+		 * @param	N/A
+		 * @return	N/A
+		 */
+		videoMoreInfo : function () {
+
+			$('.more-info').click(function() {
+				// vars
+				current = $(this).closest('.content-wrap');
+
+				current.toggleClass('open');
+			});
+
 		},
 
 		/**
@@ -60,7 +157,7 @@ var $ = jQuery,
 		 */
 		loopSlideshows : function () {
 
-			// Variables
+			// vars
 			var slideshows = $('.cycle-slideshow');
 
 			BH_landing.params.interval = setTimeout(function() {
@@ -105,7 +202,7 @@ var $ = jQuery,
 			// Set window breakpoint values
 			BH_landing.breakpoint_refreshValue();
 
-			// Variables
+			// vars
 			var slideshows = $('.cycle-slideshow');
 
 			if (BH_landing.params.interval !== '') {
