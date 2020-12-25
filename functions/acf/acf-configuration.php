@@ -4,7 +4,7 @@
  *
  * @author		Beit Hatfutsot
  * @package		bh/functions/acf
- * @version		2.14.4
+ * @version		3.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -24,6 +24,25 @@ if ( function_exists( 'acf_add_options_sub_page' ) ) {
 	acf_add_options_sub_page( 'General' );
 
 }
+
+/**
+ * BH_acf_init_google_maps_api
+ *
+ * This function initiates Google API key for use by Google Maps custom field
+ *
+ * @param	N/A
+ * @return	N/A
+ */
+function BH_acf_init_google_maps_api() {
+
+	$google_maps_api = get_field( 'acf-options_google_maps_api_key', 'option' );
+
+	if ( $google_maps_api ) {
+		acf_update_setting( 'google_api_key', $google_maps_api );
+	}
+
+}
+add_action( 'acf/init', 'BH_acf_init_google_maps_api' );
 
 /**
  * Transient support action hooks

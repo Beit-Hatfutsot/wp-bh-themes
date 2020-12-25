@@ -186,6 +186,25 @@ function BH_wp_scripts_n_styles() {
 	wp_register_script( 'item-handler',				JS_DIR . '/forms/item-handler.js',									array( 'jquery' ),							                    VERSION,	true );
 	wp_register_script( 'state-handler',			JS_DIR . '/forms/state-handler.js',									array( 'jquery' ),							                    VERSION,	true );
 
+	if ( function_exists( 'get_field' ) ) {
+
+		$google_maps_api = get_field( 'acf-options_google_maps_api_key', 'option' );
+
+		if ( $google_maps_api ) {
+
+			wp_register_script( 'google-maps', 'https://maps.googleapis.com/maps/api/js?key=' . $google_maps_api . '&language=' . substr( get_bloginfo( 'language' ), 0, 2 ), array( 'jquery' ), VERSION, true );
+
+			$google_maps_api_params = array (
+				'_googleMapsApi'	=> true
+			);
+
+			wp_localize_script( 'google-maps', 'googleMapsData', $google_maps_api_params );
+			wp_enqueue_script( 'google-maps' );
+
+		}
+
+	}
+
 	// google analytics script
 	wp_enqueue_script( 'bh-analytics' );
 	// facebook pixel script

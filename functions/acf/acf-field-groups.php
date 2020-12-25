@@ -8754,6 +8754,41 @@ acf_add_local_field_group(array(
 			'disabled' => 0,
 		),
 		array(
+			'key' => 'field_5fe465b750761',
+			'label' => 'Google Maps',
+			'name' => '',
+			'type' => 'tab',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'placement' => 'left',
+			'endpoint' => 0,
+		),
+		array(
+			'key' => 'field_5fe465d050762',
+			'label' => 'API Key',
+			'name' => 'acf-options_google_maps_api_key',
+			'type' => 'text',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+			'prepend' => '',
+			'append' => '',
+			'maxlength' => '',
+		),
+		array(
 			'key' => 'field_53b39fc7566d5',
 			'label' => 'Misc',
 			'name' => '',
@@ -8878,7 +8913,6 @@ acf_add_local_field_group(array(
 	'hide_on_screen' => '',
 	'active' => true,
 	'description' => '',
-	'modified' => 1531831000,
 ));
 
 endif;

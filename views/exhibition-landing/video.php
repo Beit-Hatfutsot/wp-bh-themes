@@ -24,7 +24,9 @@ $total	= count( $videos );
 
 ?>
 
-<section id="section-video" class="video">
+<a id="section-video"></a>
+
+<section class="video">
 
 	<?php foreach ( $videos as $video ) {
 

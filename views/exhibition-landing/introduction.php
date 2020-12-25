@@ -24,7 +24,9 @@ if ( ! $main_title && ! $sub_title && ! $content )
 
 ?>
 
-<section id="section-introduction" class="introduction">
+<a id="section-introduction"></a>
+
+<section class="introduction">
 
 	<?php if ( $image ) { ?>
 

@@ -19,7 +19,7 @@
 
 body {
 	margin: 0 auto;
-	@include font( 'ploni-regular' );
+	@include font('ploni-regular');
 	color: $black;
 	background-color: $white;
 
@@ -171,6 +171,7 @@ header {
 
 			.title {
 				@include font('anomalia-regular');
+				font-weight: normal;
 				color: $white;
 				-webkit-filter: drop-shadow(2px 2px 0 $black);
 				filter: drop-shadow(2px 2px 0 $black);
@@ -293,13 +294,78 @@ header {
 	}
 }
 
+/**************/
+/* visit info */
+/**************/
+
+.visit-info {
+
+	/***************/
+	/* tickets btn */
+	/***************/
+
+	.btn-wrap {
+		text-align: center;
+	}
+
+	/***********/
+	/* content */
+	/***********/
+
+	h3 {
+		@include font('anomalia-regular');
+	}
+
+	.title {
+		svg {
+			float: left;
+		}
+
+		h4 {
+			@include font('anomalia-regular');
+			color: $blue;
+		}
+	}
+
+	.info {
+		table {
+			tr {
+				td {
+					vertical-align: top;
+
+					&.label {
+						@include font('anomalia-regular');
+					}
+				}
+			}
+		}
+	}
+}
+
+/***************/
+/* google maps */
+/***************/
+
+.map-wrap {
+	.acf-map {
+		width: 100%;
+		border: 1px solid #CCC;
+	}
+
+	.acf-map img {
+		max-width: inherit !important;
+	}
+}
+
 /***********/
 /* buttons */
 /***********/
 
 .anu-btn {
 	@include font('anomalia-regular');
+	text-align: center;
 	text-decoration: none;
+	display: inline-block;
 
 	&.tickets-btn {
 		color: $white;
@@ -422,7 +488,6 @@ header {
 				.buttons {
 					.anu-btn {
 						margin: 0 px2vw(12px, 1920px);
-						display: inline-block;
 					}
 				}
 			}
@@ -544,6 +609,102 @@ header {
 		}
 	}
 
+	/**************/
+	/* visit info */
+	/**************/
+
+	.visit-info {
+		padding: 0 px2vw(85px, 1920px);
+
+		/***************/
+		/* tickets btn */
+		/***************/
+
+		.btn-wrap {
+			margin: px2vw(70px, 1920px) 0 px2vw(140px, 1920px);
+		}
+
+		/***********/
+		/* content */
+		/***********/
+
+		h3 {
+			margin-bottom: px2vw(55px, 1920px);
+			line-height: px2vw(83px, 1920px);
+			font-size: px2vw(60px, 1920px);
+		}
+
+		.row {
+			margin-left: px2vw(-30px, 1920px);
+			margin-right: px2vw(-30px, 1920px);
+			margin-bottom: px2vw(120px, 1920px);
+
+			&:before,
+			&:after {
+				content: " ";
+				display: table;
+			}
+
+			&:after {
+				clear: both;
+			}
+
+			.col {
+				float: left;
+				padding-left: px2vw(30px, 1920px);
+				padding-right: px2vw(30px, 1920px);
+				width: 50%;
+			}
+		}
+
+		.title {
+			svg {
+				margin-top: px2vw(5px, 1920px);
+				margin-right: px2vw(12px, 1920px);
+				height: px2vw(30px, 1920px);
+				fill: $blue;
+				stroke: $blue;
+			}
+
+			h4 {
+				margin-bottom: px2vw(55px, 1920px);
+				line-height: px2vw(40px, 1920px);
+				font-size: px2vw(32px, 1920px);
+			}
+		}
+
+		.info {
+			table {
+				tr {
+					td {
+						padding-bottom: px2vw(20px, 1920px);
+						line-height: px2vw(40px, 1920px);
+						font-size: px2vw(20px, 1920px);
+
+						&.value {
+							padding-left: px2vw(65px, 1920px);
+						}
+					}
+				}
+			}
+
+			.extra-content {
+				line-height: px2vw(40px, 1920px);
+				font-size: px2vw(20px, 1920px);
+			}
+		}
+	}
+
+	/***************/
+	/* google maps */
+	/***************/
+
+	.map-wrap {
+		.acf-map {
+			height: px2vw(500px, 1920px);
+		}
+	}
+
 	/***********/
 	/* buttons */
 	/***********/
@@ -655,7 +816,7 @@ header {
 
 				.buttons {
 					.anu-btn {
-						margin: 0 auto 17px;
+						margin: 0 auto px2vw(17px, 320px);
 						display: block;
 					}
 				}
@@ -846,21 +1007,136 @@ header {
 		}
 	}
 
+	/**************/
+	/* visit info */
+	/**************/
+
+	.visit-info {
+
+		/***************/
+		/* tickets btn */
+		/***************/
+
+		.btn-wrap {
+			margin: px2vw(30px, 320px) 0 px2vw(50px, 320px);
+		}
+
+		/***********/
+		/* content */
+		/***********/
+
+		h3 {
+			margin-left: px2vw(10px, 320px);
+			margin-bottom: px2vw(20px, 320px);
+			line-height: px2vw(25px, 320px);
+			font-size: px2vw(18px, 320px);
+		}
+
+		.title {
+			position: relative;
+			border: px2vw(1px, 320px) solid $white;
+			background-color: $blue;
+			@include box-shadow(0, 2px, #00000015, 4px);
+			cursor: pointer;
+
+			svg {
+				margin: px2vw(11px, 320px) px2vw(12px, 320px) 0 px2vw(10px, 320px);
+				height: px2vw(20px, 320px);
+				fill: $white;
+				stroke: $white;
+			}
+
+			h4 {
+				margin-left: px2vw(52px, 320px);
+				line-height: px2vw(42px, 320px);
+				font-size: px2vw(14px, 320px);
+				color: $white;
+			}
+
+			&:after {
+				content: "";
+				position: absolute;
+				top: px2vw(10px, 320px);
+				right: px2vw(10px, 320px);
+				width: px2vw(10px, 320px);
+				height: px2vw(10px, 320px);
+				border-left: px2vw(2px, 320px) solid $white;
+				border-bottom: px2vw(2px, 320px) solid $white;
+				cursor: pointer;
+				@include transition(all .25s);
+				@include transform(rotate(-45deg));
+			}
+
+			&.open {
+				&:after {
+					top: px2vw(17px, 320px);
+					@include transform(rotate(135deg));
+				}
+			}
+		}
+
+		.info {
+			padding: px2vw(10px, 320px);
+			display: none;
+
+			table {
+				tr {
+					td {
+						padding-bottom: px2vw(10px, 320px);
+						line-height: px2vw(18px, 320px);
+						font-size: px2vw(12px, 320px);
+
+						&.value {
+							padding-left: px2vw(25px, 320px);
+						}
+					}
+				}
+			}
+
+			.extra-content {
+				line-height: px2vw(18px, 320px);
+				font-size: px2vw(12px, 320px);
+			}
+
+			&.exposed {
+				display: block;
+			}
+		}
+	}
+
+	/***************/
+	/* google maps */
+	/***************/
+
+	.map-wrap {
+		padding: px2vw(10px, 320px);
+		display: none;
+
+		.acf-map {
+			height: px2vw(388px, 320px);
+		}
+
+		&.exposed {
+			display: block;
+		}
+	}
+
 	/***********/
 	/* buttons */
 	/***********/
 
 	.anu-btn {
-		line-height: 20px;
-		font-size: 14px;
-		width: 148px;
+		line-height: px2vw(20px, 320px);
+		font-size: px2vw(14px, 320px);
+		min-width: px2vw(148px, 320px);
+		max-width: px2vw(148px, 320px);
 
 		&.tickets-btn {
-			padding: 6px 5px;
+			padding: px2vw(6px, 320px) px2vw(5px, 320px);
 		}
 
 		&.museum-btn {
-			padding: 4px 3px;
+			padding: px2vw(4px, 320px) px2vw(3px, 320px);
 		}
 	}
 }

@@ -27,6 +27,71 @@ if ( ! $opening_hours || ! $cost || ! $address || ! $map )
 
 <section class="visit-info">
 
+	<div class="btn-wrap">
 
+		<?php
+			/**
+			 * Display the tickets button
+			 */
+			get_template_part( 'views/components/anu-tickets-btn' );
+		?>
+
+	</div>
+
+	<a id="section-visit-info"></a>
+
+	<?php if ( $title ) { ?>
+
+		<h3><?php echo $title; ?></h3>
+
+	<?php } ?>
+
+	<div class="row">
+		<div class="col">
+
+			<?php
+				/**
+				 * Display the opening hours
+				 */
+				include( locate_template( 'views/exhibition-landing/visit-info-opening-hours.php' ) );
+			?>
+
+		</div>
+
+		<div class="col">
+
+			<?php
+				/**
+				 * Display the cost
+				 */
+				include( locate_template( 'views/exhibition-landing/visit-info-cost.php' ) );
+			?>
+
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col">
+
+			<?php
+				/**
+				 * Display the address
+				 */
+				include( locate_template( 'views/exhibition-landing/visit-info-address.php' ) );
+			?>
+
+		</div>
+
+		<div class="col">
+
+			<?php
+				/**
+				 * Display the map
+				 */
+				include( locate_template( 'views/exhibition-landing/visit-info-map.php' ) );
+			?>
+
+		</div>
+	</div>
 
 </section><!-- .visit-info -->

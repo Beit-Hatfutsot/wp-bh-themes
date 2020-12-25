@@ -28,7 +28,7 @@ $title	= get_field( 'acf-exhibition_lp_banner_title' );
 			get_template_part( 'views/components/anu-logo' );
 		?>
 
-		<div class="title"><?php echo $title; ?></div>
+		<h1 class="title"><?php echo $title; ?></h1>
 
 		<div class="buttons">
 

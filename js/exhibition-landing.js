@@ -22,13 +22,14 @@ var $ = jQuery,
 		 */
 		init : function() {
 
-			// jQuery extentions
-			$.fn.setAllToMaxHeight = function() {
-				return this.height( Math.max.apply(this, $.map(this, function(e) { return $(e).height() })) );
-			}
-
 			// video
 			BH_landing.video();
+
+			// visit info
+			BH_landing.visitInfo();
+
+			// google maps
+			BH_landing.googleMaps();
 
 		},
 
@@ -127,6 +128,169 @@ var $ = jQuery,
 		},
 
 		/**
+		 * visitInfo
+		 *
+		 * Called from init
+		 *
+		 * @param   N/A
+		 * @return  N/A
+		 */
+		visitInfo : function() {
+
+			// vars
+			var infoTitles = $('.visit-info').find('.title'),
+				map = $('.visit-info').find('.map-wrap');
+
+			infoTitles.on('click', function() {
+				// vars
+				var title = $(this),
+					info = title.next('.info');
+
+				// toggle title
+				title.toggleClass('open');
+
+				// toggle info
+				info.toggleClass('exposed');
+
+				// toggle map
+				if (title.hasClass('map')) {
+					map.toggleClass('exposed');
+				}
+
+			});
+
+		},
+
+		/**
+		 * googleMaps
+		 *
+		 * Called from init
+		 *
+		 * @param   N/A
+		 * @return  N/A
+		 */
+		googleMaps : function() {
+
+			if ( typeof googleMapsData !== 'undefined' && typeof googleMapsData._googleMapsApi !== 'undefined' ) {
+				$('.acf-map').each(function() {
+
+					// vars
+					var map = BH_landing.initMap($(this));
+
+				});
+			}
+
+		},
+
+		/**
+		* initMap
+		*
+		* Renders a Google Map onto the selected jQuery element
+		*
+		* @param    $el (object) The jQuery element
+		* @return   (object) The map instance
+		*/
+		initMap : function($el) {
+
+			// find marker elements within map
+			var $markers = $el.find('.marker');
+
+			// create gerenic map
+			var mapArgs = {
+				zoom: $el.data('zoom') || 16,
+				mapTypeId: google.maps.MapTypeId.ROADMAP
+			};
+			var map = new google.maps.Map($el[0], mapArgs);
+
+			// add markers
+			map.markers = [];
+			$markers.each(function() {
+				BH_landing.initMarker($(this), map);
+			});
+
+			// center map based on markers
+			BH_landing.centerMap(map);
+
+			// return
+			return map;
+
+		},
+
+		/**
+		* initMarker
+		*
+		* Creates a marker for the given jQuery element and map
+		*
+		* @param    $el (object) The jQuery element
+		* @param    map (object) The map instance
+		* @return   N/A
+		*/
+		initMarker : function($marker, map) {
+
+			// get position from marker
+			var lat = $marker.data('lat');
+			var lng = $marker.data('lng');
+			var latLng = {
+				lat: parseFloat( lat ),
+				lng: parseFloat( lng )
+			};
+
+			// create marker instance
+			var marker = new google.maps.Marker({
+				position: latLng,
+				map: map
+			});
+
+			// append to reference for later use
+			map.markers.push(marker);
+
+			// if marker contains HTML, add it to an infoWindow
+			if ($marker.html()) {
+				// create info window
+				var infowindow = new google.maps.InfoWindow({
+					content: $marker.html()
+				});
+
+				// show info window when marker is clicked
+				google.maps.event.addListener(marker, 'click', function() {
+					infowindow.open(map, marker);
+				});
+			}
+
+		},
+
+		/**
+		* centerMap
+		*
+		* Centers the map showing all markers in view
+		*
+		* @param    map (object) The map instance
+		* @return   N/A
+		*/
+		centerMap : function(map) {
+
+			// create map boundaries from all map markers
+			var bounds = new google.maps.LatLngBounds();
+
+			map.markers.forEach(function( marker ){
+				bounds.extend({
+					lat: marker.position.lat(),
+					lng: marker.position.lng()
+				});
+			});
+
+			// single marker
+			if (map.markers.length == 1) {
+				map.setCenter( bounds.getCenter() );
+
+			// multiple markers
+			} else {
+				map.fitBounds(bounds);
+			}
+
+		},
+
+		/**
 		 * breakpoint_refreshValue
 		 *
 		 * Set window breakpoint values
@@ -160,10 +324,12 @@ var $ = jQuery,
 			// vars
 			var slideshows = $('.cycle-slideshow');
 
-			BH_landing.params.interval = setTimeout(function() {
-				slideshows.cycle('next');
-				BH_landing.loopSlideshows();
-			}, 5000);
+			if (slideshows.length) {
+				BH_landing.params.interval = setTimeout(function() {
+					slideshows.cycle('next');
+					BH_landing.loopSlideshows();
+				}, 5000);
+			}
 
 		},
 
@@ -199,7 +365,7 @@ var $ = jQuery,
 		 */
 		alignments : function() {
 
-			// Set window breakpoint values
+			// set window breakpoint values
 			BH_landing.breakpoint_refreshValue();
 
 			// vars
@@ -209,11 +375,13 @@ var $ = jQuery,
 				clearTimeout(BH_landing.params.interval);
 			}
 
-			// Reinit slideshows
-			slideshows.cycle('reinit');
+			// reinit slideshows
+			if (slideshows.length) {
+				slideshows.cycle('reinit');
 
-			// Loop slideshows
-			BH_landing.loopSlideshows();
+				// Loop slideshows
+				BH_landing.loopSlideshows();
+			}
 
 		}
 
