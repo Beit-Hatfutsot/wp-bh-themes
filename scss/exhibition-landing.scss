@@ -357,6 +357,53 @@ header {
 	}
 }
 
+/**********/
+/* social */
+/**********/
+
+.social {
+	text-align: center;
+
+	h4 {
+		@include font('anomalia-regular');
+		color: $blue;
+	}
+
+	ul {
+		list-style: none;
+		overflow: hidden;
+
+		li {
+			display: inline-block;
+
+			a {
+				display: block;
+			}
+
+			&:first-child {
+				margin-left: 0;
+			}
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+	}
+
+	.phone {
+		a {
+			color: $black;
+			text-decoration: none;
+			display: inline-block;
+
+			&:hover,
+			&:focus {
+				color: $blue;
+			}
+		}
+	}
+}
+
 /***********/
 /* buttons */
 /***********/
@@ -407,6 +454,28 @@ header {
 
 		&:before {
 			content: "768";
+		}
+	}
+
+	.row {
+		margin-left: px2vw(-30px, 1920px);
+		margin-right: px2vw(-30px, 1920px);
+
+		&:before,
+		&:after {
+			content: " ";
+			display: table;
+		}
+
+		&:after {
+			clear: both;
+		}
+
+		.col {
+			float: left;
+			padding-left: px2vw(30px, 1920px);
+			padding-right: px2vw(30px, 1920px);
+			width: 50%;
 		}
 	}
 
@@ -634,29 +703,6 @@ header {
 			font-size: px2vw(60px, 1920px);
 		}
 
-		.row {
-			margin-left: px2vw(-30px, 1920px);
-			margin-right: px2vw(-30px, 1920px);
-			margin-bottom: px2vw(120px, 1920px);
-
-			&:before,
-			&:after {
-				content: " ";
-				display: table;
-			}
-
-			&:after {
-				clear: both;
-			}
-
-			.col {
-				float: left;
-				padding-left: px2vw(30px, 1920px);
-				padding-right: px2vw(30px, 1920px);
-				width: 50%;
-			}
-		}
-
 		.title {
 			svg {
 				margin-top: px2vw(5px, 1920px);
@@ -674,6 +720,8 @@ header {
 		}
 
 		.info {
+			margin-bottom: px2vw(120px, 1920px);
+
 			table {
 				tr {
 					td {
@@ -700,8 +748,53 @@ header {
 	/***************/
 
 	.map-wrap {
+		margin-bottom: px2vw(120px, 1920px);
+
 		.acf-map {
 			height: px2vw(500px, 1920px);
+		}
+	}
+
+	/**********/
+	/* social */
+	/**********/
+
+	.social {
+		margin-bottom: px2vw(160px, 1920px);
+		padding: 0 px2vw(85px, 1920px);
+
+		h4 {
+			line-height: px2vw(50px, 1920px);
+			font-size: px2vw(32px, 1920px);
+		}
+
+		ul {
+			li {
+				margin: 0 px2vw(13px, 1920px);
+				width: px2vw(30px, 1920px);
+
+				a {
+					line-height: px2vw(30px, 1920px);
+				}
+			}
+		}
+
+		.phone {
+			a {
+				margin-top: px2vw(35px, 1920px);
+				line-height: px2vw(29px, 1920px);
+				font-size: px2vw(20px, 1920px);
+			}
+		}
+
+		.row {
+			h4 {
+				text-align: right;
+			}
+
+			ul {
+				text-align: left;
+			}
 		}
 	}
 
@@ -1118,6 +1211,40 @@ header {
 
 		&.exposed {
 			display: block;
+		}
+	}
+
+	/**********/
+	/* social */
+	/**********/
+
+	.social {
+		margin-top: px2vw(42px, 320px);
+		margin-bottom: px2vw(100px, 320px);
+
+		h4 {
+			margin-bottom: px2vw(4.5px, 320px);
+			line-height: px2vw(30px, 320px);
+			font-size: px2vw(18px, 320px);
+		}
+
+		ul {
+			li {
+				margin: 0 px2vw(8px, 320px);
+				width: px2vw(18.5px, 320px);
+
+				a {
+					line-height: px2vw(18.5px, 320px);
+				}
+			}
+		}
+
+		.phone {
+			a {
+				margin-top: px2vw(17px, 320px);
+				line-height: px2vw(17px, 320px);
+				font-size: px2vw(12px, 320px);
+			}
 		}
 	}
 

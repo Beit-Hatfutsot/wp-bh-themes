@@ -788,8 +788,8 @@
                     "key": "field_5fcf724491def",
                     "label": "Icon",
                     "name": "icon",
-                    "type": "text",
-                    "instructions": "\"Font Awesome\" icon class name",
+                    "type": "select",
+                    "instructions": "",
                     "required": 1,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -797,11 +797,20 @@
                         "class": "",
                         "id": ""
                     },
-                    "default_value": "",
-                    "placeholder": "fa-xxxxxx",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
+                    "choices": {
+                        "facebook": "Facebook",
+                        "instagram": "Instagram",
+                        "tripadvisor": "Tripadvisor",
+                        "twitter": "Twitter",
+                        "youtube": "YouTube"
+                    },
+                    "default_value": [],
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
+                    "placeholder": ""
                 },
                 {
                     "key": "field_5fcf727b91df0",
@@ -982,5 +991,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1608727495
+    "modified": 1608898318
 }
