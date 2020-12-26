@@ -1,6 +1,6 @@
 <?php
 /**
- * The Template for displaying the exhibition landing page visit info / map
+ * The Template for displaying the exhibition landing page visit info / waze
  *
  * @author		Beit Hatfutsot
  * @package		bh/views/exhibition-landing

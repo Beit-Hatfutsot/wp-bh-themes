@@ -25,17 +25,19 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 		?>
 
-		<li class="social-link social-link-<?php echo $icon; ?>">
+		<li class="social-link social-link-<?php echo $icon[ 'value' ]; ?> tooltip">
 			<a href="<?php echo $url; ?>" target="_blank">
 
 				<?php
 					/**
 					 * Display the icon
 					 */
-					get_template_part( 'views/svgs/shape', 'anu-' . $icon );
+					get_template_part( 'views/svgs/shape', 'anu-' . $icon[ 'value' ] );
 				?>
 
 			</a>
+
+			<span class="tooltiptext"><?php echo $icon[ 'label' ]; ?></span>
 		</li>
 
 	<?php endforeach; ?>
