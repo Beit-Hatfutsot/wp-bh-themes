@@ -94,4 +94,11 @@ if ( ! $opening_hours || ! $cost || ! $address || ! $map )
 		</div>
 	</div>
 
+	<?php
+		/**
+		 * Display Waze link
+		 */
+		include( locate_template( 'views/exhibition-landing/visit-info-waze.php' ) );
+	?>
+
 </section><!-- .visit-info -->

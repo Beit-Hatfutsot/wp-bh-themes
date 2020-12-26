@@ -1214,6 +1214,28 @@ header {
 		}
 	}
 
+	/********/
+	/* waze */
+	/********/
+
+	.waze-wrap {
+		margin-top: px2vw(40px, 320px);
+		line-height: px2vw(28.8px, 320px);
+		font-size: px2vw(20px, 320px);
+		text-align: center;
+
+		a {
+			color: $black;
+			text-decoration: none;
+			display: block;
+
+			svg {
+				height: px2vw(20px, 320px);
+				fill: $blue;
+			}
+		}
+	}
+
 	/**********/
 	/* social */
 	/**********/
