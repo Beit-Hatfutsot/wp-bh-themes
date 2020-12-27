@@ -1,0 +1,320 @@
+@import "functions";
+@import "typography";
+
+@charset "utf-8";
+
+/**********/
+/* banner */
+/**********/
+
+.banner {
+	.slideshow-placeholder {
+		direction: ltr;
+	}
+}
+
+/****************/
+/* introduction */
+/****************/
+
+.introduction {
+	img {
+		float: right;
+	}
+}
+
+/**************/
+/* visit info */
+/**************/
+
+.visit-info {
+
+	/***********/
+	/* content */
+	/***********/
+
+	.title {
+		svg {
+			float: right;
+		}
+	}
+}
+
+/**********/
+/* social */
+/**********/
+
+.social {
+	ul {
+		li {
+			&:first-child {
+				margin-right: 0;
+			}
+
+			&:last-child {
+				margin-left: 0;
+			}
+		}
+	}
+}
+
+/**************/
+/* responsive */
+/**************/
+
+@media (min-width: 768px) {
+	.row {
+		.col {
+			float: right;
+		}
+	}
+
+	/**********/
+	/* header */
+	/**********/
+
+	header {
+
+		/********/
+		/* logo */
+		/********/
+
+		.logo {
+			left: auto;
+			right: px2vw(50px, 1920px);
+		}
+	}
+
+	/*********************/
+	/* language switcher */
+	/*********************/
+
+	.language-switcher {
+		left: px2vw(50px, 1920px);
+		right: auto;
+
+		li {
+			margin: 0 px2vw(15px, 1920px) 0 0;
+		}
+	}
+
+	/****************/
+	/* introduction */
+	/****************/
+
+	.introduction {
+		.content-wrap {
+			padding: px2vw(100px, 1920px) px2vw(485px, 1920px) 0 px2vw(392px, 1920px);
+		}
+	}
+
+	/*********/
+	/* video */
+	/*********/
+
+	.video {
+		.video-single {
+			.content-bg-wrap {
+				left: auto;
+				right: 0;
+				background: transparent linear-gradient(90deg, #00000000 0%, #000000B3 60%, #000000BF 100%) 0% 0% no-repeat padding-box;
+
+				.content-wrap {
+					margin-left: 0;
+					margin-right: px2vw(139px, 1920px);
+				}
+			}
+
+			.list {
+				left: px2vw(36px, 1920px);
+				right: auto;
+			}
+		}
+	}
+
+	/**************/
+	/* visit info */
+	/**************/
+
+	.visit-info {
+
+		/***********/
+		/* content */
+		/***********/
+
+		.title {
+			svg {
+				margin-left: px2vw(12px, 1920px);
+				margin-right: 0;
+			}
+		}
+
+		.info {
+			table {
+				tr {
+					td {
+						&.value {
+							padding-left: 0;
+							padding-right: px2vw(65px, 1920px);
+						}
+					}
+				}
+			}
+		}
+	}
+
+	/**********/
+	/* social */
+	/**********/
+
+	.social {
+		.row {
+			h4 {
+				text-align: left;
+			}
+
+			ul {
+				text-align: right;
+
+				li {
+					&:first-child {
+						margin-left: px2vw(13px, 1920px);
+					}
+
+					&:last-child {
+						margin-right: px2vw(13px, 1920px);
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 767px) {
+
+	/******************/
+	/* menu hamburger */
+	/******************/
+
+	.menu-hamburger {
+		left: auto;
+		right: px2vw(10px, 320px);
+	}
+
+	/**********/
+	/* header */
+	/**********/
+
+	header {
+
+		/********/
+		/* menu */
+		/********/
+
+		.menu {
+			left: px2vw(10px, 320px);
+			right: auto;
+		}
+	}
+
+	/***************/
+	/* mobile menu */
+	/***************/
+
+	.mobile-menu-wrap {
+		.menu-close {
+			left: auto;
+			right: px2vw(15px, 320px);
+		}
+	}
+
+	/****************/
+	/* introduction */
+	/****************/
+
+	.introduction {
+		.content-wrap {
+			h2 {
+				padding: 25px px2vw(101px, 320px) 0 15px;
+			}
+
+			.sub-title {
+				padding: 0 px2vw(101px, 320px) 0 15px;
+			}
+		}
+	}
+
+	/*********/
+	/* video */
+	/*********/
+
+	.video {
+		.video-single {
+			.content-bg-wrap {
+				.content-wrap {
+					.more-info {
+						span {
+							margin-left: 0;
+							margin-right: px2vw(-10px, 320px);
+
+							&:after {
+								left: px2vw(-10px, 320px);
+								right: auto;
+							}
+						}
+					}
+				}
+			}
+
+			.list {
+				left: px2vw(10px, 320px);
+				right: auto;
+			}
+		}
+	}
+
+	/**************/
+	/* visit info */
+	/**************/
+
+	.visit-info {
+
+		/***********/
+		/* content */
+		/***********/
+
+		h3 {
+			margin-left: 0;
+			margin-right: px2vw(10px, 320px);
+		}
+
+		.title {
+			svg {
+				margin: px2vw(11px, 320px) px2vw(10px, 320px) 0 px2vw(12px, 320px);
+			}
+
+			h4 {
+				margin-left: 0;
+				margin-right: px2vw(52px, 320px);
+			}
+
+			&:after {
+				left: px2vw(10px, 320px);
+				right: auto;
+			}
+		}
+
+		.info {
+			table {
+				tr {
+					td {
+						&.value {
+							padding-left: 0;
+							padding-right: px2vw(25px, 320px);
+						}
+					}
+				}
+			}
+		}
+	}
+}

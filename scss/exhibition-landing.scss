@@ -670,6 +670,14 @@ header {
 		}
 	}
 
+	/***************/
+	/* mobile menu */
+	/***************/
+
+	.mobile-menu-wrap {
+		display: none !important;
+	}
+
 	/**********/
 	/* banner */
 	/**********/
@@ -1131,6 +1139,7 @@ header {
 			padding: 0 px2vw(15px, 320px);
 			@include vertical-align;
 			position: absolute;
+			width: 100%;
 
 			.menu,
 			.language-switcher {
