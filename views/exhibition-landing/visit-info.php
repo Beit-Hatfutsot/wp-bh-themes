@@ -38,7 +38,7 @@ if ( ! $opening_hours || ! $cost || ! $address || ! $map )
 
 	</div>
 
-	<a id="section-visit-info"></a>
+	<a class="inner-section" id="section-visit-info"></a>
 
 	<?php if ( $title ) { ?>
 

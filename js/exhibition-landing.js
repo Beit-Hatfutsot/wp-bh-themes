@@ -22,6 +22,12 @@ var $ = jQuery,
 		 */
 		init : function() {
 
+			// menu scroll
+			BH_landing.menuScroll();
+
+			// mobile menu
+			BH_landing.mobileMenu();
+
 			// video
 			BH_landing.video();
 
@@ -30,6 +36,70 @@ var $ = jQuery,
 
 			// google maps
 			BH_landing.googleMaps();
+
+		},
+
+		/**
+		 * menuScroll
+		 *
+		 * Called from init
+		 *
+		 * @param	N/A
+		 * @return	N/A
+		 */
+		menuScroll : function () {
+
+			// vars
+			var mobileMenu = $('.mobile-menu-wrap'),
+				menuItems = $('li.anchor a');
+
+			menuItems.on('click', function(e) {
+				e.preventDefault();
+
+				// vars
+				var target = $(this.hash),
+					hashStr = this.hash;
+
+				if (target.length) {
+					$('html, body').animate({ scrollTop: target.offset().top }, 1000);
+					window.history.pushState('', '', hashStr);
+
+					// hide mobile menu
+					menu.hide();
+
+					return false;
+				}
+			});
+
+		},
+
+		/**
+		 * mobileMenu
+		 *
+		 * Called from init
+		 *
+		 * @param	N/A
+		 * @return	N/A
+		 */
+		mobileMenu : function () {
+
+			// vars
+			var hamburger = $('.menu-hamburger'),
+				menu = $('.mobile-menu-wrap'),
+				close = menu.find('.menu-close'),
+				item = menu.find('.mobile-menu li');
+
+			hamburger.on('click', function() {
+				menu.toggle();
+			});
+
+			close.on('click', function() {
+				menu.toggle();
+			});
+
+			item.on('click', function() {
+				menu.toggle();
+			});
 
 		},
 

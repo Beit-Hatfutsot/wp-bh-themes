@@ -847,6 +847,58 @@
             "endpoint": 0
         },
         {
+            "key": "field_5fe824215236c",
+            "label": "Museum Menu Item",
+            "name": "acf-exhibition_lp_museum_menu_item",
+            "type": "group",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_5fe824215236d",
+                    "label": "Text",
+                    "name": "text",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5fe824215236e",
+                    "label": "Link",
+                    "name": "link",
+                    "type": "url",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": ""
+                }
+            ]
+        },
+        {
             "key": "field_5fdfb9945a6b3",
             "label": "Museum Button",
             "name": "acf-exhibition_lp_museum_btn",
@@ -991,5 +1043,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1609021551
+    "modified": 1609049174
 }

@@ -24,7 +24,7 @@ $total	= count( $videos );
 
 ?>
 
-<a id="section-video"></a>
+<a class="inner-section" id="section-video"></a>
 
 <section class="video">
 

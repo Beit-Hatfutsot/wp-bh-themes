@@ -24,7 +24,7 @@ if ( ! $main_title && ! $sub_title && ! $content )
 
 ?>
 
-<a id="section-introduction"></a>
+<a class="inner-section" id="section-introduction"></a>
 
 <section class="introduction">
 
