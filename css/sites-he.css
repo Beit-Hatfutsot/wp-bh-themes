@@ -1,0 +1,121 @@
+/**
+ * Site 0
+ */
+.site-0 .header-top {
+	border-bottom-color: #47c3d3;
+}
+.header-top .site-item-0 {
+	background-color: #47c3d3;
+}
+.site-0 .header-bottom .menu .nav > li.featured > a {
+	color: #47c3d3;
+}
+.site-0 header .featured-page a,
+.site-0 header .featured-page a:hover {
+	background-color: #a7e2ea;
+}
+.site-0 header .newsletter-popup .newsletter-popup-content .widgetcontent form .newsletter-groups label:hover,
+.site-0 header .newsletter-popup .newsletter-popup-content .widgetcontent form .newsletter-groups input[type=checkbox]:checked + label,
+.site-0 header .newsletter-popup .newsletter-popup-content .widgetcontent form .newsletter-submit,
+.site-0 .inner_page_newsltter_widget .widgetcontent form .newsletter-groups label:hover,
+.site-0 .inner_page_newsltter_widget .widgetcontent form .newsletter-groups input[type=checkbox]:checked + label,
+.site-0 .inner_page_newsltter_widget .widgetcontent form .newsletter-submit {
+	background-color: #47c3d3 !important;
+}
+.site-0 footer .sites-links {
+	border-color: #47c3d3;
+}
+footer .sites-links .site-item-0 a {
+	background-color: #47c3d3;
+}
+/**
+ * Site 1
+ */
+.site-1 .header-top {
+	border-bottom-color: #cb5947;
+}
+.header-top .site-item-1 {
+	background-color: #cb5947;
+}
+.site-1 .header-bottom .menu .nav > li.featured > a {
+	color: #cb5947;
+}
+.site-1 header .featured-page a,
+.site-1 header .featured-page a:hover {
+	background-color: ;
+}
+.site-1 header .newsletter-popup .newsletter-popup-content .widgetcontent form .newsletter-groups label:hover,
+.site-1 header .newsletter-popup .newsletter-popup-content .widgetcontent form .newsletter-groups input[type=checkbox]:checked + label,
+.site-1 header .newsletter-popup .newsletter-popup-content .widgetcontent form .newsletter-submit,
+.site-1 .inner_page_newsltter_widget .widgetcontent form .newsletter-groups label:hover,
+.site-1 .inner_page_newsltter_widget .widgetcontent form .newsletter-groups input[type=checkbox]:checked + label,
+.site-1 .inner_page_newsltter_widget .widgetcontent form .newsletter-submit {
+	background-color: #cb5947 !important;
+}
+.site-1 footer .sites-links {
+	border-color: #cb5947;
+}
+footer .sites-links .site-item-1 a {
+	background-color: #cb5947;
+}
+/**
+ * Site 2
+ */
+.site-2 .header-top {
+	border-bottom-color: #03499a;
+}
+.header-top .site-item-2 {
+	background-color: #03499a;
+}
+.site-2 .header-bottom .menu .nav > li.featured > a {
+	color: #03499a;
+}
+.site-2 header .featured-page a,
+.site-2 header .featured-page a:hover {
+	background-color: #9ab6d7;
+}
+.site-2 header .newsletter-popup .newsletter-popup-content .widgetcontent form .newsletter-groups label:hover,
+.site-2 header .newsletter-popup .newsletter-popup-content .widgetcontent form .newsletter-groups input[type=checkbox]:checked + label,
+.site-2 header .newsletter-popup .newsletter-popup-content .widgetcontent form .newsletter-submit,
+.site-2 .inner_page_newsltter_widget .widgetcontent form .newsletter-groups label:hover,
+.site-2 .inner_page_newsltter_widget .widgetcontent form .newsletter-groups input[type=checkbox]:checked + label,
+.site-2 .inner_page_newsltter_widget .widgetcontent form .newsletter-submit {
+	background-color: #03499a !important;
+}
+.site-2 footer .sites-links {
+	border-color: #03499a;
+}
+footer .sites-links .site-item-2 a {
+	background-color: #03499a;
+}
+/**
+ * Site 3
+ */
+.site-3 .header-top {
+	border-bottom-color: #fbb034;
+}
+.header-top .site-item-3 {
+	background-color: #fbb034;
+}
+.site-3 .header-bottom .menu .nav > li.featured > a {
+	color: #fbb034;
+}
+.site-3 header .featured-page a,
+.site-3 header .featured-page a:hover {
+	background-color: #fee2b6;
+}
+.site-3 header .newsletter-popup .newsletter-popup-content .widgetcontent form .newsletter-groups label:hover,
+.site-3 header .newsletter-popup .newsletter-popup-content .widgetcontent form .newsletter-groups input[type=checkbox]:checked + label,
+.site-3 header .newsletter-popup .newsletter-popup-content .widgetcontent form .newsletter-submit,
+.site-3 .inner_page_newsltter_widget .widgetcontent form .newsletter-groups label:hover,
+.site-3 .inner_page_newsltter_widget .widgetcontent form .newsletter-groups input[type=checkbox]:checked + label,
+.site-3 .inner_page_newsltter_widget .widgetcontent form .newsletter-submit {
+	background-color: #fbb034 !important;
+}
+.site-3 footer .sites-links {
+	border-color: #fbb034;
+}
+footer .sites-links .site-item-3 a {
+	background-color: #fbb034;
+}
+
