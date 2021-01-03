@@ -58,6 +58,16 @@
 	}
 }
 
+/******************/
+/* pinned buttons */
+/******************/
+
+.pinned {
+	.tickets-btn {
+		text-align: right;
+	}
+}
+
 /**************/
 /* responsive */
 /**************/
@@ -188,6 +198,23 @@
 			}
 		}
 	}
+
+	/******************/
+	/* pinned buttons */
+	/******************/
+
+	.pinned {
+		.tickets-btn {
+			padding: px2vw(95px, 1920px) px2vw(130px, 1920px) px2vw(95px, 1920px) px2vw(10px, 1920px);
+			left: auto;
+			right: px2vw(-110px, 1920px);
+		}
+
+		.scroll-top {
+			left: auto;
+			right: px2vw(180px, 1920px);
+		}
+	}
 }
 
 @media (max-width: 767px) {
@@ -315,6 +342,23 @@
 					}
 				}
 			}
+		}
+	}
+
+	/******************/
+	/* pinned buttons */
+	/******************/
+
+	.pinned {
+		.tickets-btn {
+			padding: px2vw(25px, 320px) px2vw(35px, 320px) px2vw(25px, 320px) px2vw(10px, 320px);
+			left: auto;
+			right: px2vw(-30px, 320px);
+		}
+
+		.scroll-top {
+			left: auto;
+			right: px2vw(60px, 320px);
 		}
 	}
 }

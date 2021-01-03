@@ -15,6 +15,13 @@
 
 	<?php
 		/**
+		 * Display the pinned buttons
+		 */
+		include( locate_template( 'views/exhibition-landing/pinned-buttons.php' ) );
+	?>
+
+	<?php
+		/**
 		 * Display the banner
 		 */
 		include( locate_template( 'views/exhibition-landing/banner.php' ) );

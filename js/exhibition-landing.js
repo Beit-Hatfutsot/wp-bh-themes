@@ -25,6 +25,9 @@ var $ = jQuery,
 			// menu scroll
 			BH_landing.menuScroll();
 
+			// scroll top
+			BH_landing.scrollTop();
+
 			// mobile menu
 			BH_landing.mobileMenu();
 
@@ -69,6 +72,29 @@ var $ = jQuery,
 
 					return false;
 				}
+			});
+
+		},
+
+		/**
+		 * scrollTop
+		 *
+		 * Called from init
+		 *
+		 * @param	N/A
+		 * @return	N/A
+		 */
+		scrollTop : function () {
+
+			// vars
+			var scrollBtn = $('.scroll-top');
+
+			scrollBtn.on('click', function(e) {
+				e.preventDefault();
+
+				$('html, body').animate({ scrollTop: 0 }, 1000);
+
+				return false;
 			});
 
 		},
