@@ -567,6 +567,30 @@ header {
 	}
 }
 
+/*****************/
+/* accessibility */
+/*****************/
+
+.uwy {
+	#userwayAccessibilityIcon {
+		top: auto !important;
+		left: 13px !important;
+		right: auto !important;
+
+		.uhd {
+			margin: 0 !important;
+			left: 40px !important;
+			right: auto !important;
+		}
+	}
+
+	&.userway_hidden {
+		#userwayAccessibilityIcon {
+			transform: translateX(-100%) !important;
+		}
+	}
+}
+
 /**************/
 /* responsive */
 /**************/
@@ -1081,6 +1105,16 @@ header {
 				height: px2vw(15px, 1920px);
 				border-width: 0 0 px2vw(4px, 1920px) px2vw(4px, 1920px);
 			}
+		}
+	}
+
+	/*****************/
+	/* accessibility */
+	/*****************/
+
+	.uwy {
+		#userwayAccessibilityIcon {
+			bottom: px2vw(290px, 1920px);
 		}
 	}
 }
@@ -1726,6 +1760,16 @@ header {
 				height: px2vw(7px, 320px);
 				border-width: 0 0 px2vw(2px, 320px) px2vw(2px, 320px);
 			}
+		}
+	}
+
+	/*****************/
+	/* accessibility */
+	/*****************/
+
+	.uwy {
+		#userwayAccessibilityIcon {
+			bottom: px2vw(112px, 320px);
 		}
 	}
 }

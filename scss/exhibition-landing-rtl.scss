@@ -68,6 +68,28 @@
 	}
 }
 
+/*****************/
+/* accessibility */
+/*****************/
+
+.uwy {
+	#userwayAccessibilityIcon {
+		left: auto !important;
+		right: 13px !important;
+
+		.uhd {
+			left: auto !important;
+			right: 40px !important;
+		}
+	}
+
+	&.userway_hidden {
+		#userwayAccessibilityIcon {
+			transform: translateX(100%) !important;
+		}
+	}
+}
+
 /**************/
 /* responsive */
 /**************/
