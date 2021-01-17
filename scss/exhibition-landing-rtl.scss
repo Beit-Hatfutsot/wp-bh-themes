@@ -130,6 +130,26 @@
 		}
 	}
 
+	/**********/
+	/* banner */
+	/**********/
+
+	.banner {
+		.slideshow-placeholder {
+			.slideshow {
+				.cycle-slideshow {
+					.cycle-carousel-wrap {
+						.slide {
+							.description {
+								text-align: left;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
 	/****************/
 	/* introduction */
 	/****************/
@@ -274,6 +294,28 @@
 		.menu-close {
 			left: auto;
 			right: px2vw(15px, 320px);
+		}
+	}
+
+	/**********/
+	/* banner */
+	/**********/
+
+	.banner {
+		.slideshow-placeholder {
+			.slideshow {
+				.cycle-slideshow {
+					.cycle-carousel-wrap {
+						.slide {
+							div {
+								&.description {
+									text-align: right;
+								}
+							}
+						}
+					}
+				}
+			}
 		}
 	}
 

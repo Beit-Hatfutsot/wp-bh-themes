@@ -4,7 +4,7 @@
  *
  * @author 		Beit Hatfutsot
  * @package 	bh/functions/acf
- * @version     3.0.2
+ * @version     3.0.3
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -2274,7 +2274,7 @@ acf_add_local_field_group(array(
 					'required' => 1,
 					'conditional_logic' => 0,
 					'wrapper' => array(
-						'width' => '50',
+						'width' => '30',
 						'class' => '',
 						'id' => '',
 					),
@@ -2298,7 +2298,7 @@ acf_add_local_field_group(array(
 					'required' => 1,
 					'conditional_logic' => 0,
 					'wrapper' => array(
-						'width' => '50',
+						'width' => '30',
 						'class' => '',
 						'id' => '',
 					),
@@ -2312,6 +2312,25 @@ acf_add_local_field_group(array(
 					'max_height' => '',
 					'max_size' => '',
 					'mime_types' => '',
+				),
+				array(
+					'key' => 'field_60049030bffc3',
+					'label' => 'Description',
+					'name' => 'description',
+					'type' => 'text',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '40',
+						'class' => '',
+						'id' => '',
+					),
+					'default_value' => '',
+					'placeholder' => '',
+					'prepend' => '',
+					'append' => '',
+					'maxlength' => 160,
 				),
 			),
 		),
