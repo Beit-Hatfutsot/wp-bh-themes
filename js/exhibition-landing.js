@@ -53,8 +53,7 @@ var $ = jQuery,
 		menuScroll : function () {
 
 			// vars
-			var mobileMenu = $('.mobile-menu-wrap'),
-				menuItems = $('li.anchor a');
+			var menuItems = $('li.anchor a, a.anu-btn.anchor');
 
 			menuItems.on('click', function(e) {
 				e.preventDefault();

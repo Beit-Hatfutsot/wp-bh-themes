@@ -4,7 +4,7 @@
  *
  * @author 		Beit Hatfutsot
  * @package 	bh/functions/acf
- * @version     3.0
+ * @version     3.0.2
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -3012,6 +3012,7 @@ acf_add_local_field_group(array(
 						'tripadvisor' => 'Tripadvisor',
 						'twitter' => 'Twitter',
 						'youtube' => 'YouTube',
+						'email' => 'Email',
 					),
 					'default_value' => array(
 					),
@@ -3026,7 +3027,7 @@ acf_add_local_field_group(array(
 					'key' => 'field_5fcf727b91df0',
 					'label' => 'Link',
 					'name' => 'link',
-					'type' => 'url',
+					'type' => 'text',
 					'instructions' => '',
 					'required' => 1,
 					'conditional_logic' => 0,
@@ -3037,6 +3038,9 @@ acf_add_local_field_group(array(
 					),
 					'default_value' => '',
 					'placeholder' => '',
+					'prepend' => '',
+					'append' => '',
+					'maxlength' => '',
 				),
 			),
 		),
@@ -3141,22 +3145,6 @@ acf_add_local_field_group(array(
 					'prepend' => '',
 					'append' => '',
 					'maxlength' => '',
-				),
-				array(
-					'key' => 'field_5fce19d356ad1',
-					'label' => 'Link',
-					'name' => 'link',
-					'type' => 'url',
-					'instructions' => '',
-					'required' => 1,
-					'conditional_logic' => 0,
-					'wrapper' => array(
-						'width' => '',
-						'class' => '',
-						'id' => '',
-					),
-					'default_value' => '',
-					'placeholder' => '',
 				),
 			),
 		),

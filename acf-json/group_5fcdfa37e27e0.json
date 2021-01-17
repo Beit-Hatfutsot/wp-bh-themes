@@ -802,7 +802,8 @@
                         "instagram": "Instagram",
                         "tripadvisor": "Tripadvisor",
                         "twitter": "Twitter",
-                        "youtube": "YouTube"
+                        "youtube": "YouTube",
+                        "email": "Email"
                     },
                     "default_value": [],
                     "allow_null": 0,
@@ -816,7 +817,7 @@
                     "key": "field_5fcf727b91df0",
                     "label": "Link",
                     "name": "link",
-                    "type": "url",
+                    "type": "text",
                     "instructions": "",
                     "required": 1,
                     "conditional_logic": 0,
@@ -826,7 +827,10 @@
                         "id": ""
                     },
                     "default_value": "",
-                    "placeholder": ""
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
                 }
             ]
         },
@@ -931,22 +935,6 @@
                     "prepend": "",
                     "append": "",
                     "maxlength": ""
-                },
-                {
-                    "key": "field_5fce19d356ad1",
-                    "label": "Link",
-                    "name": "link",
-                    "type": "url",
-                    "instructions": "",
-                    "required": 1,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": ""
                 }
             ]
         },
@@ -1043,5 +1031,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1609049174
+    "modified": 1610891037
 }

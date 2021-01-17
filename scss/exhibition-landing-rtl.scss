@@ -367,6 +367,26 @@
 		}
 	}
 
+	/**********/
+	/* social */
+	/**********/
+
+	.social {
+		.row {
+			ul {
+				li {
+					&:first-child {
+						margin-left: px2vw(8px, 320px);
+					}
+
+					&:last-child {
+						margin-right: px2vw(8px, 320px);
+					}
+				}
+			}
+		}
+	}
+
 	/******************/
 	/* pinned buttons */
 	/******************/
