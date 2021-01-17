@@ -1655,47 +1655,50 @@ ul.order_details {
 	}
 }
 
-
-
-
-
 /**********/
 /* footer */
 /**********/
 
 footer {
 
-	/****************/
-	/* footer links */
-	/****************/
+	/**************/
+	/* footer top */
+	/**************/
 
-	.footer-links {
-		.link-box {
-			a {
-				.link {
-					.title {
-						span {
-							left: auto;
-							right: -5px;
+	.footer-top {
+
+		/****************/
+		/* footer links */
+		/****************/
+
+		.footer-links {
+			.link-box {
+				a {
+					.link {
+						.title {
+							span {
+								left: auto;
+								right: -5px;
+							}
 						}
 					}
 				}
 			}
 		}
-	}
 
-	/***************/
-	/* search form */
-	/***************/
+		/***************/
+		/* search form */
+		/***************/
 
-	.search-form-wrapper {
-		form {
-			.search-field {
-				float: right;
-			}
+		.search-form-wrapper {
+			form {
+				.search-field {
+					float: right;
+				}
 
-			.search-submit-wrapper {
-				float: right;
+				.search-submit-wrapper {
+					float: right;
+				}
 			}
 		}
 	}

@@ -29,6 +29,7 @@ $gray-color4:		#999;
 $gray-color5:		#c2c2c2;
 $gray-color6:		#e6e6e6;
 $gray-color7:		#f4f4f4;
+$gray-color8:		#efefef;
 
 $red-color1:		#90190b;
 $red-color2:		#bf311a;
@@ -106,14 +107,14 @@ $footer-bg:			$white;
 /* typography */
 /**************/
 
-$font-color:			$gray-color3;
+$font-color:			$black;
 $font-invert-color:		$white;
 
-$link-color:			$red;
-$link-hover-color:		$red;
+$link-color:			$blue;
+$link-hover-color:		$blue;
 
-$read-more-link:		$red;
-$read-more-link-hover:	$red;
+$read-more-link:		$blue;
+$read-more-link-hover:	$blue;
 
 $font-normal:			400;
 $font-semi-bold:		600;

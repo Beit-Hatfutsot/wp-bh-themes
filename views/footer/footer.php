@@ -4,38 +4,46 @@
  *
  * @author 		Beit Hatfutsot
  * @package 	bh/views/footer
- * @version     2.12.3
+ * @version     3.1.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly ?>
 
 <footer>
 
-	<?php // Footer links
-		get_template_part( 'views/footer/footer-links' );
-	?>
+	<div class="footer-top">
 
-	<div class="container">
-		<div class="row search-form-wrapper">
-			<div class="col-sm-4 col-sm-push-4">
-				<?php //Search form
-					get_search_form();
-				?>
+		<?php // Footer links
+			get_template_part( 'views/footer/footer-links' );
+		?>
+
+		<div class="container">
+			<div class="row search-form-wrapper">
+				<div class="col-sm-4 col-sm-push-4">
+					<?php //Search form
+						get_search_form();
+					?>
+				</div>
 			</div>
 		</div>
-	</div>
 
-	<?php // Social links
-		get_template_part( 'views/footer/social-links' );
-	?>
+		<?php // Social links
+			get_template_part( 'views/footer/social-links' );
+		?>
+
+	</div>
 
 	<?php // Menu
 		get_template_part( 'views/footer/footer-menu' );
 	?>
 
-	<?php // sites
-		get_template_part( 'views/footer/sites-links' );
-	?>
+	<div class="footer-bottom">
+
+		<?php // sites
+			get_template_part( 'views/footer/sites-links' );
+		?>
+
+	</div>
 
 	<?php // Terms of Use
 		get_template_part( 'views/footer/footer', 'terms-of-use');

@@ -6,7 +6,7 @@
  *
  * @author		Beit Hatfutsot
  * @package		bh/views/footer
- * @version		2.6.0
+ * @version		3.1.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -33,7 +33,7 @@ if ( ! $links )
 ?>
 
 <div class="container">
-	<div class="social-links row" <?php echo $current_site !== false && $bh_sites[ $current_site ][ 'light_color' ] ? 'style="background-color: ' . $bh_sites[ $current_site ][ 'light_color' ] . ';"' : ''; ?>>
+	<div class="social-links row">
 
 		<ul>
 			<?php foreach ( $links as $l ) {
@@ -48,7 +48,16 @@ if ( ! $links )
 				?>
 
 				<li>
-					<a href="<?php echo $link; ?>" target="_blank"><i class="fa <?php echo $icon; ?>"></i></a>
+					<a href="<?php echo $link; ?>" target="_blank">
+
+						<?php
+							/**
+							 * Display the icon
+							 */
+							get_template_part( 'views/svgs/shape-anu', substr( $icon, 3 ) );
+						?>
+
+					</a>
 				</li>
 
 			<?php } ?>

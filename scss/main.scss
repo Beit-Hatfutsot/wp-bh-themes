@@ -22,7 +22,7 @@
 
 .main-layout-banner {
 	@include not-selectable;
-	
+
 	.container {
 		position: relative;
 		height: 100%;
@@ -78,11 +78,11 @@
 						opacity: 1;
 						@include transition(linear, .2s);
 
-						
+
 						#category {
 							font-weight: $font-bold;
-							color: #BF3118;
-							overflow: hidden;	
+							color: $blue;
+							overflow: hidden;
 						}
 
 						.desc-link {
@@ -189,7 +189,7 @@
 				right: -18.5%;
 				width: 18.5%;
 				height: 100%;
-				background-color: rgba(229, 230, 231, 1); 
+				background-color: rgba(229, 230, 231, 1);
 
 				.mini-gallery-item-wrapper {
 					display: table;
@@ -218,11 +218,11 @@
 						vertical-align: middle;
 					}
 				}
-				
+
 
 				.mini-gallery-item-wrapper:last-child {
 					margin-bottom: 0 !important;
-				} 
+				}
 
 				.mini-gallery-item-wrapper:hover {
 
@@ -250,7 +250,7 @@
 				@include transition(linear, .2s);
 			}
 		}
-	} 
+	}
 }
 
 /**********/
@@ -261,40 +261,40 @@
 	margin-top: -10px;
 	margin-bottom: 15px;
 	font-size: 14px;
-	
+
 	&:before,
 	&:after {
 		display: table;
 		content: " ";
 	}
-	
+
 	&:after {
 		clear: both;
 	}
-	
+
 	.sort-title {
 		float: left;
 		margin-right: 15px;
 		font-weight: $font-bold;
 	}
-	
+
 	ul {
 		list-style: none;
-		
+
 		li {
 			float: left;
 			margin-right: 5px;
 			cursor: pointer;
-			
+
 			&:hover,
 			&.active {
-				color: $red;
+				color: $blue;
 			}
-			
+
 			&.delimiter {
 				font-size: 13px;
 				cursor: default;
-				
+
 				&:hover {
 					color: $font-color;
 				}
@@ -309,25 +309,25 @@
 	min-height: 216px;
 	overflow: hidden;
 	@include not-selectable;
-	
+
 	.events-slider {
-		direction: ltr;		
+		direction: ltr;
 
 		.event-item {
 			position: relative !important;
 			width: 221px;
 			text-align: center;
-			
+
 			a {
 				color: $font-color;
 				text-decoration: none;
-				
+
 				img {
 					max-width: 216px;
 					max-height: 216px;
 					border: 1px solid $border-color2;
 				}
-				
+
 				.event-meta {
 					position: absolute;
 					padding: 0 3px;
@@ -336,7 +336,7 @@
 					width: 100%;
 					line-height: normal;
 					text-align: left;
-					
+
 					.event-type {
 						position: absolute;
 						top: -15px;
@@ -346,12 +346,12 @@
 						color: #888eac;
 						background-color: $white;
 					}
-					
+
 					.event-date {
 						height: 17px;
 						font-size: 14px;
 					}
-					
+
 					h3,
 					.event-desc {
 						padding-right: 10px;
@@ -362,7 +362,7 @@
 			}
 		}
 	}
-		
+
 	#events-slider-next,
 	#events-slider-prev {
 		position: absolute;
@@ -371,16 +371,16 @@
 		width: 32.5px;
 		height: 107px;
 		text-align: center;
-		background-color: $red;
+		background-color: $blue;
 		cursor: pointer;
-		
+
 		.fa {
 			font-size: 40px;
 			color: $font-invert-color;
 			@include vertical-align;
 		}
 	}
-	
+
 	#events-slider-prev {
 		top: 109px;
 	}
@@ -392,23 +392,23 @@
 
 .featured-links {
 	line-height: normal;
-	
+
 	.row {
 		margin-bottom: 30px;
-		
+
 		&:last-child {
 			margin-bottom: 0;
 		}
 	}
-	
+
 	.row1 .link-image {
 		margin-bottom: 10px;
 	}
-	
+
 	.link-content {
 		font-size: 14px;
 	}
-	
+
 	.link-content-wrapper {
 		.link-content {
 			margin-left: -20px;
@@ -427,18 +427,18 @@
 		font-size: 15px;
 		color: $black;
 		background-color: $black-color5;
-		
+
 		.row:last-child .col-sm-4:last-child .contact-details-layout:last-child {
 			margin-bottom: 0;
 			padding-bottom: 0;
 			border-bottom: 0;
 		}
-		
+
 		.contact-details-layout {
 			margin-bottom: 15px;
 			padding: 0 0 15px 28px;
 			border-bottom: 1px solid $white;
-			
+
 			p {
 				margin-bottom: 0;
 			}
@@ -446,7 +446,7 @@
 			/*******/
 			/* map */
 			/*******/
-			
+
 			&.contact-details-layout-map {
 				margin-top: -16px;
 				margin-right: -28px;
@@ -454,7 +454,7 @@
 				height: 120px;
 				border-top: 1px solid $white;
 				border-bottom: 1px solid $white !important;
-				
+
 				.map {
 					width: 100%;
 					height: 120px;
@@ -477,54 +477,54 @@
 			/***************/
 			/* single link */
 			/***************/
-			
+
 			&.contact-details-layout-single-link {
 				position: relative;
 				height: 48px !important;
 				box-sizing: content-box;
-				
+
 				&:before,
 				&:after {
 					display: table;
 					content: " ";
 				}
-				
+
 				&:after {
 					clear: both;
 				}
-				
+
 				& > a {
 					height: 48px;
 					color: #000;
 					text-decoration: none;
 					display: block;
 				}
-				
+
 				.icon {
 					float: left;
 					margin-top: 4px;
 					width: 40px;
 					height: 40px;
 				}
-				
+
 				.text {
 					margin-left: 60px;
 					@include vertical-align;
 				}
 			}
-	
+
 			/******************/
 			/* multiple links */
 			/******************/
-			
+
 			&.contact-details-layout-multiple-links {
 				margin-top: -5px;
 				padding-bottom: 10px;
-				
+
 				ul {
 					margin: 0;
 					list-style: none;
-					
+
 					li {
 						margin-right: 15px;
 						font-size: 17px;
@@ -533,40 +533,25 @@
 						&:last-child {
 							margin-right: 0;
 						}
-						
-						i {
-							position: relative;
+
+						svg {
 							width: 30px;
 							height: 30px;
-							text-align: center;
-							border: 1px solid;
-							@include border-radius(50%);
-							
-							&:before {
-								display: block;
-								@include vertical-align;
-							}
 						}
 					}
 				}
 			}
-	
+
 			/*************************/
 			/* opening hours message */
 			/*************************/
-			
+
 			&.contact-details-layout-opening-hours-message {
 				.msg {
+					padding: 5px 10px;
 					font-weight: $font-bold;
-					
-					&.msg-open {
-						color: $green-msg;
-					}
-					
-					&.msg-close,
-					&.msg-opening-today {
-						color: $red-msg;
-					}
+					color: $white;
+					background-color: $black;
 				}
 			}
 		}

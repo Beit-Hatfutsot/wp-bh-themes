@@ -4,7 +4,7 @@
  *
  * @author		Beit Hatfutsot
  * @package		bh/views/header
- * @version		2.14.0
+ * @version		3.1.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -79,7 +79,7 @@ $wpml_lang = $wpml_lang == 'ru' ? 'en' : $wpml_lang;
 					/**
 					 * Display the logo
 					 */
-					get_template_part( 'views/components/logo' );
+					get_template_part( 'views/components/anu-logo' );
 				?>
 
 				<?php
@@ -106,7 +106,7 @@ $wpml_lang = $wpml_lang == 'ru' ? 'en' : $wpml_lang;
 				/**
 				 * Display the logo
 				 */
-				get_template_part( 'views/components/logo' );
+				get_template_part( 'views/components/anu-logo' );
 			?>
 
 			<?php
