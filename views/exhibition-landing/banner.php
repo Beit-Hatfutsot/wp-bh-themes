@@ -5,7 +5,7 @@
  * @author		Beit Hatfutsot
  * @package		bh/views/exhibition-landing
  * @since		3.0
- * @version		3.0
+ * @version		3.0.3
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -40,9 +40,14 @@ if ( ! $slides )
 
 				<?php foreach ( $slides as $slide ) {
 
-					$img = $slide[ 'desktop_image' ];
+					$img			= $slide[ 'desktop_image' ];
+					$description	= $slide[ 'description' ];
 
-					echo '<div class="slide"><img src="' . $img[ 'url' ] . '" width="' . $img[ 'width' ] . '" height="' . $img[ 'height' ] . '" alt="' . $img[ 'alt' ] . '" /></div>';
+					echo
+						'<div class="slide">' .
+							'<img src="' . $img[ 'url' ] . '" width="' . $img[ 'width' ] . '" height="' . $img[ 'height' ] . '" alt="' . $img[ 'alt' ] . '" />' .
+							'<div class="description">' . $description . '</div>' .
+						'</div>';
 
 				} ?>
 
@@ -68,9 +73,14 @@ if ( ! $slides )
 
 				<?php foreach ( $slides as $slide ) {
 
-					$img = $slide[ 'mobile_image' ];
+					$img			= $slide[ 'mobile_image' ];
+					$description	= $slide[ 'description' ];
 
-					echo '<div class="slide"><div style="background: url(\'' . $img[ 'url' ] . '\') 50% 0 no-repeat;"></div></div>';
+					echo
+						'<div class="slide">' .
+							'<div style="background: url(\'' . $img[ 'url' ] . '\') 50% 0 no-repeat;"></div>' .
+							'<div class="description">' . $description . '</div>' .
+						'</div>';
 
 				} ?>
 

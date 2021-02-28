@@ -130,6 +130,26 @@
 		}
 	}
 
+	/**********/
+	/* banner */
+	/**********/
+
+	.banner {
+		.slideshow-placeholder {
+			.slideshow {
+				.cycle-slideshow {
+					.cycle-carousel-wrap {
+						.slide {
+							.description {
+								text-align: left;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
 	/****************/
 	/* introduction */
 	/****************/
@@ -277,6 +297,28 @@
 		}
 	}
 
+	/**********/
+	/* banner */
+	/**********/
+
+	.banner {
+		.slideshow-placeholder {
+			.slideshow {
+				.cycle-slideshow {
+					.cycle-carousel-wrap {
+						.slide {
+							div {
+								&.description {
+									text-align: right;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
 	/****************/
 	/* introduction */
 	/****************/
@@ -361,6 +403,26 @@
 							padding-left: 0;
 							padding-right: px2vw(25px, 320px);
 						}
+					}
+				}
+			}
+		}
+	}
+
+	/**********/
+	/* social */
+	/**********/
+
+	.social {
+		.row {
+			ul {
+				li {
+					&:first-child {
+						margin-left: px2vw(8px, 320px);
+					}
+
+					&:last-child {
+						margin-right: px2vw(8px, 320px);
 					}
 				}
 			}

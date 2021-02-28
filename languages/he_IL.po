@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: BH Website 1.0\n"
 "POT-Creation-Date: 2020-12-27 22:21+0200\n"
-"PO-Revision-Date: 2020-12-27 22:24+0200\n"
+"PO-Revision-Date: 2021-01-17 15:21+0200\n"
 "Last-Translator: Nir Goldberg <nir@htmline.com>\n"
 "Language-Team: BH online <nirg@bh.org.il>\n"
 "Language: he_IL\n"
@@ -638,7 +638,7 @@ msgstr "פחות מידע"
 
 #: views/exhibition-landing/visit-info-waze.php:19
 msgid "Navigate with"
-msgstr "נווט באמצעות"
+msgstr "ניווט באמצעות"
 
 #: views/footer/footer-links.php:60
 msgid "Learn more"
