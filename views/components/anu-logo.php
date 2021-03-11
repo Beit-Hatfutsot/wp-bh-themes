@@ -5,7 +5,7 @@
  * @author 		Beit Hatfutsot
  * @package 	bh/views/components
  * @since		3.0
- * @version     3.0
+ * @version     3.1.1
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -19,9 +19,6 @@ $wpml_lang = $globals[ 'wpml_lang' ];
 
 if ( ! $wpml_lang )
 	return;
-
-// Reset $wpml_lang in case of russian
-$wpml_lang = $wpml_lang == 'ru' ? 'en' : $wpml_lang;
 
 ?>
 
