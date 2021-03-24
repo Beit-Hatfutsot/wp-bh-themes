@@ -8,17 +8,18 @@
 
 body.login {
 	background-color: transparent;
-	
+
 	#login h1 a {
 		padding-top: 20px;
 		width: 320px;
-		height: 82px;
-		background: url( $admin-images + "logo.png" ) no-repeat 50% 50%;
+		height: 37px;
+		background: url( $admin-images + "anu-logo-v1.png" ) no-repeat 50% 50%;
+		background-size: contain;
 	}
 
 	#nav {
 		text-shadow: none;
-		
+
 		a,
 		a:hover {
 			color: $font-color !important;
