@@ -201,6 +201,12 @@ var $ = jQuery,
 			iframe.attr('src', src);
 			iframe.attr('wmode', 'Opaque');
 
+			// GTM dataLayer
+			dataLayer = [{
+				'event': 'video_' + id + '_click',
+				'eventAction': 'click'
+			}];
+
 		},
 
 		/**

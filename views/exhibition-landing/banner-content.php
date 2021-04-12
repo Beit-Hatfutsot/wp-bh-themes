@@ -5,7 +5,7 @@
  * @author		Beit Hatfutsot
  * @package		bh/views/exhibition-landing
  * @since		3.0
- * @version		3.0
+ * @version		3.1.4
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -36,14 +36,16 @@ $title	= get_field( 'acf-exhibition_lp_banner_title' );
 				/**
 				 * Display the tickets button
 				 */
-				get_template_part( 'views/components/anu-tickets-btn' );
+				$gtm_event = 'banner_anu-ticket-btn_click';
+				include( locate_template( 'views/components/anu-tickets-btn.php' ) );
 			?>
 
 			<?php
 				/**
 				 * Display the museum button
 				 */
-				get_template_part( 'views/components/anu-museum-btn' );
+				$gtm_event = 'banner_anu-museum-btn_click';
+				include( locate_template( 'views/components/anu-museum-btn.php' ) );
 			?>
 
 		</div>

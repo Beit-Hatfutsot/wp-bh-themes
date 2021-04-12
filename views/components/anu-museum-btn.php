@@ -5,7 +5,7 @@
  * @author 		Beit Hatfutsot
  * @package 	bh/views/components
  * @since		3.0
- * @version     3.0.2
+ * @version     3.1.4
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -25,6 +25,8 @@ if ( $btn ) {
 if ( ! $text )
 	return;
 
+$data_layer = $gtm_event ? 'onclick="dataLayer.push({\'event\': \'' . $gtm_event . '\', \'eventAction\': \'click\'});"' : '';
+
 ?>
 
-<a class="anu-btn museum-btn anchor" href="#section-visit-info" target="_blank"><?php echo $text; ?></a>
+<a class="anu-btn museum-btn anchor" href="#section-visit-info" target="_blank" <?php echo $data_layer; ?>><?php echo $text; ?></a>

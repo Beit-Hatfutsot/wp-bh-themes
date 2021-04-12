@@ -5,7 +5,7 @@
  * @author		Beit Hatfutsot
  * @package		bh/views/exhibition-landing
  * @since		3.0.1
- * @version		3.0.1
+ * @version		3.1.4
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -18,7 +18,8 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 		/**
 		 * Display the tickets button
 		 */
-		get_template_part( 'views/components/anu-tickets-btn' );
+		$gtm_event = 'sticky_anu-ticket-btn_click';
+		include( locate_template( 'views/components/anu-tickets-btn.php' ) );
 	?>
 
 	<?php
