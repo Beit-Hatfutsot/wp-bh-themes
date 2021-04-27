@@ -4,7 +4,7 @@
  *
  * @author 		Beit Hatfutsot
  * @package 	bh/views/main
- * @version     3.1.6
+ * @version     3.1.7
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -26,7 +26,7 @@ foreach ($slides as $s) {
 	$type = $s['type'];
 
 	switch ( $type ) {
-		
+
 		// event
 		case 'event' :
 
@@ -34,12 +34,12 @@ foreach ($slides as $s) {
 
 			if ( $event ) {
 				$image = get_field('acf-event_main_image', $event->ID);
-				
+
 				if ($image) {
-		
+
 					$event_cats	= wp_get_post_terms($event->ID, 'event_category');
-					$cat		= $event_cats ? get_field('acf-event_category_singular_name', 'event_category_' . $event_cats[0]->term_id) : ''; 
-		
+					$cat		= $event_cats ? get_field('acf-event_category_singular_name', 'event_category_' . $event_cats[0]->term_id) : '';
+
 					$item = array(
 						'category' 	=> $cat,
 						'date_html'	=> BH_get_event_date($event->ID),
@@ -49,7 +49,7 @@ foreach ($slides as $s) {
 						'link'		=> get_permalink($event->ID),
 						'target'	=> 'self'
 					);
-		
+
 					$items[] = $item;
 				}
 			}
@@ -86,7 +86,7 @@ foreach ($slides as $s) {
 }
 
 ?>
-	
+
 <section class="main-layout main-layout-banner">
 	<div class="container">
 		<div id="slideshow-wrapper">
@@ -94,7 +94,7 @@ foreach ($slides as $s) {
 				<div id="up-arrow"></div>
 				<div id="description">
 					<div id="description-cell">
-						<div id="category"></div>		
+						<div id="category"></div>
 						<a class="desc-link" href="" target="">
 							<div id="title"></div>
 						</a>
@@ -125,6 +125,12 @@ foreach ($slides as $s) {
 			?>
 			</div>
 		</div>
+	</div>
+</section>
+
+<section class="main-layout main-layout-banner-mobile visible-xs">
+	<div class="container">
+		<?php echo '<a href="' . $items[0]['link'] . '" ' . ( $items[0]['target'] == 'blank' ? 'target="_blank"' : '' ) . '><img src="' . $items[0]['image']['sizes']['large'] . '" alt="' . $items[0]['image']['alt'] . '" class="slide" /></a>'; ?>
 	</div>
 </section>
 
