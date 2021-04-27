@@ -30,6 +30,7 @@ var bh_slideshow = {
 
 			self.descriptionContainer.find('.desc-link').each(function() {
 				$(this).attr('href', self.items[self._index].link);
+				$(this).attr('target', '_' + self.items[self._index].target);
 			});
 
 			self.descriptionContainer.find('#category').each(function() {

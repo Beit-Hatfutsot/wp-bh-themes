@@ -4,7 +4,7 @@
  *
  * @author 		Beit Hatfutsot
  * @package 	bh/views/main
- * @version     2.1
+ * @version     3.1.6
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -95,7 +95,7 @@ foreach ($slides as $s) {
 				<div id="description">
 					<div id="description-cell">
 						<div id="category"></div>		
-						<a class="desc-link" href="">
+						<a class="desc-link" href="" target="">
 							<div id="title"></div>
 						</a>
 						<div id="date"></div>
