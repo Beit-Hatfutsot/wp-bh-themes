@@ -4,7 +4,7 @@
  *
  * @author 		Beit Hatfutsot
  * @package 	bh/views/main
- * @version     3.1.7
+ * @version     3.1.8
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -130,7 +130,14 @@ foreach ($slides as $s) {
 
 <section class="main-layout main-layout-banner-mobile visible-xs">
 	<div class="container">
-		<?php echo '<a href="' . $items[0]['link'] . '" ' . ( $items[0]['target'] == 'blank' ? 'target="_blank"' : '' ) . '><img src="' . $items[0]['image']['sizes']['large'] . '" alt="' . $items[0]['image']['alt'] . '" class="slide" /></a>'; ?>
+		<div class="slide">
+			<?php echo '<a href="' . $items[0]['link'] . '" ' . ( $items[0]['target'] == 'blank' ? 'target="_blank"' : '' ) . '><img src="' . $items[0]['image']['sizes']['large'] . '" alt="' . $items[0]['image']['alt'] . '" class="slide" /></a>'; ?>
+			<div class="description">
+				<a class="desc-link" href="<?php echo $items[0]['link']; ?>" target="_<?php echo $items[0]['target']; ?>">
+					<div id="title"><?php echo $items[0]['title']?></div>
+				</a>
+			</div>
+		</div>
 	</div>
 </section>
 

@@ -253,6 +253,33 @@
 	}
 }
 
+.main-layout-banner-mobile {
+	@include not-selectable;
+
+	.slide {
+		position: relative;
+
+		.description {
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+			background-color: rgba(229, 230, 231, 0.8);
+
+			.desc-link {
+				padding: 10px;
+				text-decoration: none;
+				display: block;
+
+				#title {
+					font-size: 13px;
+					font-weight: $font-bold;
+					color: #333333;
+				}
+			}
+		}
+	}
+}
+
 /**********/
 /* slider */
 /**********/
