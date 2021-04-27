@@ -33,4 +33,12 @@ $(function() {
 	});		
 });
 
+// Prevent Multiple Clicks on Contact Form 7 Submissions
+$(document).on('click', '.wpcf7-submit', function(e) {
+	if( jQuery('.ajax-loader').hasClass('is-active') ) {
+		e.preventDefault();
+		return false;
+	}
+});
+
 })(document, window, jQuery);
