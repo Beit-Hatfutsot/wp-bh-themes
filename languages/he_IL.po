@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: BH Website 1.0\n"
-"POT-Creation-Date: 2020-12-27 22:21+0200\n"
-"PO-Revision-Date: 2021-01-17 15:21+0200\n"
+"POT-Creation-Date: 2021-06-01 16:06+0300\n"
+"PO-Revision-Date: 2021-06-01 16:06+0300\n"
 "Last-Translator: Nir Goldberg <nir@htmline.com>\n"
 "Language-Team: BH online <nirg@bh.org.il>\n"
 "Language: he_IL\n"
@@ -627,6 +627,10 @@ msgstr "לרכישה"
 #: views/exhibition-landing/header.php:88
 msgid "Please rotate your device!"
 msgstr "יש לסובב את המכשיר לצפייה בתוכן"
+
+#: views/exhibition-landing/social.php:69
+msgid "Tel."
+msgstr "טל."
 
 #: views/exhibition-landing/video-single.php:36
 msgid "More"

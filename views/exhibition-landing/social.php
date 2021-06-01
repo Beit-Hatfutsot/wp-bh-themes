@@ -5,7 +5,7 @@
  * @author		Beit Hatfutsot
  * @package		bh/views/exhibition-landing
  * @since		3.0
- * @version		3.1.4
+ * @version		3.1.9
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -66,7 +66,7 @@ if ( ! $links && ! $phone )
 		$gtm_event	= 'contact_phone_click';
 		$data_layer	= 'onclick="dataLayer.push({\'event\': \'' . $gtm_event . '\', \'eventAction\': \'click\'});"';
 
-		echo '<div class="phone"><a href="tel:' . $phone . '" ' . $data_layer . '>' . $phone . '</a></div>';
+		echo '<div class="phone"><a href="tel:' . $phone . '" ' . $data_layer . '>' . __( 'Tel.', 'BH' ) . ' ' . $phone . '</a></div>';
 
 	?>
 

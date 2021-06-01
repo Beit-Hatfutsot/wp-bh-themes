@@ -5,7 +5,7 @@
  * @author		Beit Hatfutsot
  * @package		bh/views/exhibition-landing
  * @since		3.0.1
- * @version		3.1.4
+ * @version		3.1.9
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -27,6 +27,13 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 		 * Display the scroll top button
 		 */
 		get_template_part( 'views/components/anu-scroll-top-btn' );
+	?>
+
+	<?php
+		/**
+		 * Display the Whatsapp button
+		 */
+		get_template_part( 'views/components/anu-whatsapp-btn' );
 	?>
 
 </div><!-- .pinned -->

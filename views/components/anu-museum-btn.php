@@ -5,7 +5,7 @@
  * @author 		Beit Hatfutsot
  * @package 	bh/views/components
  * @since		3.0
- * @version     3.1.4
+ * @version     3.1.9
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -19,6 +19,7 @@ $btn = get_field( 'acf-exhibition_lp_museum_btn' );
 if ( $btn ) {
 
 	$text	= $btn[ 'text' ];
+	$link	= $btn[ 'link' ];
 
 }
 
@@ -27,6 +28,12 @@ if ( ! $text )
 
 $data_layer = $gtm_event ? 'onclick="dataLayer.push({\'event\': \'' . $gtm_event . '\', \'eventAction\': \'click\'});"' : '';
 
-?>
+if ( $link ) { ?>
 
-<a class="anu-btn museum-btn anchor" href="#section-visit-info" target="_blank" <?php echo $data_layer; ?>><?php echo $text; ?></a>
+	<a class="anu-btn museum-btn" href="<?php echo $link; ?>" target="_blank" <?php echo $data_layer; ?>><?php echo $text; ?></a>
+
+<?php } else { ?>
+
+	<a class="anu-btn museum-btn anchor" href="#section-visit-info" <?php echo $data_layer; ?>><?php echo $text; ?></a>
+
+<?php }

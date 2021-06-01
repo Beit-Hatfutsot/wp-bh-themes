@@ -5,7 +5,7 @@
  * @author		Beit Hatfutsot
  * @package		bh/views/exhibition-landing
  * @since		3.0
- * @version		3.0
+ * @version		3.1.9
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -39,18 +39,22 @@ if ( ! $video_id )
 
 	</div>
 
-	<ul class="list">
+	<?php if ( $total > 1 ) { ?>
 
-		<?php for ($i=1 ; $i<=$total ; $i++) :
+		<ul class="list">
 
-			$current = ( $i == $index ) ? 'current' : '';
+			<?php for ($i=1 ; $i<=$total ; $i++) :
 
-			?>
+				$current = ( $i == $index ) ? 'current' : '';
 
-			<li id="video-item-<?php echo $i; ?>" class="video-item <?php echo $current; ?>"><?php echo $i; ?></li>
+				?>
 
-		<?php endfor; ?>
+				<li id="video-item-<?php echo $i; ?>" class="video-item <?php echo $current; ?>"><?php echo $i; ?></li>
 
-	</ul>
+			<?php endfor; ?>
+
+		</ul>
+
+	<?php } ?>
 
 </div><!-- #video-single-<?php echo $index; ?> -->

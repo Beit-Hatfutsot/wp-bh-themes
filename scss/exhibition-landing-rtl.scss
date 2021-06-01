@@ -8,8 +8,10 @@
 /**********/
 
 .banner {
-	.slideshow-placeholder {
-		direction: ltr;
+	.banner-wrap {
+		.slideshow-placeholder {
+			direction: ltr;
+		}
 	}
 }
 
@@ -65,6 +67,11 @@
 .pinned {
 	.tickets-btn {
 		text-align: right;
+	}
+
+	.anu-whatsapp {
+		left: 20px;
+		right: auto;
 	}
 }
 
@@ -135,13 +142,15 @@
 	/**********/
 
 	.banner {
-		.slideshow-placeholder {
-			.slideshow {
-				.cycle-slideshow {
-					.cycle-carousel-wrap {
-						.slide {
-							.description {
-								text-align: left;
+		.banner-wrap {
+			.slideshow-placeholder {
+				.slideshow {
+					.cycle-slideshow {
+						.cycle-carousel-wrap {
+							.slide {
+								.description {
+									text-align: left;
+								}
 							}
 						}
 					}
@@ -302,14 +311,16 @@
 	/**********/
 
 	.banner {
-		.slideshow-placeholder {
-			.slideshow {
-				.cycle-slideshow {
-					.cycle-carousel-wrap {
-						.slide {
-							div {
-								&.description {
-									text-align: right;
+		.banner-wrap {
+			.slideshow-placeholder {
+				.slideshow {
+					.cycle-slideshow {
+						.cycle-carousel-wrap {
+							.slide {
+								div {
+									&.description {
+										text-align: right;
+									}
 								}
 							}
 						}

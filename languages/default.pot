@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: BH Website 1.0\n"
-"POT-Creation-Date: 2020-12-27 22:26+0200\n"
+"POT-Creation-Date: 2021-06-01 16:05+0300\n"
 "PO-Revision-Date: 2019-02-07 14:14+0200\n"
 "Last-Translator: Nir Goldberg <nir@htmline.com>\n"
 "Language-Team: BH online <nirg@bh.org.il>\n"
@@ -307,6 +307,10 @@ msgstr ""
 
 #: views/exhibition-landing/header.php:88
 msgid "Please rotate your device!"
+msgstr ""
+
+#: views/exhibition-landing/social.php:69
+msgid "Tel."
 msgstr ""
 
 #: views/exhibition-landing/video-single.php:36

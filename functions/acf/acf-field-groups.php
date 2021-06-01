@@ -4,7 +4,7 @@
  *
  * @author 		Beit Hatfutsot
  * @package 	bh/functions/acf
- * @version     3.0.3
+ * @version     3.1.9
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -3137,7 +3137,7 @@ acf_add_local_field_group(array(
 			'name' => 'acf-exhibition_lp_museum_btn',
 			'type' => 'group',
 			'instructions' => '',
-			'required' => 1,
+			'required' => 0,
 			'conditional_logic' => 0,
 			'wrapper' => array(
 				'width' => '',
@@ -3165,6 +3165,22 @@ acf_add_local_field_group(array(
 					'append' => '',
 					'maxlength' => '',
 				),
+				array(
+					'key' => 'field_60b629b2e9255',
+					'label' => 'Link',
+					'name' => 'link',
+					'type' => 'url',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'default_value' => '',
+					'placeholder' => '',
+				),
 			),
 		),
 		array(
@@ -3173,7 +3189,7 @@ acf_add_local_field_group(array(
 			'name' => 'acf-exhibition_lp_tickets_btn',
 			'type' => 'group',
 			'instructions' => '',
-			'required' => 1,
+			'required' => 0,
 			'conditional_logic' => 0,
 			'wrapper' => array(
 				'width' => '',
@@ -3223,6 +3239,25 @@ acf_add_local_field_group(array(
 			'key' => 'field_5fcf72c191df1',
 			'label' => 'Phone',
 			'name' => 'acf-exhibition_lp_phone',
+			'type' => 'text',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+			'prepend' => '',
+			'append' => '',
+			'maxlength' => '',
+		),
+		array(
+			'key' => 'field_60b63812dddfa',
+			'label' => 'Whatsapp Phone Number',
+			'name' => 'acf-exhibition_lp_whatsapp_phone_number',
 			'type' => 'text',
 			'instructions' => '',
 			'required' => 0,

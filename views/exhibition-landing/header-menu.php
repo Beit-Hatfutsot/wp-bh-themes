@@ -5,7 +5,7 @@
  * @author		Beit Hatfutsot
  * @package		bh/views/exhibition-landing
  * @since		3.0
- * @version		3.1.4
+ * @version		3.1.9
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -29,7 +29,8 @@ $menu_items = array(
 	),
 );
 
-$museum_menu_item = get_field( 'acf-exhibition_lp_museum_menu_item' );
+$museum_menu_item	= get_field( 'acf-exhibition_lp_museum_menu_item' );
+$museum_btn			= get_field( 'acf-exhibition_lp_museum_btn' );
 
 ?>
 
@@ -64,10 +65,26 @@ $museum_menu_item = get_field( 'acf-exhibition_lp_museum_menu_item' );
 
 			$text		= $museum_menu_item[ 'text' ];
 			$link		= $museum_menu_item[ 'link' ];
-			$gtm_event	= 'header-menu_museum-menu-item_click';
+			$gtm_event	= 'header-menu_museum-menu-item-1_click';
 			$data_layer	= 'onclick="dataLayer.push({\'event\': \'' . $gtm_event . '\', \'eventAction\': \'click\'});"';
 
 			echo '<li><a href="' . $link . '" target="_blank" ' . $data_layer . '>' . $text . '</a></li>';
+
+		}
+
+		if ( $museum_btn ) {
+
+			$text		= $museum_btn[ 'text' ];
+			$link		= $museum_btn[ 'link' ];
+
+			if ( $link ) {
+
+				$gtm_event	= 'header-menu_museum-menu-item-2_click';
+				$data_layer	= 'onclick="dataLayer.push({\'event\': \'' . $gtm_event . '\', \'eventAction\': \'click\'});"';
+
+				echo '<li><a href="' . $link . '" target="_blank" ' . $data_layer . '>' . $text . '</a></li>';
+
+			}
 
 		}
 

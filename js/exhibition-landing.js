@@ -392,6 +392,25 @@ var $ = jQuery,
 		},
 
 		/**
+		 * banner_top
+		 *
+		 * Align banner with header height
+		 * Called from loaded/alignments
+		 *
+		 * @param	N/A
+		 * @return	N/A
+		 */
+		banner_top : function () {
+
+			// vars
+			var header = $('header'),
+				banner = $('.banner');
+
+			banner.css('padding-top', header.height());
+
+		},
+
+		/**
 		 * breakpoint_refreshValue
 		 *
 		 * Set window breakpoint values
@@ -468,6 +487,9 @@ var $ = jQuery,
 
 			// set window breakpoint values
 			BH_landing.breakpoint_refreshValue();
+
+			// align banner according to header height
+			BH_landing.banner_top();
 
 			// vars
 			var slideshows = $('.cycle-slideshow');
