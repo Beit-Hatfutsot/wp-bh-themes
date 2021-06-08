@@ -4,7 +4,7 @@
  *
  * @author		Beit Hatfutsot
  * @package		bh/functions/acf
- * @version		3.0
+ * @version		3.1.11
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -16,6 +16,7 @@ if ( function_exists( 'acf_add_options_sub_page' ) ) {
 
 	acf_add_options_sub_page( 'Header/Footer' );
 	acf_add_options_sub_page( 'Contact Details' );
+	acf_add_options_sub_page( 'Pinned Buttons' );
 	acf_add_options_sub_page( 'Main Banner' );
 	acf_add_options_sub_page( 'Exhibitions and Events' );
 	acf_add_options_sub_page( 'Donations' );

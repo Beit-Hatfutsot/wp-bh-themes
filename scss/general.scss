@@ -4903,6 +4903,25 @@ body > header {
 	background-color: $blue !important;
 }
 
+/******************/
+/* pinned buttons */
+/******************/
+
+.pinned {
+	.anu-whatsapp {
+		position: fixed;
+		padding: 5px;
+		bottom: 20px;
+		right: 20px;
+		width: 60px;
+		height: 60px;
+		background: rgb(77, 194, 71);
+		@include border-radius(50%);
+		z-index: 300;
+		display: block;
+	}
+}
+
 /**********/
 /* footer */
 /**********/

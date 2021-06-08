@@ -5,7 +5,7 @@
  * @author 		Beit Hatfutsot
  * @package 	bh/views/components
  * @since		3.1.9
- * @version     3.1.9
+ * @version     3.1.11
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -14,10 +14,14 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 if ( ! function_exists( 'get_field' ) )
 	return;
 
-$whatsapp_number = get_field( 'acf-exhibition_lp_whatsapp_phone_number' );
+if ( ! $whatsapp_number ) {
 
-if ( ! $whatsapp_number )
-	return;
+	$whatsapp_number = get_field( 'acf-exhibition_lp_whatsapp_phone_number' );
+
+	if ( ! $whatsapp_number )
+		return;
+
+}
 
 ?>
 

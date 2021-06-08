@@ -4,7 +4,7 @@
  *
  * @author 		Beit Hatfutsot
  * @package 	bh/functions/acf
- * @version     3.1.9
+ * @version     3.1.11
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -28,6 +28,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
  * @fieldgroup	Shop - Why Shop With Us
  * @fieldgroup	Header/Footer Options
  * @fieldgroup	Contact Details Options
+ * @fieldgroup	Pinned Buttons Options
  * @fieldgroup	Main Banner Options
  * @fieldgroup	Exhibitions and Events Options
  * @fieldgroup	Donations Settings
@@ -5514,6 +5515,65 @@ acf_add_local_field_group(array(
 ));
 
 acf_add_local_field_group(array(
+	'key' => 'group_60bf7da323276',
+	'title' => 'Pinned Buttons Options',
+	'fields' => array(
+		array(
+			'key' => 'field_60bf7e3e3606c',
+			'label' => 'Whatsapp',
+			'name' => '',
+			'type' => 'tab',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'placement' => 'left',
+			'endpoint' => 0,
+		),
+		array(
+			'key' => 'field_60bf7c5d2fe20',
+			'label' => 'Whatsapp Phone Number',
+			'name' => 'acf-pinned_buttons_whatsapp_phone_number',
+			'type' => 'text',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+			'prepend' => '',
+			'append' => '',
+			'maxlength' => '',
+		),
+	),
+	'location' => array(
+		array(
+			array(
+				'param' => 'options_page',
+				'operator' => '==',
+				'value' => 'acf-options-pinned-buttons',
+			),
+		),
+	),
+	'menu_order' => 17,
+	'position' => 'normal',
+	'style' => 'default',
+	'label_placement' => 'top',
+	'instruction_placement' => 'label',
+	'hide_on_screen' => '',
+	'active' => true,
+	'description' => '',
+));
+
+acf_add_local_field_group(array(
 	'key' => 'group_58062306798a8',
 	'title' => 'Main Banner Options',
 	'fields' => array(
@@ -5818,7 +5878,7 @@ acf_add_local_field_group(array(
 			),
 		),
 	),
-	'menu_order' => 17,
+	'menu_order' => 18,
 	'position' => 'normal',
 	'style' => 'default',
 	'label_placement' => 'top',
@@ -6205,7 +6265,7 @@ acf_add_local_field_group(array(
 			),
 		),
 	),
-	'menu_order' => 18,
+	'menu_order' => 19,
 	'position' => 'normal',
 	'style' => 'default',
 	'label_placement' => 'top',
@@ -6706,7 +6766,7 @@ For more information please contact us at racheli@bh.org.il',
 			),
 		),
 	),
-	'menu_order' => 19,
+	'menu_order' => 20,
 	'position' => 'normal',
 	'style' => 'default',
 	'label_placement' => 'top',
@@ -6956,7 +7016,7 @@ acf_add_local_field_group(array(
 			),
 		),
 	),
-	'menu_order' => 20,
+	'menu_order' => 21,
 	'position' => 'normal',
 	'style' => 'default',
 	'label_placement' => 'top',
@@ -7314,7 +7374,7 @@ acf_add_local_field_group(array(
 			),
 		),
 	),
-	'menu_order' => 21,
+	'menu_order' => 22,
 	'position' => 'normal',
 	'style' => 'default',
 	'label_placement' => 'top',
@@ -7548,7 +7608,7 @@ acf_add_local_field_group(array(
 			),
 		),
 	),
-	'menu_order' => 22,
+	'menu_order' => 23,
 	'position' => 'normal',
 	'style' => 'default',
 	'label_placement' => 'top',
@@ -8465,7 +8525,7 @@ acf_add_local_field_group(array(
 			),
 		),
 	),
-	'menu_order' => 23,
+	'menu_order' => 24,
 	'position' => 'normal',
 	'style' => 'default',
 	'label_placement' => 'top',
@@ -9009,7 +9069,7 @@ acf_add_local_field_group(array(
 			),
 		),
 	),
-	'menu_order' => 24,
+	'menu_order' => 25,
 	'position' => 'normal',
 	'style' => 'default',
 	'label_placement' => 'top',

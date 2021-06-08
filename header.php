@@ -4,7 +4,7 @@
  *
  * @author		Beit Hatfutsot
  * @package		bh
- * @version		2.6.0
+ * @version		3.1.11
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -93,4 +93,11 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 		 * Display the header
 		 */
 		get_template_part( 'views/header/header' );
+	?>
+
+	<?php
+		/**
+		 * Display the pinned buttons
+		 */
+		get_template_part( 'views/components/pinned-buttons' );
 	?>
