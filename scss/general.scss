@@ -4951,7 +4951,7 @@ footer {
 		@include border-radius(50%);
 		background-color: $blue;
 		display: inline-block;
-		z-index: 99;
+		z-index: 300;
 
 		&:hover {
 			background-color: $landing-dark-blue;
