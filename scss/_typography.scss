@@ -1,5 +1,11 @@
 @import "functions";
 
+/*********/
+/* fonts */
+/*********/
+
+@include load-font("anomalia-regular", "anomalia/anomalia-regular-aaa", regular, normal);
+
 /*************/
 /* headlines */
 /*************/

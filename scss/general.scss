@@ -4903,11 +4903,61 @@ body > header {
 	background-color: $blue !important;
 }
 
+/**********/
+/* footer */
+/**********/
+
+footer {
+
+	/***************/
+	/* sites links */
+	/***************/
+
+	.sites-links {
+		position: relative;
+		border-color: $blue !important;
+		background-color: $white;
+		z-index: 3000000000;
+
+		.site-item {
+			a {
+				background-color: $blue !important;
+			}
+		}
+	}
+
+	/**********/
+	/* credit */
+	/**********/
+
+	.copyrights {
+		position: relative;
+		background-color: $white;
+		z-index: 3000000000;
+	}
+}
+
 /******************/
 /* pinned buttons */
 /******************/
 
 .pinned {
+	.tickets-btn {
+		position: fixed;
+		@include font('anomalia-regular');
+		color: $white;
+		text-align: left;
+		text-decoration: none;
+		@include border-radius(50%);
+		background-color: $blue;
+		display: inline-block;
+		z-index: 99;
+
+		&:hover {
+			background-color: $landing-dark-blue;
+		}
+	}
+
 	.anu-whatsapp {
 		position: fixed;
 		padding: 5px;
@@ -4922,23 +4972,26 @@ body > header {
 	}
 }
 
-/**********/
-/* footer */
-/**********/
+/*****************/
+/* accessibility */
+/*****************/
 
-footer {
+.uwy {
+	#userwayAccessibilityIcon {
+		top: auto !important;
+		left: 13px !important;
+		right: auto !important;
 
-	/***************/
-	/* sites links */
-	/***************/
+		.uhd {
+			margin: 0 !important;
+			left: 40px !important;
+			right: auto !important;
+		}
+	}
 
-	.sites-links {
-		border-color: $blue !important;
-
-		.site-item {
-			a {
-				background-color: $blue !important;
-			}
+	&.userway_hidden {
+		#userwayAccessibilityIcon {
+			transform: translateX(-100%) !important;
 		}
 	}
 }

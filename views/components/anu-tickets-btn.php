@@ -5,7 +5,7 @@
  * @author 		Beit Hatfutsot
  * @package 	bh/views/components
  * @since		3.0
- * @version     3.1.4
+ * @version     3.1.12
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -14,19 +14,21 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 if ( ! function_exists( 'get_field' ) )
 	return;
 
-$btn = get_field( 'acf-exhibition_lp_tickets_btn' );
+if ( ! $btn ) {
 
-if ( $btn ) {
+	$btn		= get_field( 'acf-exhibition_lp_tickets_btn' );
 
-	$text	= $btn[ 'text' ];
-	$link	= $btn[ 'link' ];
+	if ( ! $btn )
+		return;
 
 }
 
+$text		= $btn[ 'text' ];
+$link		= $btn[ 'link' ];
+$data_layer	= $gtm_event ? 'onclick="dataLayer.push({\'event\': \'' . $gtm_event . '\', \'eventAction\': \'click\'});"' : '';
+
 if ( ! $text || ! $link )
 	return;
-
-$data_layer = $gtm_event ? 'onclick="dataLayer.push({\'event\': \'' . $gtm_event . '\', \'eventAction\': \'click\'});"' : '';
 
 ?>
 

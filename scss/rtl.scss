@@ -1660,6 +1660,10 @@ ul.order_details {
 /******************/
 
 .pinned {
+	.tickets-btn {
+		text-align: right;
+	}
+
 	.anu-whatsapp {
 		left: 20px;
 		right: auto;
@@ -1749,6 +1753,28 @@ footer {
 			& > li {
 				float: right;
 			}
+		}
+	}
+}
+
+/*****************/
+/* accessibility */
+/*****************/
+
+.uwy {
+	#userwayAccessibilityIcon {
+		left: auto !important;
+		right: 13px !important;
+
+		.uhd {
+			left: auto !important;
+			right: 40px !important;
+		}
+	}
+
+	&.userway_hidden {
+		#userwayAccessibilityIcon {
+			transform: translateX(100%) !important;
 		}
 	}
 }

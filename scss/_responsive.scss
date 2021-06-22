@@ -1285,6 +1285,32 @@
 			}
 		}
 	}
+
+	/******************/
+	/* pinned buttons */
+	/******************/
+
+	.pinned {
+		.tickets-btn {
+			padding: px2vw(25px, 320px) px2vw(10px, 320px) px2vw(25px, 320px) px2vw(35px, 320px);
+			bottom: px2vw(12px, 320px);
+			left: px2vw(-30px, 320px);
+			width: px2vw(90px, 320px);
+			height: px2vw(90px, 320px);
+			line-height: px2vw(20px, 320px);
+			font-size: px2vw(12px, 320px);
+		}
+	}
+
+	/*****************/
+	/* accessibility */
+	/*****************/
+
+	.uwy {
+		#userwayAccessibilityIcon {
+			bottom: px2vw(112px, 320px);
+		}
+	}
 }
 
 @media (max-width: 526px) {
@@ -2990,6 +3016,32 @@
 					}
 				}
 			}
+		}
+	}
+
+	/******************/
+	/* pinned buttons */
+	/******************/
+
+	.pinned {
+		.tickets-btn {
+			padding: px2vw(95px, 1920px) px2vw(10px, 1920px) px2vw(95px, 1920px) px2vw(130px, 1920px);
+			bottom: px2vw(5px, 1920px);
+			left: px2vw(-110px, 1920px);
+			width: px2vw(265px, 1920px);
+			height: px2vw(265px, 1920px);
+			line-height: px2vw(39px, 1920px);
+			font-size: px2vw(28px, 1920px);
+		}
+	}
+
+	/*****************/
+	/* accessibility */
+	/*****************/
+
+	.uwy {
+		#userwayAccessibilityIcon {
+			bottom: px2vw(290px, 1920px);
 		}
 	}
 }
