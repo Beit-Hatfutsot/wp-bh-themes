@@ -12,6 +12,6 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 ?>
 
-<svg viewBox="0 0 23.42 23.42" class="shape shape-anu-pay">
+<svg viewBox="0 0 26.64 14.27" class="shape shape-anu-pay">
 	<use xlink:href="#shape-anu-pay"></use>
 </svg>

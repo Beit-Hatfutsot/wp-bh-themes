@@ -382,6 +382,10 @@ header {
 	.title {
 		svg {
 			float: left;
+
+			&.shape-anu-pay {
+				stroke: none;
+			}
 		}
 
 		h4 {
@@ -1621,7 +1625,7 @@ header {
 			}
 
 			h4 {
-				margin-left: px2vw(52px, 320px);
+				margin-left: px2vw(60px, 320px);
 				line-height: px2vw(42px, 320px);
 				font-size: px2vw(14px, 320px);
 				color: $white;
