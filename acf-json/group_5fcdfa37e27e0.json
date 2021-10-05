@@ -503,7 +503,7 @@
                             "key": "field_5fcf61ddc85de",
                             "label": "Content",
                             "name": "content",
-                            "type": "textarea",
+                            "type": "wysiwyg",
                             "instructions": "",
                             "required": 1,
                             "conditional_logic": 0,
@@ -513,10 +513,10 @@
                                 "id": ""
                             },
                             "default_value": "",
-                            "placeholder": "",
-                            "maxlength": "",
-                            "rows": "",
-                            "new_lines": "br"
+                            "tabs": "all",
+                            "toolbar": "basic",
+                            "media_upload": 0,
+                            "delay": 0
                         }
                     ]
                 }
@@ -598,7 +598,7 @@
                             "key": "field_5fcf62d5bf31d",
                             "label": "Content",
                             "name": "content",
-                            "type": "textarea",
+                            "type": "wysiwyg",
                             "instructions": "",
                             "required": 1,
                             "conditional_logic": 0,
@@ -608,10 +608,10 @@
                                 "id": ""
                             },
                             "default_value": "",
-                            "placeholder": "",
-                            "maxlength": "",
-                            "rows": "",
-                            "new_lines": "br"
+                            "tabs": "all",
+                            "toolbar": "basic",
+                            "media_upload": 0,
+                            "delay": 0
                         }
                     ]
                 },
@@ -712,7 +712,7 @@
                             "key": "field_5fcf6417bf323",
                             "label": "Content",
                             "name": "content",
-                            "type": "textarea",
+                            "type": "wysiwyg",
                             "instructions": "",
                             "required": 1,
                             "conditional_logic": 0,
@@ -722,10 +722,10 @@
                                 "id": ""
                             },
                             "default_value": "",
-                            "placeholder": "",
-                            "maxlength": "",
-                            "rows": "",
-                            "new_lines": "br"
+                            "tabs": "all",
+                            "toolbar": "basic",
+                            "media_upload": 0,
+                            "delay": 0
                         }
                     ]
                 }
@@ -1085,5 +1085,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1624357483
+    "modified": 1633432020
 }
