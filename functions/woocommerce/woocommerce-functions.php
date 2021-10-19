@@ -4,7 +4,7 @@
  *
  * @author		Beit Hatfutsot
  * @package		bh/functions/woocommerce
- * @version		2.6.0
+ * @version		3.1.16
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -471,7 +471,7 @@ function BH_shop_products_filter() {
  */
 function BH_shop_wswu_banner() {
 
-	get_template_part( 'views/sidebar/sidebar-shop', 'wswu-banner' );
+	//get_template_part( 'views/sidebar/sidebar-shop', 'wswu-banner' );
 
 }
 
@@ -717,7 +717,7 @@ function BH_shop_single_shipping() {
  */
 function BH_shop_single_experience_banner() {
 
-	get_template_part( 'views/woocommerce/single-product/single-product-section2', 'banner' );
+	//get_template_part( 'views/woocommerce/single-product/single-product-section2', 'banner' );
 
 }
 
