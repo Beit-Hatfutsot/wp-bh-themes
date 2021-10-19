@@ -4,7 +4,7 @@
  *
  * @author		Beit Hatfutsot
  * @package		bh/functions
- * @version		3.0
+ * @version		3.1.17
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -148,9 +148,11 @@ function BH_wp_scripts_n_styles() {
 	/**
 	 * Scripts
 	 */
+	wp_deregister_script( 'jquery' );
+	wp_register_script( 'jquery',					JS_DIR . '/libs/jquery.js',											array(),														'1.12.4',	false );
 	wp_register_script( 'bootstrap',				JS_DIR . '/libs/bootstrap.min.js',									array( 'jquery' ),												VERSION,	true );
 	wp_register_script( 'countdown',				JS_DIR . '/libs/jquery.responsive_countdown.min.js',				array( 'jquery', 'bootstrap' ),									VERSION,	true );
-	wp_register_script( 'cycle2',					JS_DIR . '/libs/jquery.cycle2.min.js',								array( 'jquery' ),									VERSION,	true );
+	wp_register_script( 'cycle2',					JS_DIR . '/libs/jquery.cycle2.min.js',								array( 'jquery' ),												VERSION,	true );
 	wp_register_script( 'cycle2-carousel',			JS_DIR . '/libs/jquery.cycle2.carousel.min.js',						array( 'cycle2' ),												VERSION,	true );
 	wp_register_script( 'cycle2-swipe',				JS_DIR . '/libs/jquery.cycle2.swipe.min.js',						array( 'cycle2' ),												VERSION,	true );
 	wp_register_script( 'cycle2-ios6fix',			JS_DIR . '/libs/ios6fix.js',										array( 'cycle2' ),												VERSION,	true );
