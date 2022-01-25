@@ -4,7 +4,7 @@
  *
  * @author 		Beit Hatfutsot
  * @package 	bh/functions/acf
- * @version     3.1.15
+ * @version     3.1.18
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -1194,7 +1194,6 @@ acf_add_local_field_group(array(
 	),
 	'active' => true,
 	'description' => '',
-	'modified' => 1533632403,
 ));
 
 acf_add_local_field_group(array(
@@ -7714,12 +7713,7 @@ acf_add_local_field_group(array(
 			'label' => 'Banners',
 			'name' => 'acf-options-shop_banners',
 			'type' => 'repeater',
-			'instructions' => '<p>Image dimensions:</p>
-
-<div>Image #01: 493x633px</div>
-<div>Image #02: 627x633px</div>
-<div>Image #03: 627x633px</div>
-<div>Image #04: 399x633px</div>',
+			'instructions' => '',
 			'required' => 0,
 			'conditional_logic' => 0,
 			'wrapper' => array(
@@ -7729,7 +7723,7 @@ acf_add_local_field_group(array(
 			),
 			'collapsed' => '',
 			'min' => 0,
-			'max' => 4,
+			'max' => 0,
 			'layout' => 'row',
 			'button_label' => 'Add Banner',
 			'sub_fields' => array(
@@ -7738,11 +7732,11 @@ acf_add_local_field_group(array(
 					'label' => 'Image',
 					'name' => 'image',
 					'type' => 'image',
-					'instructions' => '',
+					'instructions' => 'Image dimensions: 1170x633px',
 					'required' => 0,
 					'conditional_logic' => 0,
 					'wrapper' => array(
-						'width' => 25,
+						'width' => '25',
 						'class' => '',
 						'id' => '',
 					),
@@ -8601,7 +8595,6 @@ acf_add_local_field_group(array(
 	'hide_on_screen' => '',
 	'active' => true,
 	'description' => '',
-	'modified' => 1533471170,
 ));
 
 acf_add_local_field_group(array(

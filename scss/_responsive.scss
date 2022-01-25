@@ -2975,6 +2975,29 @@
 		}
 	}
 
+	/**********************************/
+	/* shop - homepage simple banners */
+	/**********************************/
+
+	.simple-shop-banners-wrapper {
+		.slideshow-placeholder {
+			.slideshow {
+				.cycle-slideshow {
+					.cycle-carousel-wrap {
+						.slide {
+							img {
+								width: auto;
+								height: auto;
+								min-width: 100%;
+								min-height: 100%;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
 	/**********/
 	/* footer */
 	/**********/

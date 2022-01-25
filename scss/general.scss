@@ -2566,6 +2566,54 @@ body > header {
 	}
 }
 
+/**********************************/
+/* shop - homepage simple banners */
+/**********************************/
+
+.simple-shop-banners-wrapper {
+	position: relative;
+	margin-bottom: 30px;
+	padding-top: 54.102564103%;
+	overflow: hidden;
+	z-index: 200;
+
+	.slideshow-placeholder {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+
+		.slideshow {
+			width: 100%;
+			height: 100%;
+
+			.cycle-slideshow {
+				width: 100% !important;
+				max-width: 100%;
+				height: 100%;
+
+				.cycle-carousel-wrap {
+					width: 100%;
+					height: 100%;
+
+					.slide {
+						width: 100%;
+						height: 100%;
+						display: none;
+
+						&:first-child,
+						&.cycle-slide {
+							display: block;
+						}
+
+					}
+				}
+			}
+		}
+	}
+}
+
 /***********************************/
 /* shop - homepage categories menu */
 /***********************************/

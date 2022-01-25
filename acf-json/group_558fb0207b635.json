@@ -23,7 +23,7 @@
             "label": "Banners",
             "name": "acf-options-shop_banners",
             "type": "repeater",
-            "instructions": "<p>Image dimensions:<\/p>\r\n\r\n<div>Image #01: 493x633px<\/div>\r\n<div>Image #02: 627x633px<\/div>\r\n<div>Image #03: 627x633px<\/div>\r\n<div>Image #04: 399x633px<\/div>",
+            "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -33,7 +33,7 @@
             },
             "collapsed": "",
             "min": 0,
-            "max": 4,
+            "max": 0,
             "layout": "row",
             "button_label": "Add Banner",
             "sub_fields": [
@@ -42,11 +42,11 @@
                     "label": "Image",
                     "name": "image",
                     "type": "image",
-                    "instructions": "",
+                    "instructions": "Image dimensions: 1170x633px",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": 25,
+                        "width": "25",
                         "class": "",
                         "id": ""
                     },
@@ -470,6 +470,7 @@
             "button_label": "Add Slider",
             "min": 0,
             "max": 0,
+            "collapsed": "",
             "sub_fields": [
                 {
                     "key": "field_558fd75714fcf",
@@ -517,8 +518,7 @@
                         "featured_image"
                     ]
                 }
-            ],
-            "collapsed": ""
+            ]
         },
         {
             "key": "field_548d4f4a0945d",
@@ -892,7 +892,7 @@
             }
         ]
     ],
-    "menu_order": 21,
+    "menu_order": 24,
     "position": "normal",
     "style": "default",
     "label_placement": "top",
@@ -900,5 +900,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1533471170
+    "modified": 1643094065
 }

@@ -18,7 +18,8 @@ var $ = jQuery,
 			breakpoint				: '',									// CSS media query breakpoint (int)
 			prev_breakpoint			: '',									// Previous media query breakpoint (int)
 			api						: js_globals.template_url + '/api/',
-			timeout					: 400									// general timeout (int)
+			timeout					: 400,									// general timeout (int)
+			interval				: ''									// Receives the setTimeout result for the shop hompeage slideshow presentation
 
 		},
 
@@ -992,6 +993,56 @@ var $ = jQuery,
 		},
 		
 		/**
+		 * shopHomepageSlideshow
+		 *
+		 * This function reinits slideshow
+		 * Called from loaded/alignments
+		 *
+		 * @param	N/A
+		 * @return	N/A
+		 */
+		shopHomepageSlideshow : function () {
+
+			var slideshow = $('.simple-shop-banners-wrapper .cycle-slideshow');
+
+			if (BH_general.params.interval !== '') {
+				clearTimeout(BH_general.params.interval);
+			}
+
+			// reinit slideshows
+			if (slideshow.length) {
+				slideshow.cycle('reinit');
+
+				// Loop slideshows
+				BH_general.loopSlideshow();
+			}
+
+		},
+
+		/**
+		 * loopSlideshow
+		 *
+		 * This function transitions the slideshow to the next slide in an infinite loop
+		 * Called from loaded/alignments
+		 *
+		 * @param	N/A
+		 * @return	N/A
+		 */
+		loopSlideshow : function () {
+
+			// vars
+			var slideshow = $('.simple-shop-banners-wrapper .cycle-slideshow');
+
+			if (slideshow.length) {
+				BH_general.params.interval = setTimeout(function() {
+					slideshow.cycle('next');
+					BH_general.loopSlideshow();
+				}, 5000);
+			}
+
+		},
+
+		/**
 		 * loaded
 		 *
 		 * Called by $(window).load event
@@ -1034,6 +1085,9 @@ var $ = jQuery,
 
 			// close all footer sub menus
 			$('.footer-menu li.menu-item-has-children').removeClass('collapsed');
+
+			// shop homepage slideshow
+			BH_general.shopHomepageSlideshow();
 
 			// woocommerce single product page / shop about
 			if (BH_general.params.page == 'woocommerce-single-product' || BH_general.params.page == 'shop-about') {
