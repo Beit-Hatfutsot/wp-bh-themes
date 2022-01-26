@@ -4,7 +4,7 @@
  *
  * @author 		Beit Hatfutsot
  * @package 	bh/views/woocommerce/single-product
- * @version     2.0
+ * @version     3.1.20
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -23,6 +23,22 @@ if ( ! $weight && ! $dimensions )
 
 	<?php // title ?>
 	<div class="product-meta-section-title"><?php _e('Technical Details', 'BH'); ?></div>
+
+	<?php // sku ?>
+	<?php if ( $sku = $product->get_sku() ) { ?>
+
+		<div class="tech-details sku clearfix">
+			<div class="name"><?php _e('SKU', 'BH'); ?></div>
+			<div class="value"><?php echo $sku; ?></div>
+		</div>
+
+		<?php
+			echo '<meta itemprop="sku"		content="' . $product->get_sku() . '" />';
+			echo '<meta itemprop="mpn"		content="' . $product->get_sku() . '" />';
+			echo '<meta itemprop="gtin12"	content="' . gtin_12($product->get_sku()) . '" />';
+		?>
+
+	<?php } ?>
 
 	<?php // weight ?>
 	<?php if ($weight) { ?>
@@ -53,11 +69,5 @@ if ( ! $weight && ! $dimensions )
 		?>
 
 	<?php } ?>
-
-	<?php
-		echo '<meta itemprop="sku"		content="' . $product->get_sku() . '" />';
-		echo '<meta itemprop="mpn"		content="' . $product->get_sku() . '" />';
-		echo '<meta itemprop="gtin12"	content="' . gtin_12($product->get_sku()) . '" />';
-	?>
 
 </div>

@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: BH Website 1.0\n"
-"POT-Creation-Date: 2021-06-01 16:06+0300\n"
-"PO-Revision-Date: 2021-06-01 16:06+0300\n"
+"POT-Creation-Date: 2022-01-26 12:14+0200\n"
+"PO-Revision-Date: 2022-01-26 12:15+0200\n"
 "Last-Translator: Nir Goldberg <nir@htmline.com>\n"
 "Language-Team: BH online <nirg@bh.org.il>\n"
 "Language: he_IL\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.4.2\n"
+"X-Generator: Poedit 3.0\n"
 "X-Poedit-Basepath: ..\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;esc_html__;esc_html_e;"
@@ -106,15 +106,15 @@ msgstr "שגיאה כללית."
 msgid "Transaction ID"
 msgstr "מזהה עסקה"
 
-#: functions/scripts-n-styles.php:178 views/donate/form-amount.php:78
+#: functions/scripts-n-styles.php:180 views/donate/form-amount.php:78
 msgid "Bar Mitzvah boy Mordechai ben Ester"
 msgstr "חתן בר המצווה מרדכי בן אסתר"
 
-#: functions/scripts-n-styles.php:179
+#: functions/scripts-n-styles.php:181
 msgid "Our beloved grandmother Bracha Cohen"
 msgstr "סבתנו היקרה ברכה כהן ז\"ל"
 
-#: functions/scripts-n-styles.php:180
+#: functions/scripts-n-styles.php:182
 msgid "To Barak Aharoni with appreciation of your good work"
 msgstr "לברק אהרוני על פועלו"
 
@@ -872,14 +872,18 @@ msgid "Technical Details"
 msgstr "פרטים טכניים"
 
 #: views/woocommerce/single-product/single-product-section1-meta.php:31
+msgid "SKU"
+msgstr "מק\"ט"
+
+#: views/woocommerce/single-product/single-product-section1-meta.php:47
 msgid "Weight"
 msgstr "משקל"
 
-#: views/woocommerce/single-product/single-product-section1-meta.php:45
+#: views/woocommerce/single-product/single-product-section1-meta.php:61
 msgid "Dimensions"
 msgstr "מידות"
 
-#: views/woocommerce/single-product/single-product-section1-meta.php:45
+#: views/woocommerce/single-product/single-product-section1-meta.php:61
 msgid "Length x Width x Height"
 msgstr "גובה x רוחב x אורך"
 
