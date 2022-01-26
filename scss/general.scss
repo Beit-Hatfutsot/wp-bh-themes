@@ -635,7 +635,7 @@ body > header {
 							font-size: 18px;
 							font-weight: $font-bold;
 							color: $font-invert-color;
-							background: $orange-color3;
+							background: $blue;
 
 							&:hover {
 								background-color: $gray-color3;
@@ -2658,9 +2658,8 @@ body > header {
 			}
 		}
 
-		&:nth-child(3n+1) { .category-item { background-color: $orange-color4; } }
-		&:nth-child(3n+2) { .category-item { background-color: $red-color3; } }
-		&:nth-child(3n+3) { .category-item { background-color: $blue-color3; } }
+		&:nth-child(2n+1) { .category-item { background-color: $blue; } }
+		&:nth-child(2n+2) { .category-item { background-color: $gray-color2; } }
 
 		&.manual-item-wrapper {
 			.category-item {
@@ -2753,6 +2752,7 @@ body > header {
 					@include transition(all);
 					@include opacity(0);
 					visibility: hidden;
+					z-index: 1000;
 
 					.product-item-meta {
 						padding: 10px;
@@ -2794,7 +2794,7 @@ body > header {
 							right: 10px;
 							font-size: 20px;
 							font-weight: $font-bold;
-							color: $orange-color3;
+							color: $blue;
 
 							del {
 								font-size: 15px;
@@ -2817,7 +2817,7 @@ body > header {
 							line-height: 30px;
 							font-size: 20px;
 							color: $font-invert-color;
-							background-color: $orange-color3;
+							background-color: $blue;
 							text-align: center;
 							text-decoration: none;
 							display: block;
@@ -2863,7 +2863,7 @@ body > header {
 			position: relative;
 			padding: 5px;
 			min-height: 60px;
-			background-color: $orange-color4;
+			background-color: $blue;
 			z-index: 1;
 
 			.icon {
@@ -3211,7 +3211,6 @@ body > header {
 
 				select {
 					font-size: 16px;
-					background-color: $orange-color5;
 				}
 			}
 		}
@@ -3345,7 +3344,7 @@ body > header {
 
 				.product-gallery-slider-prev {
 					left: 15px;
-					border-right: 26px solid $orange-color3;
+					border-right: 26px solid $blue;
 
 					&:hover {
 						border-right-color: $gray-color3;
@@ -3354,7 +3353,7 @@ body > header {
 
 				.product-gallery-slider-next {
 					right: 15px;
-					border-left: 26px solid $orange-color3;
+					border-left: 26px solid $blue;
 
 					&:hover {
 						border-left-color: $gray-color3;
@@ -3485,7 +3484,7 @@ body > header {
 					float: left;
 					position: relative;
 					@include calc(width, "100% - 165px");
-					background-color: $orange-color3;
+					background-color: $blue;
 					@include box-shadow(0, 0, rgba(153,153,153,0.75), 2px, 1px);
 
 					&:after {
@@ -3831,6 +3830,7 @@ table.shop_table {
 
 		.checkout-button {
 			margin: 0 !important;
+			padding: .618em 1em !important;
 			height: 30px;
 			font-size: 14px !important;
 			font-weight: $font-normal !important;
@@ -3841,7 +3841,7 @@ table.shop_table {
 			-webkit-text-shadow:	none;
 			-moz-text-shadow:		none;
 			text-shadow:			none;
-			background: $red !important;
+			background: $blue !important;
 			@include border-radius(3px);
 			border: 0;
 			text-decoration: none !important;
@@ -3974,7 +3974,7 @@ table.shop_table {
 				-webkit-text-shadow:	none;
 				-moz-text-shadow:		none;
 				text-shadow:			none;
-				background: $red;
+				background: $blue;
 				@include border-radius(3px);
 				text-decoration: none;
 				border: 0;
@@ -4003,13 +4003,15 @@ ul.order_details {
 		float: left;
 		position: relative;
 		margin: 0 0 20px -25px;
-		padding: 14px 25px;
+		padding: 0 25px;
+		line-height: 47px;
 		font-size: 18px;
 		font-weight: $font-normal;
-		background-color: $blue-color5;
+		color:  $font-invert-color;
+		background-color: $blue;
 
 		a {
-			color: $font-color;
+			color: $font-invert-color;
 		}
 
 		&:before {
@@ -4019,7 +4021,7 @@ ul.order_details {
 			left: 0;
 			width: 0;
 			height: 0;
-			border-top: 10px solid $blue-color3;
+			border-top: 10px solid $blue;
 			border-left: 10px solid transparent;
 		}
 
@@ -4030,7 +4032,7 @@ ul.order_details {
 			left: 100%;
 			width: 0;
 			height: 0;
-			border-bottom: 47px solid $blue-color5;
+			border-bottom: 47px solid $blue;
 			border-right: 28px solid transparent;
 		}
 	}
@@ -4063,7 +4065,7 @@ ul.order_details {
 
 		.products-slider-prev {
 			left: 0;
-			border-right: 36px solid $orange-color3;
+			border-right: 36px solid $blue;
 
 			&:hover {
 				border-right-color: $gray-color3;
@@ -4072,7 +4074,7 @@ ul.order_details {
 
 		.products-slider-next {
 			right: 0;
-			border-left: 36px solid $orange-color3;
+			border-left: 36px solid $blue;
 
 			&:hover {
 				border-left-color: $gray-color3;
@@ -4156,7 +4158,7 @@ ul.order_details {
 				height: 50px;
 				font-size: 22px !important;
 				font-weight: $font-bold !important;
-				color: $orange-color3 !important;
+				color: $blue !important;
 
 				& > .amount {
 					margin-top: 25px;
@@ -4184,7 +4186,7 @@ ul.order_details {
 				position: relative;
 				width: 62px;
 				height: 42px;
-				background-color: $orange-color3;
+				background-color: $blue;
 
 				&:before {
 					content: "";
@@ -4195,7 +4197,7 @@ ul.order_details {
 					height: 0;
 					border-left: 31px solid transparent;
 					border-right: 31px solid transparent;
-					border-top: 10px solid $orange-color3;
+					border-top: 10px solid $blue;
 				}
 
 				&:after {
@@ -4302,7 +4304,7 @@ ul.order_details {
 					left: 0;
 					width: 100%;
 					height: 71px;
-					background: $cyan-color2;
+					background: $blue;
 				}
 
 				.team-member {
@@ -4644,7 +4646,10 @@ footer {
 	/***************/
 
 	.footer-menu {
+		position: relative;
 		padding: 20px 0 0;
+		background-color: #FFF;
+		z-index: 3000000000;
 
 		li {
 			list-style: none;

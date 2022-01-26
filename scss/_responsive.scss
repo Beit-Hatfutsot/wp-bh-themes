@@ -1012,14 +1012,14 @@
 			margin: 0 -15px 15px;
 			position: relative;
 			padding: 7px 0 7px 35px;
-			background-color: #c6e8ed;
+			background-color: $blue;
 			cursor: pointer;
 
 			h3 {
 				margin: 0;
 				font-size: 16px;
 				font-weight: $font-bold;
-				color: $font-color;
+				color: $font-invert-color;
 
 				.active { display: none; }
 				.inactive { display: block; }
@@ -1034,7 +1034,7 @@
 				height: 0;
 				border-top: 7.5px solid transparent;
 				border-bottom: 7.5px solid transparent;
-				border-left: 13px solid $gray-color3;
+				border-left: 13px solid $white;
 			}
 
 			& + .awpf-filters-wrapper {
@@ -1043,7 +1043,7 @@
 
 			&:hover,
 			&.collapsed {
-				background-color: $blue-color4;
+				background-color: $blue;
 			}
 
 			&.collapsed {
@@ -1054,7 +1054,7 @@
 
 				&:before {
 					top: 9px;
-					border-top: 13px solid $gray-color3;
+					border-top: 13px solid $white;
 					border-right: 7.5px solid transparent;
 					border-bottom: 0;
 					border-left: 7.5px solid transparent;
@@ -1079,7 +1079,7 @@
 				font-weight: $font-bold;
 				color: $font-invert-color;
 				text-align: center;
-				background-color: $orange-color3;
+				background-color: $blue;
 				cursor: pointer;
 			}
 
