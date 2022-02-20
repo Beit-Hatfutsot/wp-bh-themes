@@ -4,7 +4,7 @@
  *
  * @author 		Beit Hatfutsot
  * @package 	bh/functions
- * @version     2.0
+ * @version     3.2.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -155,7 +155,8 @@ add_action('BH_shop_single_product_meta',			'BH_shop_single_add_to_cart', 30);
 //add_action('BH_shop_single_product_meta',			'BH_shop_single_gift', 40);
 add_action('BH_shop_single_product_meta',			'BH_shop_single_content', 50);
 add_action('BH_shop_single_product_meta',			'BH_shop_single_meta', 60);
-add_action('BH_shop_single_product_meta',			'BH_shop_single_shipping', 70);
+add_action('BH_shop_single_product_meta',           'BH_shop_single_shipping', 70);
+add_action('BH_shop_single_product_meta',           'BH_shop_single_return_policy', 80);
 add_action('BH_shop_experience',					'BH_shop_single_experience_banner', 10);
 add_action('BH_shop_related_products',				'BH_shop_single_related_products', 10);
 add_action('BH_after_single_product',				'BH_EC_product_detail', 10);

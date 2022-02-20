@@ -5,7 +5,7 @@
  * @author 		Beit Hatfutsot
  * @package 	bh/views/header
  * @since		2.6.0
- * @version     2.6.0
+ * @version     3.2.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -14,6 +14,10 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
  * Variables
  */
 global $globals;
+
+// hide featured page for shop pages
+if ( 'shop' == $globals[ 'bh_sites' ][ $globals[ 'current_site' ] ][ 'type' ] )
+    return;
 
 $header_elements	= $globals[ 'header_elements' ];
 $featured_page		= $header_elements[ 'featured_page' ];

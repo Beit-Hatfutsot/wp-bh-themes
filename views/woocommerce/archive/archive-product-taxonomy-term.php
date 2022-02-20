@@ -4,7 +4,7 @@
  *
  * @author 		Beit Hatfutsot
  * @package 	bh/views/woocommerce/archive
- * @version     2.0
+ * @version     3.2.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly ?>
@@ -61,7 +61,9 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly ?>
 				<?php
 					// check if fetured image should be displayed
 					$total_products		= $wp_query->found_posts;
-					$featured_product	= $total_products >= 3 ? true : false;
+
+					// turn off featured product display - new design requirement
+					//$featured_product	= $total_products >= 3 ? true : false;
 				?>
 
 				<div class="products-list">

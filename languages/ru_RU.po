@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: BH Website 1.0\n"
-"POT-Creation-Date: 2021-06-01 16:09+0300\n"
-"PO-Revision-Date: 2022-02-09 14:00+0200\n"
+"POT-Creation-Date: 2022-02-20 23:10+0200\n"
+"PO-Revision-Date: 2022-02-20 23:10+0200\n"
 "Last-Translator: Nir Goldberg <nir@htmline.com>\n"
 "Language-Team: BH online <nirg@bh.org.il>\n"
 "Language: ru_RU\n"
@@ -106,15 +106,15 @@ msgstr ""
 msgid "Transaction ID"
 msgstr ""
 
-#: functions/scripts-n-styles.php:178 views/donate/form-amount.php:78
+#: functions/scripts-n-styles.php:180 views/donate/form-amount.php:78
 msgid "Bar Mitzvah boy Mordechai ben Ester"
 msgstr ""
 
-#: functions/scripts-n-styles.php:179
+#: functions/scripts-n-styles.php:181
 msgid "Our beloved grandmother Bracha Cohen"
 msgstr ""
 
-#: functions/scripts-n-styles.php:180
+#: functions/scripts-n-styles.php:182
 msgid "To Barak Aharoni with appreciation of your good work"
 msgstr ""
 
@@ -228,7 +228,7 @@ msgstr ""
 msgid "Filter products"
 msgstr ""
 
-#: functions/woocommerce/woocommerce-functions.php:770
+#: functions/woocommerce/woocommerce-functions.php:785
 msgid ""
 "<b>IMPORTANT NOTIFICATION:</b> Due to the Israeli postal office being unable "
 "to provide our customers up to date order tracking and delivery within "
@@ -236,31 +236,31 @@ msgid ""
 "shipping. We apologise for any inconvenience to our customers."
 msgstr ""
 
-#: functions/woocommerce/woocommerce-functions.php:790
+#: functions/woocommerce/woocommerce-functions.php:805
 msgid "Checkout: Please fill your billing address and shipping address"
 msgstr ""
 
-#: functions/woocommerce/woocommerce-functions.php:804
+#: functions/woocommerce/woocommerce-functions.php:819
 msgid "Checkout: Please fill your payment details"
 msgstr ""
 
-#: functions/woocommerce/woocommerce-functions.php:819
+#: functions/woocommerce/woocommerce-functions.php:834
 msgid "Thank you. Your order has been received"
 msgstr ""
 
-#: functions/woocommerce/woocommerce-functions.php:833
+#: functions/woocommerce/woocommerce-functions.php:848
 msgid "Secured Billing: Please choose your preferred billing method"
 msgstr ""
 
-#: functions/woocommerce/woocommerce-functions.php:1232
+#: functions/woocommerce/woocommerce-functions.php:1247
 msgid "Most Popular"
 msgstr ""
 
-#: functions/woocommerce/woocommerce-functions.php:1233
+#: functions/woocommerce/woocommerce-functions.php:1248
 msgid "Price: Low to High"
 msgstr ""
 
-#: functions/woocommerce/woocommerce-functions.php:1234
+#: functions/woocommerce/woocommerce-functions.php:1249
 msgid "Price: High to Low"
 msgstr ""
 
@@ -576,10 +576,6 @@ msgstr ""
 msgid "Your gift is tax deductible in Israel."
 msgstr ""
 
-#: views/donate/process-options.php:38
-msgid "Make a tax deductible gift in the United States instead"
-msgstr ""
-
 #: views/donate/process-top.php:4
 msgctxt "donation-quote"
 msgid "Deeds of giving are the very foundations of the world"
@@ -837,7 +833,7 @@ msgstr ""
 msgid "Subscribe to Blog notifications"
 msgstr ""
 
-#: views/woocommerce/archive/archive-product-taxonomy-term.php:73
+#: views/woocommerce/archive/archive-product-taxonomy-term.php:75
 msgid "Sort by"
 msgstr ""
 
@@ -870,15 +866,23 @@ msgid "Technical Details"
 msgstr ""
 
 #: views/woocommerce/single-product/single-product-section1-meta.php:31
+msgid "SKU"
+msgstr ""
+
+#: views/woocommerce/single-product/single-product-section1-meta.php:47
 msgid "Weight"
 msgstr ""
 
-#: views/woocommerce/single-product/single-product-section1-meta.php:45
+#: views/woocommerce/single-product/single-product-section1-meta.php:61
 msgid "Dimensions"
 msgstr ""
 
-#: views/woocommerce/single-product/single-product-section1-meta.php:45
+#: views/woocommerce/single-product/single-product-section1-meta.php:61
 msgid "Length x Width x Height"
+msgstr ""
+
+#: views/woocommerce/single-product/single-product-section1-return-policy.php:25
+msgid "Return Policy"
 msgstr ""
 
 #: views/woocommerce/single-product/single-product-section1-shipping.php:17

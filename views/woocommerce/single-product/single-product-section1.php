@@ -4,7 +4,7 @@
  *
  * @author 		Beit Hatfutsot
  * @package 	bh/views/woocommerce/single-product
- * @version     2.0
+ * @version     3.2.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -53,6 +53,7 @@ global $post;
 				 * @hooked	BH_shop_single_content - 50
 				 * @hooked	BH_shop_single_meta - 60
 				 * @hooked	BH_shop_single_shipping - 70
+				 * @hooked	BH_shop_single_return_policy - 80
 				 */
 				do_action('BH_shop_single_product_meta');
 			?>

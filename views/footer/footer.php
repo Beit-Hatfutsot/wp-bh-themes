@@ -4,12 +4,16 @@
  *
  * @author 		Beit Hatfutsot
  * @package 	bh/views/footer
- * @version     3.1.0
+ * @version     3.2.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly ?>
 
 <footer>
+
+	<?php // Shop experience banner
+		get_template_part( 'views/footer/footer-shop-experience' );
+	?>
 
 	<div class="footer-top">
 

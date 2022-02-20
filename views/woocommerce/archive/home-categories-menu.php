@@ -4,7 +4,7 @@
  *
  * @author 		Beit Hatfutsot
  * @package 	bh/views/woocommerce/archive
- * @version     2.0
+ * @version     3.2.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -50,7 +50,6 @@ echo '<div class="container shop-categories-menu-wrapper visible-sm visible-xs">
 				echo '<div class="category-item">';
 					echo '<div class="title">' . $manual_item_title . '</div>';
 					echo $manual_item_subtext ? '<div class="subtext">' . $manual_item_subtext . '</div>' : '';
-					echo '<span class="icon"></span>';
 				echo '</div>';
 			echo '</a>';
 		echo '</div>';

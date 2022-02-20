@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: BH Website 1.0\n"
-"POT-Creation-Date: 2022-01-26 12:14+0200\n"
+"POT-Creation-Date: 2022-02-20 23:08+0200\n"
 "PO-Revision-Date: 2019-02-07 14:14+0200\n"
 "Last-Translator: Nir Goldberg <nir@htmline.com>\n"
 "Language-Team: BH online <nirg@bh.org.il>\n"
@@ -192,7 +192,7 @@ msgstr ""
 msgid "Filter products"
 msgstr ""
 
-#: functions/woocommerce/woocommerce-functions.php:770
+#: functions/woocommerce/woocommerce-functions.php:785
 msgid ""
 "<b>IMPORTANT NOTIFICATION:</b> Due to the Israeli postal office being unable "
 "to provide our customers up to date order tracking and delivery within "
@@ -200,31 +200,31 @@ msgid ""
 "shipping. We apologise for any inconvenience to our customers."
 msgstr ""
 
-#: functions/woocommerce/woocommerce-functions.php:790
+#: functions/woocommerce/woocommerce-functions.php:805
 msgid "Checkout: Please fill your billing address and shipping address"
 msgstr ""
 
-#: functions/woocommerce/woocommerce-functions.php:804
+#: functions/woocommerce/woocommerce-functions.php:819
 msgid "Checkout: Please fill your payment details"
 msgstr ""
 
-#: functions/woocommerce/woocommerce-functions.php:819
+#: functions/woocommerce/woocommerce-functions.php:834
 msgid "Thank you. Your order has been received"
 msgstr ""
 
-#: functions/woocommerce/woocommerce-functions.php:833
+#: functions/woocommerce/woocommerce-functions.php:848
 msgid "Secured Billing: Please choose your preferred billing method"
 msgstr ""
 
-#: functions/woocommerce/woocommerce-functions.php:1232
+#: functions/woocommerce/woocommerce-functions.php:1247
 msgid "Most Popular"
 msgstr ""
 
-#: functions/woocommerce/woocommerce-functions.php:1233
+#: functions/woocommerce/woocommerce-functions.php:1248
 msgid "Price: Low to High"
 msgstr ""
 
-#: functions/woocommerce/woocommerce-functions.php:1234
+#: functions/woocommerce/woocommerce-functions.php:1249
 msgid "Price: High to Low"
 msgstr ""
 
@@ -532,7 +532,7 @@ msgstr ""
 msgid "Subscribe to Blog notifications"
 msgstr ""
 
-#: views/woocommerce/archive/archive-product-taxonomy-term.php:73
+#: views/woocommerce/archive/archive-product-taxonomy-term.php:75
 msgid "Sort by"
 msgstr ""
 
@@ -578,6 +578,10 @@ msgstr ""
 
 #: views/woocommerce/single-product/single-product-section1-meta.php:61
 msgid "Length x Width x Height"
+msgstr ""
+
+#: views/woocommerce/single-product/single-product-section1-return-policy.php:25
+msgid "Return Policy"
 msgstr ""
 
 #: views/woocommerce/single-product/single-product-section1-shipping.php:17

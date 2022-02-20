@@ -4,7 +4,7 @@
  *
  * @author 		Beit Hatfutsot
  * @package 	bh/functions/acf
- * @version     3.1.18
+ * @version     3.2.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -8296,6 +8296,44 @@ acf_add_local_field_group(array(
 			'ui' => 1,
 		),
 		array(
+			'key' => 'field_62117f3d6f353',
+			'label' => 'Banner Title',
+			'name' => 'acf-options_experience_title',
+			'type' => 'text',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+			'prepend' => '',
+			'append' => '',
+			'maxlength' => '',
+		),
+		array(
+			'key' => 'field_62117d41e26f9',
+			'label' => 'Banner Text',
+			'name' => 'acf-options_experience_text',
+			'type' => 'textarea',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+			'maxlength' => '',
+			'rows' => '',
+			'new_lines' => '',
+		),
+		array(
 			'key' => 'field_5533a5d3f26dd',
 			'label' => 'Emails',
 			'name' => '',
@@ -8574,6 +8612,25 @@ acf_add_local_field_group(array(
 			'default_value' => '',
 			'tabs' => 'all',
 			'toolbar' => 'full',
+			'media_upload' => 0,
+			'delay' => 0,
+		),
+		array(
+			'key' => 'field_62129f0621edc',
+			'label' => 'Return Policy (for single product page)',
+			'name' => 'acf-options_product_return_policy',
+			'type' => 'wysiwyg',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'tabs' => 'all',
+			'toolbar' => 'basic',
 			'media_upload' => 0,
 			'delay' => 0,
 		),

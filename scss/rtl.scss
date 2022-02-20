@@ -1062,15 +1062,20 @@ article.post {
 
 		&.manual-item-wrapper {
 			.category-item {
+				.title {
+					padding-left: 0;
+					padding-right: 45px;
+
+					&:before {
+						left: auto;
+						right: 15px;
+					}
+				}
+
 				.subtext {
 					left: 10px;
 					right: auto;
 					text-align: left;
-				}
-
-				.icon {
-					left: auto;
-					right: 35%;
 				}
 			}
 		}
@@ -1107,6 +1112,25 @@ article.post {
 }
 
 /******************/
+/* shop - sidebar */
+/******************/
+
+.shop-sidebar {
+
+	/**************/
+	/* term title */
+	/**************/
+
+	.term-title-wrapper {
+		.term-title {
+			.icon {
+				float: right;
+			}
+		}
+	}
+}
+
+/******************/
 /* shop - archive */
 /******************/
 
@@ -1117,26 +1141,19 @@ article.post {
 	/***************/
 
 	.term-banner-wrapper {
-		&:before {
-			left: auto;
-			right: -50px;
-		}
-
 		.term-banner {
-			&:before,
+			&:before {
+				left: auto;
+				right: -30px;
+				border-width: 50px 0 50px 30px;
+				border-color: transparent transparent transparent $gray-color6;
+			}
+
 			&:after {
 				left: auto;
-				right: -50px;
-			}
-
-			&:before {
-				border-bottom-left-radius: 25px;
-				border-bottom-right-radius: 0;
-			}
-
-			&:after {
-				border-top-left-radius: 25px;
-				border-top-right-radius: 0;
+				right: -28px;
+				border-width: 50px 0 50px 30px;
+				border-color: transparent transparent transparent $white;
 			}
 
 			.term-image {
@@ -1263,7 +1280,7 @@ article.post {
 
 					a.button {
 						&:after {
-							left: 119.5px;
+							left: 118px;
 							right: auto;
 						}
 
@@ -1275,7 +1292,7 @@ article.post {
 						}
 
 						&.loading:after { left: 118px; }
-						&.added:after { left: 111px; }
+						&.added:after { left: 116.5px; }
 					}
 
 					a.added_to_cart {
@@ -1322,6 +1339,30 @@ article.post {
 						.value {
 							float: left;
 							direction: ltr;
+						}
+					}
+				}
+
+				/*****************/
+				/* return policy */
+				/*****************/
+
+				&.single-product-meta-return-policy {
+					.product-meta-section-title {
+						&:after {
+							left: 10px;
+							right: auto;
+							border-left: 2px solid $black;
+							border-right: 0;
+							@include transform(rotate(-45deg));
+						}
+					}
+
+					&.collapsed {
+						.product-meta-section-title {
+							&:after {
+								@include transform(rotate(-135deg));
+							}
 						}
 					}
 				}
@@ -1745,8 +1786,15 @@ footer {
 				& > .item-before {
 					left: auto;
 					right: 15px;
-					border-left: 0;
-					border-right: 13px solid $font-color;
+					border-right: 0;
+					border-left: 2px solid black;
+					@include transform(rotate(-45deg));
+				}
+
+				&.collapsed {
+					& > .item-before {
+						@include transform(rotate(-135deg));
+					}
 				}
 			}
 

@@ -4,7 +4,7 @@
  *
  * @author		Beit Hatfutsot
  * @package		bh/functions/woocommerce
- * @version		3.1.16
+ * @version		3.2.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -703,6 +703,21 @@ function BH_shop_single_meta() {
 function BH_shop_single_shipping() {
 
 	get_template_part( 'views/woocommerce/single-product/single-product-section1', 'shipping' );
+
+}
+
+/**
+ * BH_shop_single_return_policy
+ * 
+ * Section 1
+ * Display product return policy
+ *
+ * @param	N/A
+ * @return	N/A
+ */
+function BH_shop_single_return_policy() {
+
+	get_template_part( 'views/woocommerce/single-product/single-product-section1', 'return-policy' );
 
 }
 
