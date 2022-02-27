@@ -4121,6 +4121,7 @@ ul.order_details {
 			img {
 				margin: 0 !important;
 				width: auto !important;
+				max-height: 100%;
 				@include vertical-align;
 				display: inline-block !important;
 			}
