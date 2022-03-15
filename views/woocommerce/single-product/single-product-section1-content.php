@@ -4,7 +4,7 @@
  *
  * @author 		Beit Hatfutsot
  * @package 	bh/views/woocommerce/single-product
- * @version     2.0
+ * @version     3.2.2
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -49,7 +49,7 @@ if ( ! $badges && ! $content )
 	<?php // content ?>
 	<?php if ($content) { ?>
 
-		<div class="content"><?php echo $content; ?></div>
+		<div class="content"><?php echo apply_filters( 'the_content', $content ); ?></div>
 
 	<?php } ?>
 
