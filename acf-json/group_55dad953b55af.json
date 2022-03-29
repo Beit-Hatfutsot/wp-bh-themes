@@ -236,36 +236,6 @@
                     ]
                 },
                 {
-                    "key": "field_5a08942bf41a3",
-                    "label": "Featured Page",
-                    "name": "featured_page",
-                    "type": "post_object",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": [
-                        [
-                            {
-                                "field": "field_5a08a8ae90c95",
-                                "operator": "!=",
-                                "value": "dbs"
-                            }
-                        ]
-                    ],
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "post_type": [
-                        "page"
-                    ],
-                    "taxonomy": [],
-                    "allow_null": 0,
-                    "multiple": 0,
-                    "return_format": "object",
-                    "ui": 1
-                },
-                {
                     "key": "field_5613737f33b57",
                     "label": "Social Links",
                     "name": "social_links",
@@ -463,6 +433,29 @@
                     "prepend": "",
                     "append": "",
                     "maxlength": ""
+                },
+                {
+                    "key": "field_5a08942bf41a3",
+                    "label": "Featured Link",
+                    "name": "featured_link",
+                    "type": "link",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5a08a8ae90c95",
+                                "operator": "!=",
+                                "value": "dbs"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array"
                 }
             ]
         },
@@ -737,7 +730,7 @@
             }
         ]
     ],
-    "menu_order": 13,
+    "menu_order": 15,
     "position": "normal",
     "style": "default",
     "label_placement": "top",
@@ -745,5 +738,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1560348225
+    "modified": 1648568491
 }

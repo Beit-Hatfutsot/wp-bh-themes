@@ -4,7 +4,7 @@
  *
  * @author 		Beit Hatfutsot
  * @package 	bh/functions/acf
- * @version     3.2.0
+ * @version     3.2.3
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -4119,37 +4119,6 @@ acf_add_local_field_group(array(
 					),
 				),
 				array(
-					'key' => 'field_5a08942bf41a3',
-					'label' => 'Featured Page',
-					'name' => 'featured_page',
-					'type' => 'post_object',
-					'instructions' => '',
-					'required' => 0,
-					'conditional_logic' => array(
-						array(
-							array(
-								'field' => 'field_5a08a8ae90c95',
-								'operator' => '!=',
-								'value' => 'dbs',
-							),
-						),
-					),
-					'wrapper' => array(
-						'width' => '',
-						'class' => '',
-						'id' => '',
-					),
-					'post_type' => array(
-						0 => 'page',
-					),
-					'taxonomy' => array(
-					),
-					'allow_null' => 0,
-					'multiple' => 0,
-					'return_format' => 'object',
-					'ui' => 1,
-				),
-				array(
 					'key' => 'field_5613737f33b57',
 					'label' => 'Social Links',
 					'name' => 'social_links',
@@ -4347,6 +4316,29 @@ acf_add_local_field_group(array(
 					'prepend' => '',
 					'append' => '',
 					'maxlength' => '',
+				),
+				array(
+					'key' => 'field_5a08942bf41a3',
+					'label' => 'Featured Link',
+					'name' => 'featured_link',
+					'type' => 'link',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => array(
+						array(
+							array(
+								'field' => 'field_5a08a8ae90c95',
+								'operator' => '!=',
+								'value' => 'dbs',
+							),
+						),
+					),
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'return_format' => 'array',
 				),
 			),
 		),
@@ -4629,7 +4621,6 @@ acf_add_local_field_group(array(
 	'hide_on_screen' => '',
 	'active' => true,
 	'description' => '',
-	'modified' => 1560348225,
 ));
 
 acf_add_local_field_group(array(

@@ -4,7 +4,7 @@
  *
  * @author		Beit Hatfutsot
  * @package		bh/functions
- * @version		2.14.0
+ * @version		3.2.3
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -143,7 +143,7 @@ function BH_set_current_site() {
 		$current_object_id = get_queried_object_id();
 
 		foreach ( $bh_sites as $s ) {
-			if ( $s[ 'type' ] == 'main' && ( ( $s[ 'featured_page' ] && $s[ 'featured_page' ]->ID == $current_object_id ) || ( $s[ 'menu_theme_location' ] && BH_is_object_in_menu( $s[ 'menu_theme_location' ], $current_object_id ) ) ) )
+			if ( $s[ 'type' ] == 'main' && ( ( $s[ 'featured_link' ] && $s[ 'featured_link' ]->ID == $current_object_id ) || ( $s[ 'menu_theme_location' ] && BH_is_object_in_menu( $s[ 'menu_theme_location' ], $current_object_id ) ) ) )
 				// return
 				return $index;
 
@@ -231,7 +231,7 @@ function BH_set_header_elements() {
 		'newsletter_header_top_popup'	=> '',
 		'newsletter_header_mid_popup'	=> '',
 		'featured_notification'			=> '',
-		'featured_page'					=> ''
+		'featured_link'					=> ''
 	);
 
 	/**
@@ -278,9 +278,9 @@ function BH_set_header_elements() {
 		$elements[ 'featured_notification' ] = $featured_notification;
 	}
 
-	// Featured page
-	if ( $bh_sites && $current_site !== false && $bh_sites[ $current_site ][ 'featured_page' ] ) {
-		$elements[ 'featured_page' ] = $bh_sites[ $current_site ][ 'featured_page' ];
+	// Featured link
+	if ( $bh_sites && $current_site !== false && $bh_sites[ $current_site ][ 'featured_link' ] ) {
+		$elements[ 'featured_link' ] = $bh_sites[ $current_site ][ 'featured_link' ];
 	}
 
 	// return
