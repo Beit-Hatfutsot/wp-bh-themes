@@ -6,3 +6,4 @@ node_modules/
 #js/min/
 #images/general/svg-defs.svg
 functions/forms/save_file_log.txt
+package-lock.json
