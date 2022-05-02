@@ -100,7 +100,7 @@ global $globals;
 	if ( is_product() )
 		wp_enqueue_script( 'elevateZoom' );
 
-	if ( is_singular('post') )
+	if ( is_singular('post') || is_singular('product') )
 		get_template_part( 'views/blog/add-this' );
 
 	if ( is_woocommerce() ) {
