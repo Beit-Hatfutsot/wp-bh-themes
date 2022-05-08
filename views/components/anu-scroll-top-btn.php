@@ -12,4 +12,4 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 ?>
 
-<a class="anchor scroll-top" href="#"></a>
+<a id="scroll-top" class="anchor scroll-top" href="#"></a>

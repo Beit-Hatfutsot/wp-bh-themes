@@ -33,3 +33,15 @@ if ( ! $text || ! $link )
 ?>
 
 <a class="anu-btn tickets-btn" href="<?php echo $link; ?>" target="_blank" <?php echo $data_layer; ?>><?php echo $text; ?></a>
+
+    <?php
+
+        /**
+         * Display the scroll top button
+         */
+
+        // adding scripts from landig page for the scrollTop button will scroll smoothlly up the page
+         wp_enqueue_script( 'exhibition-landing' );
+
+         get_template_part( 'views/components/anu-scroll-top-btn' );
+    ?>anu

@@ -144,6 +144,7 @@ var $ = jQuery,
 
 		},
 
+
 		/**
 		 * get_page
 		 *
@@ -356,6 +357,7 @@ var $ = jQuery,
 			});
 
 		},
+
 
 		/**
 		 * single_product_return_policy

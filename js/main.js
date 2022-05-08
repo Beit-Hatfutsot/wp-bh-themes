@@ -25,6 +25,9 @@ var $ = jQuery,
 			}
 
 		},
+
+
+
 		
 		set_slider_height	: function() {
 			

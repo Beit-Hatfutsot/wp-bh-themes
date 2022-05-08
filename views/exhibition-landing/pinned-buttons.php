@@ -22,11 +22,15 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 		include( locate_template( 'views/components/anu-tickets-btn.php' ) );
 	?>
 
+
 	<?php
+	    //removing thisfrom landing page so i can add this to all website
+
 		/**
 		 * Display the scroll top button
 		 */
-		get_template_part( 'views/components/anu-scroll-top-btn' );
+		
+		// get_template_part( 'views/components/anu-scroll-top-btn' );
 	?>
 
 	<?php
