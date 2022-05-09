@@ -39,6 +39,9 @@ var $ = jQuery,
 			// set page
 			BH_general.params.page = BH_general.get_page();
 
+			// scroll top
+			BH_general.scrollTop();
+
 			// set woocommerce indication
 			BH_general.params.woocommerce = BH_general.params.page && (BH_general.params.page.substring(0, 11) == 'woocommerce' || BH_general.params.page == 'shop-why-shop-with-us' || BH_general.params.page == 'shop-about');
 
@@ -143,6 +146,33 @@ var $ = jQuery,
 			BH_general.footer_menu();
 
 		},
+
+
+
+		/**
+		 * scrollTop
+		 *
+		 * Called from init
+		 *
+		 * @param	N/A
+		 * @return	N/A
+		 */
+		scrollTop : function () {
+
+			// vars
+			var scrollBtn = $('.scroll-top');
+
+			scrollBtn.on('click', function(e) {
+				e.preventDefault();
+
+				$('html, body').animate({ scrollTop: 0 }, 1000);
+
+				return false;
+			});
+
+		},
+
+
 
 
 		/**

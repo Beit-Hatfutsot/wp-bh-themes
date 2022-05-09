@@ -41,7 +41,8 @@ if ( ! $text || ! $link )
          */
 
         // adding scripts from landig page for the scrollTop button will scroll smoothlly up the page
-         wp_enqueue_script( 'exhibition-landing' );
+       
+      
 
          get_template_part( 'views/components/anu-scroll-top-btn' );
     ?>anu
