@@ -4,7 +4,7 @@
  *
  * @author		Beit Hatfutsot
  * @package		bh/functions/woocommerce
- * @version		3.2.0
+ * @version		3.2.6
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -1031,7 +1031,7 @@ function BH_shop_order_invoice( $order_id ) {
 	);
 
 	// Add language indicator
-	if ( $currency != 'ILS' )
+//	if ( $currency != 'ILS' )
 		$data[ 'lang' ] = 'en';
 
 	// Add items and payment info into $data
@@ -1259,6 +1259,36 @@ function BH_shop_catalog_orderby_options( $options ) {
 
 	// return
 	return $options;
+
+}
+
+/**
+ * BH_shop_currency_symbol
+ *
+ * Change default currenct symbol for NIS
+ *
+ * @param	$currency_symbol (string)
+ * @param	$currency (string)
+ * @return	(string)
+ */
+function BH_shop_currency_symbol( $currency_symbol, $currency ) {
+
+	$wpml_lang = function_exists('icl_object_id') ? ICL_LANGUAGE_CODE : '';
+
+	if ( 'en' == $wpml_lang ) {
+
+		switch( $currency ) {
+
+			case 'ILS':
+				$currency_symbol = 'NIS';
+				break;
+
+		}
+
+	}
+
+	// return
+	return $currency_symbol;
 
 }
 
