@@ -1265,7 +1265,7 @@ function BH_shop_catalog_orderby_options( $options ) {
 /**
  * BH_shop_currency_symbol
  *
- * Change default currenct symbol for NIS
+ * Change default currency symbol for NIS
  *
  * @param	$currency_symbol (string)
  * @param	$currency (string)
@@ -1289,6 +1289,27 @@ function BH_shop_currency_symbol( $currency_symbol, $currency ) {
 
 	// return
 	return $currency_symbol;
+
+}
+
+/**
+ * BH_shop_currency_position
+ *
+ * Change default currency position for NIS
+ *
+ * @param	N/A
+ * @return	(string)
+ */
+function BH_shop_currency_position() {
+
+	$wpml_lang = apply_filters( 'wpml_current_language', NULL );
+
+	if ( 'en' == $wpml_lang ) {
+		return 'right_space';
+	}
+	else {
+		return 'right_space';
+	}
 
 }
 

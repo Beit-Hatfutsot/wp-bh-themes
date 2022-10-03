@@ -210,8 +210,10 @@ add_action('woocommerce_refund_created',			'BH_shop_order_refund', 10, 2);
  * @see		BH_shop_sale_price_html()
  * @see     BH_shop_catalog_orderby_options()
  * @see     BH_shop_currency_symbol()
+ * @see     BH_shop_currency_position()
  */
 add_filter('woocommerce_price_html', 'BH_shop_price_html', 10, 2);
 add_filter('woocommerce_sale_price_html', 'BH_shop_sale_price_html', 10, 2);
 add_filter('woocommerce_catalog_orderby', 'BH_shop_catalog_orderby_options');
 add_filter('woocommerce_currency_symbol', 'BH_shop_currency_symbol', 10, 2);
+add_filter('pre_option_woocommerce_currency_pos', 'BH_shop_currency_position');
