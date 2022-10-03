@@ -1275,7 +1275,7 @@ function BH_shop_currency_symbol( $currency_symbol, $currency ) {
 
 	$wpml_lang = function_exists('icl_object_id') ? ICL_LANGUAGE_CODE : '';
 
-	if ( 'en' == $wpml_lang ) {
+	if ( 'he' != $wpml_lang ) {
 
 		switch( $currency ) {
 
@@ -1304,8 +1304,8 @@ function BH_shop_currency_position() {
 
 	$wpml_lang = apply_filters( 'wpml_current_language', NULL );
 
-	if ( 'en' == $wpml_lang ) {
-		return 'right_space';
+	if ( 'he' == $wpml_lang ) {
+		return 'left_space';
 	}
 	else {
 		return 'right_space';
