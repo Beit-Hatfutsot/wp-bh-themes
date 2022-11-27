@@ -58,7 +58,7 @@
 
 			<div class="artist"><?php echo $artists ? $artists : '&nbsp;'; ?></div>
 		</div>
-
+<?php /*
 		<div class="add-to-cart-wrapper">
 			<div class="price"><?php echo $product->get_price_html(); ?></div>
 
@@ -70,12 +70,12 @@
 					 *
 					 * @hooked woocommerce_template_loop_add_to_cart - 10
 					 */
-					//do_action( 'woocommerce_after_shop_loop_item' );
-
+					do_action( 'woocommerce_after_shop_loop_item' );
+/*
 				?>
 			</div>
 		</div>
-
+*/?>
 	</div>
 
 </div>
