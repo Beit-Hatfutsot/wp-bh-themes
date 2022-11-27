@@ -5,7 +5,7 @@
  * @author		Beit Hatfutsot
  * @package		bh/views/header
  * @since		2.6.0
- * @version		2.6.0
+ * @version		3.3.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -37,6 +37,7 @@ if ( ! $bh_sites )
 	/**
 	 * Display the shop mini cart
 	 */
+/*
 	if ( $current_site !== false && $bh_sites[ $current_site ][ 'type' ] == 'shop' && $elements[ 'shop_cart_header_' . $header_position . '_popup' ] ) { ?>
 
 		<div class="header-element shop-cart-popup shop-cart-header-<?php echo $header_position; ?>-popup">
@@ -44,6 +45,7 @@ if ( ! $bh_sites )
 		</div>
 
 	<?php }
+*/
 ?>
 
 <?php
